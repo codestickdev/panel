@@ -1,0 +1,126 @@
+.panelHeader{
+    height: 60px;
+    border-bottom: 1px solid $primarycolorlight;
+    background-color: #fff;
+
+    &__wrap{
+        display: flex;
+        height: inherit;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 0 !important;
+    }
+    &__logo{
+        position: absolute;
+        left: 20px;
+    }
+    &__current{
+        display: none;
+    }
+    &__steps{
+        display: flex;
+        justify-content: space-between;
+        width: 500px;
+        padding-bottom: 7px;
+
+        .step{
+            width: calc(100% / 4);
+            text-align: center;
+            position: relative;
+
+            p{
+                font-size: 14px;
+                line-height: 1;
+                font-weight: 500;
+                color: $primarycolor;
+                margin: 2px 0 0;
+            }
+
+            &--current{
+                p{
+                    color: $pbred;
+                }
+            }
+        }
+    }
+    &__progress{
+        width: 390px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: -13%;
+
+        &:before{
+            content: '';
+            width: var(--bar-width);
+            height: 4px;
+            background-color: $pbred;
+            position: absolute;
+            bottom: 6px;
+            z-index: 1;
+        }
+
+        .pos{
+            width: 14px;
+            height: 14px;
+            background-color: #fff;
+            border: 1px solid $primarycolorlight;
+            border-radius: 100%;
+            position: relative;
+            z-index: 2;
+
+            &--current{
+                border-color: $pbred;
+            }
+            &--done{
+                border-color: $pbred;
+                background-color: $pbred;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .panelHeader{
+        &__wrap{
+            position: relative;
+        }
+        &__logo{
+            img{
+                width: 92px;
+            }
+        }
+        &__current{
+            display: block;
+            position: absolute;
+            right: 20px;
+
+            p{
+                font-size: 14px;
+                color: $primarycolor;
+            }
+        }
+        &__steps{
+            display: none;
+        }
+        &__progress{
+            bottom: -10%;
+
+            &:before{
+                height: 3px;
+                bottom: 4px;
+            }
+            .pos{
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+}
+@media (max-width: 430px){
+    .panelHeader{
+        &__progress{
+            width: calc(100% - 40px);
+        }
+    }
+}

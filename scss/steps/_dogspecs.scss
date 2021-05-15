@@ -1,0 +1,529 @@
+.formDog{
+    &__name{
+        font-family: 'Bebas Neue';
+        font-size: 35px;
+        line-height: 42px;
+        color: $pbred;
+        text-align: center;
+        font-weight: 400;
+        margin: 0 0 30px;
+    }
+    &__age{
+        .dogAge{
+            box-sizing: border-box;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            padding: 0 20px 40px;
+            border-bottom: 1px solid $primarycolorlight;
+
+            &:last-of-type{
+                border-bottom: 0;
+                margin: 0 auto;
+            }
+
+            &__inputs{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                span{
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #000;
+                }
+            }
+        }
+    }
+    &__sterylization{
+        .dogSterylization{
+            box-sizing: border-box;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            padding: 0 20px 40px;
+            border-bottom: 1px solid $primarycolorlight;
+
+            &:last-of-type{
+                border-bottom: 0;
+                margin: 0 auto;
+            }
+        }
+    }
+    &__breed{
+        .dogBreed{
+            box-sizing: border-box;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            padding: 0 20px 40px;
+            border-bottom: 1px solid $primarycolorlight;
+
+            &:last-of-type{
+                border-bottom: 0;
+                margin: 0 auto;
+            }
+            &__list{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                span{
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #000;
+                    margin-right: 20px;
+                }
+            }
+            &__inputs{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 20px 0 0;
+
+                .input{
+                    margin: 0;
+                    max-width: 265px;
+                }
+
+                span{
+                    font-size: 14px;
+                    margin: 0 20px;
+                }
+            }
+        }
+    }
+    &__allergy{
+        .dogAllergy{
+            box-sizing: border-box;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            padding: 0 20px 40px;
+            border-bottom: 1px solid $primarycolorlight;
+
+            &:last-of-type{
+                border-bottom: 0;
+                margin: 0 auto;
+            }
+        }
+    }
+    &__health{
+        .dogHealth{
+            box-sizing: border-box;
+            max-width: 1030px;
+            margin: 0 auto 30px;
+            padding: 0 20px 40px;
+            border-bottom: 1px solid $primarycolorlight;
+
+            &:last-of-type{
+                border-bottom: 0;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .formDog{
+        &__name{
+            margin: 0 0 10px;
+        }
+    }
+}
+
+.dogSelector{
+    box-sizing: border-box;
+    margin: 0 0 30px;
+    padding: 0 20px;
+
+    &:last-of-type{
+        border-bottom: 0;
+        margin: 0 auto;
+
+        .dogSelector__divider{
+            display: none;
+        }
+    }
+
+    &__wrap{
+        width: fit-content;
+        max-width: 955px;
+        margin: 0 auto;
+    }
+    &__name{
+        font-family: 'Bebas Neue';
+        font-size: 35px;
+        line-height: 42px;
+        color: $pbred;
+        text-align: center;
+        font-weight: 400;
+        margin: 0 0 30px;
+    }
+    &__options{
+        display: flex;
+        justify-content: space-between;
+        max-width: fit-content;
+        margin: 0 auto;
+        position: relative;
+    }
+    &__option{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 224px;
+        height: 122px;
+        position: relative;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+        margin: 0 10px;
+        transition: border-width .3s ease-in-out;
+        transition: border-color .3s ease-in-out;
+
+        &:first-of-type{
+            margin-left: 0;
+        }
+        &:last-of-type{
+            margin-right: 0;
+        }
+
+        &:hover{
+            border-color: $greencolor;
+            border-width: 2px;
+        }
+
+        input{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+        img{
+            max-width: 130px;
+            margin: 0 auto;
+        }
+
+        &.checked{
+            border-color: $greencolor;
+            border-width: 2px;
+        }
+    }
+    &__desc{
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+        padding: 18px 20px;
+        margin: 35px 0 0;
+        position: relative;
+
+        .arrow{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 4px;
+            left: 20px;
+            background-color: #fff;
+            transform: rotate(45deg);
+            transition: left cubic-bezier(0.35, 0.01, 0.15, 1.02) 1s;
+
+            &.active{
+                top: -11px;
+                border-left: 1px solid rgba(0,0,0,0.2);
+                border-top: 1px solid rgba(0,0,0,0.2);
+            }
+        }
+
+        h3{
+            font-family: 'Bebas Neue';
+            font-size: 21px;
+            line-height: 25px;
+            font-weight: 400;
+            color: #000;
+            margin: 0 0 15px;
+            text-align: center;
+        }
+        p{
+            font-size: 14px;
+            line-height: 16px;
+            margin: 0 auto;
+            max-width: 300px;
+            color: $primarycolor;
+            text-align: center;
+        }
+    }
+    &__divider{
+        background-color: $primarycolorlight;
+        height: 1px;
+        width: 100%;
+        max-width: 760px;
+        margin: 40px auto;
+    }
+}
+@media (max-width: 1050px){
+    .dogSelector{
+        &__option{
+            width: 160px;
+        }
+    }
+}
+@media (max-width: 991px){
+    .dogSelector{
+        &__option{
+            width: 128px;
+
+            img{
+                max-width: 70px;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .dogSelector{
+        &__wrap{
+            width: 100%;
+            max-width: 100%;
+        }
+        &__options{
+            width: 100%;
+            max-width: 100%;
+        }
+        &__option{
+            margin: 0;
+            transform: scale(.7);
+            height: 100px;
+            transition: ease .3s;
+
+            &.checked{
+                transform: scale(1);
+            }
+
+            img{
+                width: 100%;
+                max-width: 70px;
+                padding: 0 5px;
+                box-sizing: border-box;
+            }
+        }
+        &--options-2{
+            .dogSelector__option{
+                width: calc(100% / 2);
+            }
+        }
+        &--options-3{
+            .dogSelector__option{
+                width: calc(100% / 3);
+            }
+        }
+        &--options-4{
+            .dogSelector__option{
+                width: calc(100% / 4);
+            }
+        }
+        &--options-5{
+            .dogSelector__option{
+                width: calc(100% / 5);
+            }
+        }
+        &--options-6{
+            .dogSelector__option{
+                width: calc(100% / 6);
+            }
+        }
+        &__desc{
+            margin: 25px 0 0;
+        }
+    }
+}
+
+.dogSlide{
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    &__name{
+        font-family: 'Bebas Neue';
+        font-size: 35px;
+        line-height: 42px;
+        color: $pbred;
+        text-align: center;
+        font-weight: 400;
+        margin: 0 0 30px;
+    }
+    &__input{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: fit-content;
+        margin: 0 auto;
+
+        span{
+            font-size: 14px;
+            line-height: 16px;
+            color: #000;
+        }
+
+        &--error{
+            position: relative;
+
+            &:before{
+                content: '';
+                background-image: url('../assets/img/inputError_alert.svg');
+                background-size: 20px;
+                width: 20px;
+                height: 18px;
+                position: absolute;
+                right: -35px;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+            &:after{
+                content: attr(errormsg);
+                font-size: 14px;
+                line-height: 16px;
+                font-weight: 600;
+                color: $pbred;
+                margin: 0;
+                position: absolute;
+                left: 130%;
+                top: 50%;
+                transform: translate(0, -50%);
+                min-width: 200px;
+            }
+    
+            .input{
+                border: 2px solid $pbred;
+            }
+        }
+    }
+    &__notice{
+        display: none;
+    }
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: 30px auto 0;
+    }
+    &__dog{
+        width: 100%;
+        margin: 0 3px;
+        height: 100px;
+        background-color: #888;
+
+        &.active{
+            background-color: #b9b9b9;
+        }
+    }
+    &__slider{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .dogRange{
+        border: 0 !important;
+        width: calc(100% - 120px);
+        height: 0;
+        border-top: 1px solid #000 !important;
+
+        .ui-slider-range-min{
+            top: -3px;
+            border-top: 5px solid $pbred;
+        }
+        .ui-slider-handle{
+            border: 0;
+            background: unset;
+            outline: none;
+            cursor: pointer;
+            top: -10px;
+
+            &:after{
+                content: '';
+                background-image: url('../assets/img/sliderRange_icon.svg');
+                background-repeat: no-repeat;
+                background-size: 32px;
+                width: 30px;
+                height: 35px;
+                position: absolute;
+                top: -12px;
+                left: -7px;
+            }
+        }
+
+        &__before{
+            font-size: 14px;
+            line-height: 16px;
+            color: #000;
+            margin: 0;
+        }
+    }
+    &__divider{
+        background-color: $primarycolorlight;
+        height: 1px;
+        width: 100%;
+        max-width: 760px;
+        margin: 30px auto;
+    }
+}
+@media (max-width: 767px){
+    .dogSlide{
+        &__input{
+            &--error{
+                &:before,
+                &:after{
+                    display: none;
+                }
+            }
+        }
+        &--error{
+            .dogSlide__name{
+                margin: 0 0 10px;
+            }
+            .dogSlide__notice{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 0 10px;
+    
+                &:before{
+                    content: '';
+                    background-image: url('../assets/img/inputError_alert.svg');
+                    background-repeat: no-repeat;
+                    background-size: 13px;
+                    width: 13px;
+                    height: 13px;
+                    position: relative;
+                    display: inline-block;
+                    margin-right: 3px;
+                }
+                &:after{
+                    content: attr(errormsg);
+                    font-size: 10px;
+                    line-height: 12px;
+                    font-weight: 600;
+                    color: $pbred;
+                    margin: 0;
+                    position: relative;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 550px){
+    .dogSlide{
+        &__dog{
+            margin: 0;
+            height: 70px;
+            transform: scale(.7);
+            transition: ease .3s;
+
+            &.active{
+                transform: scale(1);
+            }
+        }
+    }
+}

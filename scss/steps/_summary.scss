@@ -1,0 +1,79 @@
+.summaryContent{
+    max-width: 590px;
+    margin: 0 auto 30px;
+
+    .summaryCart{
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+        padding: 16px 40px 40px;
+
+        &__heading{
+            margin: 0 0 20px;
+
+            h2{
+                font-family: 'Bebas Neue';
+                font-size: 21px;
+                line-height: 25px;
+                font-weight: 400;
+                color: #000;
+                margin: 0 0 15px;
+                text-align: center;
+            }
+            p{
+                font-size: 14px;
+                line-height: 16px;
+                color: $primarycolor;
+                margin: 0;
+                text-align: center;
+            }
+        }
+
+        &__content{
+            border: 1px solid $primarycolorlight;
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+
+            .switchTabs{
+                border-top: 0;
+            }
+
+            .contentShow{
+                &--nextdelivery{
+                    .summary{
+                        max-width: 330px;
+                        padding: 0;
+                        border: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .summaryContent{
+        padding: 0 20px;
+        
+        .summaryCart{
+            padding: 16px 20px 20px;
+
+            &__heading{
+                margin: 0 0 15px;
+
+                h2{
+                    margin: 0 0 5px;
+                }
+                p{
+                    font-size: 10px;
+                    line-height: 12px;
+                }
+            }
+        }
+    }
+}
+
+.summaryCoupon{
+    .input{
+        margin: 0 auto;
+    }
+}

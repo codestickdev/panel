@@ -1,0 +1,626 @@
+.psibufetPlan{
+    padding: 0 20px;
+
+    &>h2{
+        font-family: 'Bebas Neue';
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: 400;
+        text-align: center;
+        margin: 0 0 30px;
+        color: #000;
+    }
+    &__wrap{
+        max-width: 950px;
+        margin: 0 auto 10px;
+        background-color: #fff;
+        border: 1px solid $primarycolorlight;
+        border-top: 0;
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+
+        .contentShow{
+            display: none;
+            align-items: center;
+
+            &.ready{
+                display: flex;
+            }
+        }
+    }
+    &__karma{
+        width: calc(100% / 2);
+
+        img{
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    &__karmaInfo{
+        width: calc(100% / 2);
+
+        .mobileInfo{
+            &__image{
+                display: none;
+            }
+        }
+
+        .discount{
+            display: none;
+            font-family: 'Bebas Neue';
+            font-size: 25px;
+            line-height: 30px;
+            font-weight: 400;
+            margin: 0 auto;
+            max-width: fit-content;
+            text-align: center;
+            color: #808080;
+            position: relative;
+
+            &:after{
+                content: '';
+                height: 2px;
+                width: calc(100% + 10px);
+                left: -5px;
+                top: 45%;
+                transform: translate(0, -50%);
+                position: absolute;
+                background-color: $pbred;
+            }
+
+            &__wrap{
+                font-size: 35px;
+                line-height: 42px;
+                padding-right: 3px;
+
+                span{
+                    position: relative;
+                    padding-right: 21px;
+
+                    small{
+                        font-size: 21px;
+                        position: absolute;
+                        top: -6px;
+                        right: 3px;
+                    }
+                }
+            }
+        }
+        .price{
+            font-family: 'Bebas Neue';
+            font-size: 41px;
+            line-height: 50px;
+            font-weight: 400;
+            margin: 0;
+            text-align: center;
+            color: $greencolor;
+
+            &__wrap{
+                font-size: 71px;
+                line-height: 85px;
+                padding: 0 7px;
+            }
+
+            &__price{
+                position: relative;
+                padding-right: 50px;
+
+                small{
+                    font-size: 45px;
+                    position: absolute;
+                    top: -9px;
+                    right: 12px;
+                }
+            }
+        }
+        .portion{
+            font-family: 'Bebas Neue';
+            font-size: 25px;
+            line-height: 30px;
+            font-weight: 400;
+            margin: 0 0 25px;
+            text-align: center;
+            color: #000;
+        }
+        p{
+            &:last-of-type{
+                margin: 0 auto;
+            }
+
+            font-size: 14px;
+            line-height: 16px;
+            color: $primarycolor;
+            font-weight: 500;
+            max-width: 360px;
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+        
+        &--discount{
+            .discount{
+                display: block;
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .psibufetPlan{
+        &__karmaInfo{
+            padding-right: 20px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .psibufetPlan{
+        &>h2{
+            font-size: 16px;
+            line-height: 19px;
+            margin: 0 0 15px;
+        }
+        &__karma{
+            display: none;
+        }
+        &__karmaInfo{
+            width: 100%;
+            padding: 0 20px 20px;
+
+            .mobileInfo{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 0 15px;
+
+                &__image{
+                    display: block;
+                    width: 80px;
+                    margin: 0;
+
+                    img{
+                        width: 60px;
+                        max-width: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+
+            .discount{
+                font-size: 10px;
+                line-height: 12px;
+    
+                &:after{
+                    height: 1px;
+                    width: calc(100% + 10px);
+                    left: -5px;
+                    top: 45%;
+                    transform: translate(0, -50%);
+                }
+    
+                &__wrap{
+                    font-size: 16px;
+                    line-height: 19px;
+                    padding-right: 3px;
+    
+                    span{
+                        position: relative;
+                        padding-right: 10px;
+    
+                        small{
+                            font-size: 10px;
+                            position: absolute;
+                            top: -3px;
+                            right: 1px;
+                        }
+                    }
+                }
+            }
+
+            .price{
+                font-size: 21px;
+                line-height: 25px;
+
+                &__wrap{
+                    font-size: 34px;
+                    line-height: 40px;
+                    padding: 0 4px;
+                }
+    
+                &__price{
+                    position: relative;
+                    padding-right: 26px;
+    
+                    small{
+                        font-size: 21px;
+                        top: -4px;
+                        right: 8px;
+                    }
+                }
+            }
+            .portion{
+                font-size: 12px;
+                line-height: 14px;
+                margin: 0;
+            }
+            p{
+                font-size: 10px;
+                line-height: 12px;
+                margin: 0 auto 15px;
+            }
+        }
+    }
+}
+@media (max-width: 530px){
+    .psibufetPlan{
+        &__wrap{
+            .switchTabs{
+                .tab{
+                    &.best{
+                        &:before{
+                            background-size: 82px;
+                            width: 82px;
+                            height: 26px;
+                            top: -35px;
+                            left: -40%; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.psibufetHow{
+    max-width: 950px;
+    margin: 0 auto 10px;
+
+    .accordion{
+        &__content{
+            display: flex;
+
+            .portion{
+                width: 30%;
+
+                h3{
+                    font-family: 'Bebas Neue';
+                    font-size: 25px;
+                    line-height: 30px;
+                    font-weight: 400;
+                    color: #000;
+                    margin: 0;
+                    text-align: center;
+                }
+                h4{
+                    font-family: 'Bebas Neue';
+                    font-size: 16px;
+                    line-height: 19px;
+                    font-weight: 400;
+                    color: #000;
+                    margin: 0;
+                    text-align: center;
+                }
+
+                .dogs{
+                    margin: 15px 0;
+
+                    &__dog{
+                        font-family: 'Bebas Neue';
+                        font-size: 25px;
+                        line-height: 30px;
+                        font-weight: 400;
+                        color: $pbred;
+                        margin: 0 0 3px;
+                        text-align: center;
+
+                        span{
+                            color: #000;
+                        }
+                    }
+                }
+            }
+            .info{
+                width: 70%;
+                padding-right: 30px;
+
+                ul{
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+
+                    li{
+                        font-size: 14px;
+                        line-height: 19px;
+                        color: $primarycolor;
+                        margin: 0 0 15px;
+                        text-align: left;
+                        position: relative;
+                        padding-left: 15px;
+
+                        &:before{
+                            content: '';
+                            background-image: url('../assets/img/arrow_red.svg');
+                            background-repeat: no-repeat;
+                            background-size: 10px;
+                            width: 10px;
+                            height: 12px;
+                            position: absolute;
+                            left: 0;
+                            top: 3px;
+                            transform: rotate(-90deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .psibufetHow{
+        max-width: calc(100% - 40px);
+    }
+}
+@media (max-width: 767px){
+    .psibufetHow{
+        .accordion{
+            &__content{
+                flex-direction: column;
+
+                .portion{
+                    width: 100%;
+                    margin: 0;
+
+                    h3{
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                    h4{
+                        font-size: 10px;
+                        line-height: 12px;
+                    }
+                    .dogs{
+                        margin: 5px 0 12px;
+
+                        &__dog{
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
+                    }
+                }
+                .info{
+                    width: 280px;
+                    max-width: 100%;
+                    margin: 0 auto;
+                    padding: 0;
+
+                    ul{
+                        li{
+                            font-size: 10px;
+                            line-height: 12px;
+
+                            &:before{
+                                background-size: 7px;
+                                width: 7px;
+                                height: 9px;
+                                top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.psibufetDog{
+    max-width: 950px;
+    margin: 0 auto 35px;
+
+    &__image{
+        img{
+            max-width: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    &__certificate{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: -110px 0 20px;
+    }
+    p{
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 460px;
+        color: $primarycolor;
+
+        a{
+            color: $pbred;
+            text-decoration: none;
+            transition: ease .3s;
+
+            &:hover{
+                opacity: .7;
+            }
+        }
+    }
+}
+@media (max-width: 991px){
+    .psibufetDog{
+        max-width: calc(100% - 40px);
+    }
+}
+@media (max-width: 767px){
+    .psibufetDog{
+        margin: 0 auto 15px;
+
+        &__certificate{
+            margin: -48px 0 15px;
+
+            img{
+                max-width: 100px;
+            }
+        }
+        p{
+            max-width: calc(100% - 40px);
+            margin: 0 auto;
+            font-size: 10px;
+            line-height: 12px;
+        }
+    }
+}
+
+.psibufetFaq{
+    background-color: #E8E8E8;
+    margin-bottom: 60px;
+
+    &__wrap{
+        position: relative;
+
+        h2{
+            font-size: 35px;
+            line-height: 42px;
+            font-family: 'Bebas Neue';
+            font-weight: 500;
+            color: #000;
+            margin: 0 0 35px;
+            text-align: center;
+        }
+
+        .moreFaq{
+            display: block;
+            margin: 40px auto;
+            max-width: fit-content;
+            transition: ease .3s;
+
+            &:hover{
+                opacity: .7;
+
+                span{
+                    &:after{
+                        right: -25px;
+                    }
+                }
+            }
+
+            span{
+                display: block;
+                font-size: 14px;
+                line-height: 19px;
+                font-weight: 700;
+                color: #000;
+                text-align: center;
+                position: relative;
+
+                &:after{
+                    content: '';
+                    background-image: url('/wp-content/themes/psibufet/images/chevron_down.svg');
+                    background-repeat: no-repeat;
+                    background-size: 10px;
+                    width: 19px;
+                    height: 10px;
+                    transform: rotate(-90deg);
+                    position: absolute;
+                    right: -22px;
+                    top: 0;
+                    transition: ease .3s;
+                }
+            }
+        }
+    }
+    &__list{
+        max-width: 950px;
+        margin: 0 auto;
+
+        .question{
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+            margin: 0 0 10px;
+
+            &:last-of-type{
+                margin: 0;
+            }
+
+            &--open{
+                .question__heading{
+                    p{
+                        color: $pbred;
+
+                        &:after{
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
+            &__heading{
+                padding: 16px 20px;
+                cursor: pointer;
+
+                p{
+                    font-size: 21px;
+                    line-height: 25px;
+                    font-family: 'Bebas Neue';
+                    font-weight: 500;
+                    color: #000;
+                    margin: 0;
+                    padding-right: 25px;
+                    position: relative;
+                    transition: ease .3s;
+
+                    &:after{
+                        content: '';
+                        background-image: url('/wp-content/themes/psibufet/images/chevron_down.svg');
+                        background-repeat: no-repeat;
+                        background-size: 20px;
+                        width: 20px;
+                        height: 15px;
+                        position: absolute;
+                        top: 5px;
+                        right: 0;
+                        transition: ease .3s;
+                    }
+                }
+            }
+            &__answer{
+                display: none;
+                padding: 0 20px 20px;
+                font-size: 12px;
+                line-height: 14px;
+                color: $primarycolor;
+                margin: 0;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .psibufetFaq{
+        margin-bottom: 20px;
+
+        &__wrap{
+            h2{
+                font-size: 21px;
+                line-height: 25px;
+                margin: 0 0 15px;
+            }
+        }
+        &__list{
+            .question{
+                &__heading{
+                    padding: 14px ​20px;
+
+                    p{
+                        font-size: 16px;
+                        line-height: 19px;
+
+                        &:after{
+                            background-size: 10px;
+                            width: 10px;
+                            height: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
