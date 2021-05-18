@@ -469,7 +469,7 @@ body{
     }
     &--mainform,
     &--mainform-dog{
-        min-height: calc(100vh - 160px);
+        min-height: calc(100vh - 60px);
         position: relative;
         padding-bottom: 130px;
 
@@ -506,8 +506,8 @@ body{
             }
         }
         &--mainform-dog{
-            padding-bottom: 210px;
-            min-height: calc(100vh - 270px);
+            padding-bottom: 140px;
+            min-height: calc(100vh - 140px);
 
             .stepHeading{
                 &__wrap{

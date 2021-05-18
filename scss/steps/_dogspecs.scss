@@ -402,17 +402,33 @@
     &__list{
         display: flex;
         justify-content: space-between;
+        height: 110px;
         max-width: 1000px;
         margin: 30px auto 0;
     }
     &__dog{
         width: 100%;
         margin: 0 3px;
-        height: 100px;
-        background-color: #888;
+        align-self: flex-end;
+        text-align: center;
+        opacity: .5;
+        cursor: pointer;
+        transition: ease .5s;
 
+        &:hover{
+            opacity: 1;
+        }
         &.active{
-            background-color: #b9b9b9;
+            opacity: 1;
+
+            img{
+                transform: scale(1.5);
+                margin-bottom: 17px;
+            }
+        }
+
+        img{
+            transition: ease .5s;
         }
     }
     &__slider{
@@ -470,12 +486,29 @@
 }
 @media (max-width: 767px){
     .dogSlide{
+        &__list{
+            height: 80px;
+        }
         &__input{
             &--error{
                 &:before,
                 &:after{
                     display: none;
                 }
+            }
+        }
+        &__dog{
+            height: auto;
+
+            &.active{
+                img{
+                    transform: scale(1.1);
+                    margin-bottom: 7px;
+                }
+            }
+
+            img{
+                transform: scale(0.8);
             }
         }
         &--error{
@@ -517,12 +550,17 @@
     .dogSlide{
         &__dog{
             margin: 0;
-            height: 70px;
-            transform: scale(.7);
             transition: ease .3s;
 
+            img{
+                max-width: 100%;
+                transform: scale(0.7);
+            }
+
             &.active{
-                transform: scale(1);
+                img{
+                    transform: scale(1);
+                }
             }
         }
     }

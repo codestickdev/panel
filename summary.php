@@ -52,7 +52,7 @@
                     <div class="summary">
                         <div class="summary__pos">
                             <p>Karma:</p>
-                            <p><span>5<small>20</small></span> zł / dzień</p>
+                            <p class="price"><span class="value">5<small>20</small></span> zł / dzień</p>
                         </div>
                         <div class="summary__pos">
                             <p>Okres:</p>
@@ -65,7 +65,7 @@
                     </div>
                     <div class="total">
                         <p>Suma:</p>
-                        <p class="price"><span>36<small>40</small></span> zł</p>
+                        <p class="price"><span class="value">36<small>40</small></span> zł</p>
                     </div>
                 </div>
                 <div class="cartSummary__content contentShow contentShow--nextdelivery" data="02">
@@ -76,7 +76,7 @@
                     <div class="summary">
                         <div class="summary__pos">
                             <p>Karma:</p>
-                            <p><span>5<small>20</small></span> zł / dzień</p>
+                            <p class="price"><span class="value">5<small>20</small></span> zł / dzień</p>
                         </div>
                         <div class="summary__pos">
                             <p>Okres:</p>
@@ -92,7 +92,7 @@
                     </div>
                     <div class="total">
                         <p>Suma:</p>
-                        <p class="price"><span>36<small>40</small></span> zł</p>
+                        <p class="price"><span class="value">36<small>40</small></span> zł</p>
                     </div>
                 </div>
             </div>
@@ -109,9 +109,11 @@
         </div>
     </section>
     <div class="navbar-clone"></div>
-    <div class="navbar">
-        <a href="#" class="btn btn--back"><span>Wstecz</span></a>
-        <a href="#" class="btn"><span>Przejdź do kasy</span></a>
+    <div class="navbar navbar--wide">
+        <div class="navbar__wrap">
+            <a href="#" class="btn btn--back"><span>Wstecz</span></a>
+            <a href="#" class="btn"><span>Przejdź do kasy</span></a>
+        </div>
     </div>
 </main>
 

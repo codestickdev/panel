@@ -163,6 +163,12 @@ $(document).ready(function(){
         $('.question').not(this).find('.question__answer').slideUp();
         $(this).toggleClass('question--close question--open');
         $(this).find('.question__answer').slideToggle();
+
+        var offsetTop = $(this).offset().top;
+        console.log(offsetTop);
+        $('html, body').animate({
+            scrollTop: offsetTop - 200,
+        }, 500);
     });
 });
 
@@ -287,9 +293,26 @@ $(document).ready(function(){
             max: 50,
         });
 
+        dogsImage.on('click', function(){
+            var insertvalue = $(this).attr('insertvalue');
+            valueInput.val(insertvalue).trigger('keyup');
+        });
         slider.on('slide', function(event, ui){
             var slideValue = ui.value;
             $(valueInput).val(slideValue);
+            $(dogsImage).each(function(){
+                var rangeMin = $(this).attr('rangefrom');
+                var rangeMax = $(this).attr('rangeto');
+
+                if(slideValue >= rangeMin && slideValue <= rangeMax){
+                    $(this).addClass('active');
+                }else{
+                    $(this).removeClass('active');
+                }
+            })
+        });
+        slider.on('slidechange', function(event, ui){
+            var slideValue = ui.value;
             $(dogsImage).each(function(){
                 var rangeMin = $(this).attr('rangefrom');
                 var rangeMax = $(this).attr('rangeto');
@@ -315,4 +338,17 @@ $(document).ready(function(){
             }, 500);
         });
     });  
+});
+
+/* cart value bar cart.php mobile */
+$(document).ready(function(){
+    var bar = $('.cartValue__heading');
+    var closebtn = $('.cartValue__content').find('.closebtn');
+
+    bar.on('click', function(){
+        $(this).parent().parent().toggleClass('cartValue--active');
+    });
+    closebtn.on('click', function(){
+        $(this).parent().parent().parent().removeClass('cartValue--active');
+    });
 });

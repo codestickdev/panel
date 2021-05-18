@@ -317,7 +317,8 @@
                             <div class="summaryAcceptance__wrap">
                                 <div class="singleCheckbox error">
                                     <input type="checkbox" class="checkboxEngine" name="acceptance1"/>
-                                    <label for="acceptance1" error-msg="Pole wymagane.">Akceptuję <a href="#">regulamin serwisu Psibufet</a>.</label>
+                                    <label for="acceptance1">Akceptuję <a href="#">regulamin serwisu Psibufet</a>.</label>
+                                    <div class="singleCheckbox__error" error-msg="Pole wymagane."></div>
                                 </div>
                                 <div class="singleCheckbox">
                                     <input type="checkbox" class="checkboxEngine" name="acceptance2"/>
@@ -433,8 +434,31 @@
         </div>
     </section>
     <section class="cartValue" price="36.72">
-        <div class="cartValue__heading">
-            <p>Wartość koszyka <span class="value">36<small>72</small></span> zł</p>
+        <div class="cartValue__wrap">
+            <div class="cartValue__heading">
+                <p>Wartość koszyka <span class="value">36<small>72</small></span> zł</p>
+            </div>
+            <div class="cartValue__content">
+                <div class="closebtn"></div>
+                <div class="cartValue__items">
+                    <div class="cartValue__pos">
+                        <p>Karma:</p>
+                        <p class="data price"><span class="value">5<small>20</small></span> zł / dzień</p>
+                    </div>
+                    <div class="cartValue__pos">
+                        <p>Okres:</p>
+                        <p class="data">14 dni</p>
+                    </div>
+                    <div class="cartValue__pos">
+                        <p>Dostawa:</p>
+                        <p class="data">0 zł</p>
+                    </div>
+                    <div class="cartValue__pos cartValue__pos--discount">
+                        <p>Rabat:</p>
+                        <p class="data">-50%</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </main>

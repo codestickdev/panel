@@ -1,6 +1,6 @@
 .formWrap{
     max-width: 760px;
-    margin: 0 auto;
+    margin: 0 auto !important;
     padding: 0 20px;
 
     form{
@@ -48,7 +48,7 @@
     .formWrap{
         &__miska{
             display: block;
-            bottom: 80px;
+            bottom: 0;
         }
     }
 }

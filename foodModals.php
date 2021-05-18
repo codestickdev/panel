@@ -279,7 +279,7 @@
             </div>
             <div class="title" style="background-color: #F7BE45"><p>Jagnię wcina<img class="no-lazyload" src="./assets/img/foodTile_icon_jagnie.svg"/></p></div>
             <div class="desc">
-                <p>Kompozycja mięsa z kurczaka, gotowanej marchewki, jabłek i zielonego groszku.</p>
+                <p>Chude mięso z hodowli w Jeleniej Górze uzupełniają brokuły, marchew oraz żurawina.</p>
             </div>
             <div class="usp">
                 <div class="usp__pos">

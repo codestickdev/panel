@@ -343,3 +343,17 @@
         }
     }
 }
+@media (max-width: 360px){
+    .foodTile{
+        &__name{
+            img{
+                max-width: 40px;
+                right: 5px;
+                top: 3px;
+            }
+        }
+        &__content{
+            padding: 17px 20px 30px;
+        }
+    }
+}

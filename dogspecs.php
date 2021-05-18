@@ -216,13 +216,27 @@
                     <span>kg</span>
                 </div>
                 <div class="dogSlide__list">
-                    <div class="dogSlide__dog active" rangefrom="1" rangeto="6"></div>
-                    <div class="dogSlide__dog" rangefrom="7" rangeto="14"></div>
-                    <div class="dogSlide__dog" rangefrom="15" rangeto="22"></div>
-                    <div class="dogSlide__dog" rangefrom="23" rangeto="30"></div>
-                    <div class="dogSlide__dog" rangefrom="31" rangeto="38"></div>
-                    <div class="dogSlide__dog" rangefrom="39" rangeto="46"></div>
-                    <div class="dogSlide__dog" rangefrom="47" rangeto="50"></div>
+                    <div class="dogSlide__dog active" rangefrom="1" rangeto="6" insertvalue="5">
+                        <img src="./assets/img/wagapsa1.svg"/>
+                    </div>
+                    <div class="dogSlide__dog" rangefrom="7" rangeto="14" insertvalue="10">
+                        <img src="./assets/img/wagapsa2.svg"/>
+                    </div>
+                    <div class="dogSlide__dog" rangefrom="15" rangeto="22" insertvalue="15">
+                        <img src="./assets/img/wagapsa3.svg"/>
+                    </div>
+                    <div class="dogSlide__dog" rangefrom="23" rangeto="30" insertvalue="25">
+                        <img src="./assets/img/wagapsa4.svg"/>
+                    </div>
+                    <div class="dogSlide__dog" rangefrom="31" rangeto="38" insertvalue="35">
+                        <img src="./assets/img/wagapsa5.svg"/>
+                    </div>
+                    <div class="dogSlide__dog" rangefrom="39" rangeto="46" insertvalue="42">
+                        <img src="./assets/img/wagapsa6.svg"/>
+                    </div>
+                    <div class="dogSlide__dog" rangefrom="47" rangeto="100" insertvalue="50">
+                        <img src="./assets/img/wagapsa7.svg"/>
+                    </div>
                 </div>
                 <div class="dogSlide__slider">
                     <p class="dogRange__before">0 kg</p>
@@ -240,13 +254,27 @@
                     <span>kg</span>
                 </div>
                 <div class="dogSlide__list">
-                    <div class="dogSlide__dog active" rangefrom="1" rangeto="6"></div>
-                    <div class="dogSlide__dog" rangefrom="7" rangeto="14"></div>
-                    <div class="dogSlide__dog" rangefrom="15" rangeto="22"></div>
-                    <div class="dogSlide__dog" rangefrom="23" rangeto="30"></div>
-                    <div class="dogSlide__dog" rangefrom="31" rangeto="38"></div>
-                    <div class="dogSlide__dog" rangefrom="39" rangeto="46"></div>
-                    <div class="dogSlide__dog" rangefrom="47" rangeto="50"></div>
+                <div class="dogSlide__dog active" rangefrom="1" rangeto="6" insertvalue="5">
+                        <img src="./assets/img/wagapsa1.svg"/>
+                    </div>
+                    <div class="dogSlide__dog" rangefrom="7" rangeto="14" insertvalue="10">
+                        <img src="./assets/img/wagapsa2.svg"/>
+                    </div>
+                    <div class="dogSlide__dog" rangefrom="15" rangeto="22" insertvalue="15">
+                        <img src="./assets/img/wagapsa3.svg"/>
+                    </div>
+                    <div class="dogSlide__dog" rangefrom="23" rangeto="30" insertvalue="25">
+                        <img src="./assets/img/wagapsa4.svg"/>
+                    </div>
+                    <div class="dogSlide__dog" rangefrom="31" rangeto="38" insertvalue="35">
+                        <img src="./assets/img/wagapsa5.svg"/>
+                    </div>
+                    <div class="dogSlide__dog" rangefrom="39" rangeto="46" insertvalue="42">
+                        <img src="./assets/img/wagapsa6.svg"/>
+                    </div>
+                    <div class="dogSlide__dog" rangefrom="47" rangeto="100" insertvalue="50">
+                        <img src="./assets/img/wagapsa7.svg"/>
+                    </div>
                 </div>
                 <div class="dogSlide__slider">
                     <p class="dogRange__before">0 kg</p>

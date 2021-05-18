@@ -29,19 +29,28 @@
     justify-content: center;
     background-color: $greencolor;
     width: 100%;
+    box-shadow: -2px -2px 0px rgba(0, 0, 0, 0.1);
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 10;
     transition: ease .3s;
 
+    &__wrap{
+        display: block;
+        position: relative;
+        width: 100%;
+    }
     &__heading{
         display: flex;
         align-items: center;
         justify-content: center;
         height: 50px;
         width: 100%;
-        position: relative;
+        position: absolute;
+        bottom: 0;
+        background-color: $greencolor;
+        z-index: 3;
 
         &:before,
         &:after{
@@ -55,6 +64,7 @@
             top: 50%;
             transform: translate(0, -50%);
             filter: brightness(20);
+            transition: ease .3s;
         }
         &:before{
             left: 20px;
@@ -89,6 +99,77 @@
         }
     }
 
+    &__content{
+        display: block;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        bottom: -120px;
+        left: 0;
+        box-shadow: 0px -2px 0px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+        transition: ease .6s;
+
+        .closebtn{
+            position: absolute;
+            right: 15px;
+            top: 17px;
+            width: 15px;
+            height: 15px;
+            
+            &:before{
+                content: '';
+                background-image: url('../assets/img/closeBtn_clean.svg');
+                background-size: 10px;
+                width: 10px;
+                height: 10px;
+                position: relative;
+                display: block;
+            }
+        }
+    }
+    &__items{
+        max-width: 190px;
+        margin: 0 auto;
+        padding: 16px 0;
+    }
+    &__pos{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 0 5px;
+
+        p{
+            font-size: 14px;
+            line-height: 16px;
+            color: #000;
+            margin: 0;
+
+            &.price{
+                .value{
+                    position: relative;
+                    padding-right: 10px;
+
+                    small{
+                        font-size: 8px;
+                        position: absolute;
+                        right: 0;
+                        top: -2px;
+                    }
+                }
+            }
+        }
+
+        &--discount{
+            display: none;
+
+            p{
+                font-weight: 600;
+                color: #129D6F;
+            }
+        }
+    }
+
     &--changed{
         .cartValue__heading{
             p{
@@ -99,6 +180,25 @@
                     color: #fff;
                 }
             }
+        }
+    }
+    &--active{
+        .cartValue__heading{
+            z-index: 3;
+            &:before,
+            &:after{
+                transform: rotate(-180deg);
+                top: 40%;
+            }
+        }
+        .cartValue__content{
+            bottom: 50px;
+            z-index: 2;
+        }
+    }
+    &--discount{
+        .cartValue__pos--discount{
+            display: flex;
         }
     }
 }
@@ -458,6 +558,7 @@
             left: 0;
             margin: 0;
             opacity: 0;
+            z-index: 3;
             cursor: pointer;
         }
         .checkbox{
@@ -479,8 +580,8 @@
                     width: 14px;
                     height: 14px;
                     position: absolute;
-                    left: 4px;
-                    top: 4px;
+                    left: 3px;
+                    top: 3px;
                 }
             }
         }
@@ -980,6 +1081,7 @@
 
     .singleCheckbox{
         margin: 0 0 10px;
+        max-width: none;
 
         label{
             font-size: 12px;
@@ -1139,7 +1241,7 @@
 
             &--items{
                 border-bottom: 0;
-                max-width: 325px;
+                max-width: 335px;
                 margin-bottom: 0;
 
                 .alert{
@@ -1187,7 +1289,8 @@
                 }
             }
             .alert{
-                margin-top: 20px;
+                max-width: 240px;
+                margin: 20px auto 0;
             }
         }
         .total{
@@ -1240,7 +1343,7 @@
             padding-bottom: 10px;
             
             .info{
-                max-width: 155px;
+                max-width: 215px;
                 height: 38px;
                 margin: 15px auto;
 
@@ -1293,12 +1396,14 @@
                         font-size: 10px;
                         line-height: 12px;
 
-                        span{
-                            padding-right: 9px;
-
-                            small{
-                                font-size: 7px;
-                                top: -2px;
+                        &.price{
+                            .value{
+                                padding-right: 10px;
+    
+                                small{
+                                    font-size: 8px;
+                                    top: -1px;
+                                }
                             }
                         }
                     }
@@ -1315,7 +1420,7 @@
                         font-size: 12px;
                         line-height: 14px;
                         
-                        span{
+                        .value{
                             padding-right: 10px;
     
                             small{
