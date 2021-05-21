@@ -343,6 +343,7 @@ body {
 .addfield {
   display: flex;
   align-items: center;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
   line-height: 14px;
   color: #000;
@@ -2730,7 +2731,7 @@ body {
 }
 
 .cartSummary__content .summary .alert {
-  max-width: 240px;
+  max-width: 340px;
   margin: 20px auto 0;
 }
 
@@ -3218,11 +3219,11 @@ body {
   }
   .psibufetPlan__karmaInfo .mobileInfo__image {
     display: block;
-    width: 80px;
+    width: 120px;
     margin: 0;
   }
   .psibufetPlan__karmaInfo .mobileInfo__image img {
-    width: 60px;
+    width: 120px;
     max-width: 100%;
     object-fit: contain;
   }
@@ -4349,11 +4350,6 @@ body {
   margin-right: 0;
 }
 
-.dogSelector__option:hover {
-  border-color: #129D6F;
-  border-width: 2px;
-}
-
 .dogSelector__option input {
   position: absolute;
   top: 0;
@@ -4697,15 +4693,21 @@ body {
 
 @media (max-width: 550px) {
   .dogSlide__dog {
+    display: inline-block;
+    width: fit-content;
     margin: 0;
+    max-height: 80px;
     transition: ease .3s;
   }
   .dogSlide__dog img {
     max-width: 100%;
     transform: scale(0.7);
   }
+  .dogSlide__dog.active {
+    margin: 0 5px;
+  }
   .dogSlide__dog.active img {
-    transform: scale(1);
+    transform: scale(1.3);
   }
 }
 
@@ -4880,7 +4882,7 @@ body.noscroll {
 }
 
 .btn--back {
-  height: 42px;
+  height: 46px;
   min-width: 86px;
   background-color: #fff;
   border: 2px solid #ccc;

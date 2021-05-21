@@ -184,11 +184,6 @@
             margin-right: 0;
         }
 
-        &:hover{
-            border-color: $greencolor;
-            border-width: 2px;
-        }
-
         input{
             position: absolute;
             top: 0;
@@ -549,7 +544,10 @@
 @media (max-width: 550px){
     .dogSlide{
         &__dog{
+            display: inline-block;
+            width: fit-content;
             margin: 0;
+            max-height: 80px;
             transition: ease .3s;
 
             img{
@@ -558,8 +556,10 @@
             }
 
             &.active{
+                margin: 0 5px;
+                
                 img{
-                    transform: scale(1);
+                    transform: scale(1.3);
                 }
             }
         }
