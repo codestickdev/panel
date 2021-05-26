@@ -7,7 +7,7 @@
         </div>
     </section>
 
-    <section class="formDog__name formWrap">
+    <section class="formWrap">
         <form>
             <div class="inputWrapper">
                 <div class="inputWrapper__notice" data-errormsg="Podaj imię psa"></div>
