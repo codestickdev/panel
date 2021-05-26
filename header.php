@@ -42,7 +42,8 @@
                     <p>Koszyk</p>
                 </div>
             </div>
-            <div class="panelHeader__progress" style="--bar-width: 100%;">
+            <div class="panelHeader__progress">
+                <div class="panelHeader__status" style="width: 50%;"></div>
                 <div class="pos pos--done"></div>
                 <div class="pos pos--done"></div>
                 <div class="pos pos--done"></div>

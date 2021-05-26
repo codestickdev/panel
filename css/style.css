@@ -151,16 +151,6 @@ body {
   bottom: -13%;
 }
 
-.panelHeader__progress:before {
-  content: '';
-  width: var(--bar-width);
-  height: 4px;
-  background-color: #F15748;
-  position: absolute;
-  bottom: 6px;
-  z-index: 1;
-}
-
 .panelHeader__progress .pos {
   width: 14px;
   height: 14px;
@@ -178,6 +168,13 @@ body {
 .panelHeader__progress .pos--done {
   border-color: #F15748;
   background-color: #F15748;
+}
+
+.panelHeader__status {
+  position: absolute;
+  bottom: 6px;
+  height: 4px;
+  background: #F15748;
 }
 
 @media (max-width: 767px) {
@@ -202,13 +199,13 @@ body {
   .panelHeader__progress {
     bottom: -10%;
   }
-  .panelHeader__progress:before {
-    height: 3px;
-    bottom: 4px;
-  }
   .panelHeader__progress .pos {
     width: 10px;
     height: 10px;
+  }
+  .panelHeader__status {
+    bottom: 4px;
+    height: 3px;
   }
 }
 
@@ -224,8 +221,17 @@ body {
   margin: 0 auto;
 }
 
+.inputWrapper__delete {
+  display: none;
+}
+
 .inputWrapper__notice {
   display: none;
+}
+
+.inputWrapper--error {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .inputWrapper--error .inputWrapper__notice {
@@ -240,12 +246,12 @@ body {
   height: 18px;
   position: absolute;
   right: -35px;
-  top: 50%;
+  top: 30%;
   transform: translate(0, -50%);
 }
 
 .inputWrapper--error .inputWrapper__notice:after {
-  content: attr(errormsg);
+  content: attr(data-errormsg);
   font-size: 14px;
   line-height: 16px;
   font-weight: 600;
@@ -253,20 +259,101 @@ body {
   margin: 0;
   position: absolute;
   left: 110%;
-  top: 50%;
+  top: 30%;
   transform: translate(0, -50%);
   min-width: 200px;
 }
 
 .inputWrapper--error .input {
   border: 2px solid #F15748;
+  margin: 0 0 20px;
+}
+
+.inputWrapper--errorBottom {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.inputWrapper--errorBottom .inputWrapper__notice {
+  display: flex;
+  max-width: fit-content;
+  margin: 0 auto 10px;
+}
+
+.inputWrapper--errorBottom .inputWrapper__notice:before {
+  content: '';
+  background-image: url("../assets/img/inputError_alert.svg");
+  background-size: 20px;
+  width: 20px;
+  height: 18px;
+  display: inline-block;
+  left: 0;
+  top: -1px;
+  position: relative;
+  margin-right: 5px;
+}
+
+.inputWrapper--errorBottom .inputWrapper__notice:after {
+  content: attr(data-errormsg);
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 600;
+  color: #F15748;
+  margin: 0;
+  position: relative;
+  left: 0;
+  top: 0;
+  transform: none;
+  min-width: 0;
+}
+
+.inputWrapper--errorBottom .input {
+  border: 2px solid #F15748;
+  margin: 0 0 10px;
+}
+
+.inputWrapper--delete {
+  position: relative;
+}
+
+.inputWrapper--delete .inputWrapper__delete {
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 12px;
+  cursor: pointer;
+  transition: ease .3s;
+}
+
+.inputWrapper--delete .inputWrapper__delete:hover {
+  opacity: .8;
+}
+
+.inputWrapper--delete .inputWrapper__delete:after {
+  content: '-';
+  color: #fff;
+  font-size: 22px;
+  line-height: 13px;
+  font-family: auto;
+  font-weight: 100;
+  width: 18px;
+  height: 18px;
+  background-color: #F15748;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 991px) {
   .inputWrapper--error .inputWrapper__notice {
     display: flex;
     max-width: fit-content;
-    margin: 0 auto 5px;
+    margin: 0 auto 10px;
   }
   .inputWrapper--error .inputWrapper__notice:before {
     display: inline-block;
@@ -283,16 +370,19 @@ body {
     transform: none;
     min-width: 0;
   }
+  .inputWrapper--error .input {
+    margin: 0 0 10px;
+  }
 }
 
 @media (max-width: 767px) {
-  .inputWrapper--error .inputWrapper__notice:before {
+  .inputWrapper--error .inputWrapper__notice:before, .inputWrapper--errorBottom .inputWrapper__notice:before {
     background-size: 11px;
     width: 11px;
     height: 11px;
     margin-right: 3px;
   }
-  .inputWrapper--error .inputWrapper__notice:after {
+  .inputWrapper--error .inputWrapper__notice:after, .inputWrapper--errorBottom .inputWrapper__notice:after {
     font-size: 8px;
     line-height: 9px;
   }
@@ -4412,7 +4502,7 @@ body {
   font-size: 14px;
   line-height: 16px;
   margin: 0 auto;
-  max-width: 300px;
+  max-width: calc(100% - 30px);
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
 }
@@ -4530,7 +4620,7 @@ body {
 }
 
 .dogSlide__input--error:after {
-  content: attr(errormsg);
+  content: attr(data-errormsg);
   font-size: 14px;
   line-height: 16px;
   font-weight: 600;
@@ -4680,7 +4770,7 @@ body {
     margin-right: 3px;
   }
   .dogSlide--error .dogSlide__notice:after {
-    content: attr(errormsg);
+    content: attr(data-errormsg);
     font-size: 10px;
     line-height: 12px;
     font-weight: 600;
@@ -5095,7 +5185,7 @@ body.noscroll {
 }
 
 .panel--mainform, .panel--mainform-dog {
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 61px);
   position: relative;
   padding-bottom: 130px;
 }
@@ -5272,5 +5362,78 @@ body.noscroll {
     margin-right: 20px !important;
     padding: 0 10px !important;
   }
+}
+
+/* React select style */
+.autocomplete__control {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  height: 40px;
+}
+
+.autocomplete__value-container {
+  padding: 0 0 0 20px;
+}
+
+.autocomplete__single-value {
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+}
+
+.autocomplete__indicator-separator {
+  display: none;
+}
+
+.autocomplete__indicator {
+  padding: 0;
+  position: absolute;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.autocomplete__indicator:after {
+  content: '';
+  background-image: url("../../assets/img/arrow_red.svg");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  width: 16px;
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  display: block;
+}
+
+.autocomplete__indicator svg {
+  display: none;
+}
+
+.autocomplete__menu {
+  margin: 0;
+  border: 1px solid #ccc;
+  border-top: 0;
+  border-radius: 0;
+  top: calc(100% - 1px);
+  box-shadow: 4px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.autocomplete__menu-list {
+  padding: 0;
+}
+
+.autocomplete__option {
+  padding: 8px 0 8px 20px;
+  font-size: 14px;
+  transition: ease .3s;
+}
+
+.autocomplete__option--is-focused, .autocomplete__option--is-selected {
+  background-color: #F15748;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

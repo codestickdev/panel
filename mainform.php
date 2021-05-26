@@ -13,11 +13,11 @@
     <section class="formClient formWrap">
         <form>
             <div class="inputWrapper inputWrapper--error">
-                <div class="inputWrapper__notice" errormsg="Podaj swoje imię"></div>
+                <div class="inputWrapper__notice" data-errormsg="Podaj swoje imię"></div>
                 <input type="text" class="input input--text" placeholder="Twoje imię"/>
             </div>
-            <div class="inputWrapper">
-                <div class="inputWrapper__notice" errormsg="Podaj adres e-mail"></div>
+            <div class="inputWrapper inputWrapper--errorBottom">
+                <div class="inputWrapper__notice" data-errormsg="Podaj adres e-mail"></div>
                 <input type="email" class="input input--text" placeholder="Adres e-mail"/>
             </div>
             <p class="formInfo">Podając dane w powyższym formularzu, zgadzasz się na otrzymywanie od nas informacji handlowych. Administratorem Twoich danych będzie Feedwell sp. z o. o. siedzibą w Warszawie i będą one wykorzystywane w celu wysyłki tychże informacji. Zgodę tą możesz w każdej chwili wycofać. Informacje o Twoich prawach z tym związanych i więcej szczegółów znajdziesz w w <a href="#">Polityce Prywatności</a>.</p>

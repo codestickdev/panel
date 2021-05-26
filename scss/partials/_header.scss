@@ -51,16 +51,6 @@
         position: absolute;
         bottom: -13%;
 
-        &:before{
-            content: '';
-            width: var(--bar-width);
-            height: 4px;
-            background-color: $pbred;
-            position: absolute;
-            bottom: 6px;
-            z-index: 1;
-        }
-
         .pos{
             width: 14px;
             height: 14px;
@@ -78,6 +68,12 @@
                 background-color: $pbred;
             }
         }
+    }
+    &__status{
+        position: absolute;
+        bottom: 6px;
+        height: 4px;
+        background: $pbred;
     }
 }
 @media (max-width: 767px){
@@ -105,15 +101,15 @@
         }
         &__progress{
             bottom: -10%;
-
-            &:before{
-                height: 3px;
-                bottom: 4px;
-            }
+            
             .pos{
                 width: 10px;
                 height: 10px;
             }
+        }
+        &__status{
+            bottom: 4px;
+            height: 3px;
         }
     }
 }

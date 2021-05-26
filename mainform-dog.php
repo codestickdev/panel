@@ -10,8 +10,14 @@
     <section class="formDog__name formWrap">
         <form>
             <div class="inputWrapper">
-                <div class="inputWrapper__notice" errormsg="Podaj imię psa"></div>
+                <div class="inputWrapper__notice" data-errormsg="Podaj imię psa"></div>
                 <input type="text" class="input input--text" placeholder="Imię psa"/>
+                <div class="inputWrapper__delete"></div>
+            </div>
+            <div class="inputWrapper inputWrapper--delete">
+                <div class="inputWrapper__notice" data-errormsg="Podaj imię psa"></div>
+                <input type="text" class="input input--text" placeholder="Imię psa"/>
+                <div class="inputWrapper__delete"></div>
             </div>
             <div class="addfield">Dodaj kolejnego psa</div>
         </form>

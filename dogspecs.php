@@ -247,8 +247,8 @@
             </div>
             <div class="dogSlide dogSlide--error">
                 <h2 class="formDog__name">Marcel</h2>
-                <div class="dogSlide__notice" errormsg="Podaj wagę swojego psa."></div>
-                <div class="dogSlide__input dogSlide__input--error" errormsg="Podaj wagę swojego psa.">
+                <div class="dogSlide__notice" data-errormsg="Podaj wagę swojego psa."></div>
+                <div class="dogSlide__input dogSlide__input--error" data-errormsg="Podaj wagę swojego psa.">
                     <span>Waży</span>
                     <input type="text" class="input input--text input--small" value="1" />
                     <span>kg</span>

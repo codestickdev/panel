@@ -243,7 +243,7 @@
             font-size: 14px;
             line-height: 16px;
             margin: 0 auto;
-            max-width: 300px;
+            max-width: calc(100% - 30px);
             color: $primarycolor;
             text-align: center;
         }
@@ -373,7 +373,7 @@
                 transform: translate(0, -50%);
             }
             &:after{
-                content: attr(errormsg);
+                content: attr(data-errormsg);
                 font-size: 14px;
                 line-height: 16px;
                 font-weight: 600;
@@ -528,7 +528,7 @@
                     margin-right: 3px;
                 }
                 &:after{
-                    content: attr(errormsg);
+                    content: attr(data-errormsg);
                     font-size: 10px;
                     line-height: 12px;
                     font-weight: 600;
