@@ -195,6 +195,15 @@
     box-sizing: border-box;
     transition: ease .3s;
 
+    &[type="number"]{
+        -moz-appearance: textfield;
+    }
+    &[type="number"]::-webkit-outer-spin-button,
+    &[type="number"]::-webkit-inner-spin-button{
+        display: none;
+        -webkit-appearance: none;
+        margin: 0;
+    }
     &::placeholder{
         color: $primarycolor;
     }
@@ -383,7 +392,6 @@
         border: 1px solid rgba(0, 0, 0, 0.2);
         box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
         position: relative;
-        margin-bottom: 10px;
         transition: ease .3s;
 
         input{
@@ -419,6 +427,70 @@
             &.checked{
                 background-color: $pbred;
                 border-color: $pbred;
+            }
+        }
+    }
+    &__notice{
+        display: none;
+        position: absolute;
+        right: calc(-100% + 40px);
+        top: 50%;
+        transform: translate(0, -50%);
+
+        p{
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 600;
+            margin: 0;
+            color: $pbred;
+            position: relative;
+
+            &:before{
+                content: '';
+                background-image: url('../assets/img/inputError_alert.svg');
+                background-size: 20px;
+                width: 20px;
+                height: 18px;
+                position: absolute;
+                left: -35px;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+    &--error{
+        position: relative;
+
+        .groupCheckbox__notice{
+            display: block;
+        }
+    }
+}
+@media (max-width: 991px){
+    .groupCheckbox{
+        &--error{
+            padding-bottom: 50px;
+        }
+        &__notice{
+            right: -30px;
+            left: 0;
+            margin: 0 auto;
+            bottom: 20px;
+            top: auto;
+            max-width: fit-content;
+            height: fit-content;
+            transform: none;
+
+            p{
+                font-size: 12px;
+                line-height: 14px;
+
+                &:before{
+                    background-size: 16px;
+                    width: 16px;
+                    height: 14px;
+                    left: -25px;
+                }
             }
         }
     }
@@ -516,6 +588,13 @@
                         height: 16px;
                     }
                 }
+            }
+        }
+        &--required{
+            border-color: $pbred;
+            
+            .checkField{
+                border-color: $pbred;
             }
         }
     }

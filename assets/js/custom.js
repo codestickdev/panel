@@ -1,3 +1,9 @@
+/* Prealoader disable */
+$(document).ready(function(){
+    setTimeout(function(){
+        $('.pageLoader').addClass('pageLoader--disable');
+    }, 500);
+});
 /* Navbar clone height */
 $(document).ready(function(){
     var height = $('.navbar').outerHeight();
@@ -129,7 +135,6 @@ $(document).ready(function(){
     });
 });
 
-
 /* Cart value change animation */
 $(document).ready(function(){
     var bar = $('.cartValue');
@@ -184,7 +189,6 @@ $(document).ready(function(){
 
 /* Food modal */
 $(document).ready(function(){
-    /* Food Modal */
     
     var modal = $('.foodModal');
     var closeBtn = $('.foodModal').find('.closeFoodModal');

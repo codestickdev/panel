@@ -63,6 +63,29 @@ body{
     }
 }
 
+.pageLoader{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    transition: ease .3s;
+
+    img{
+        max-width: 160px;
+    }
+
+    &--disable{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
 .devdivider{
     width: 100%;
     border: 2px solid #b1b1b1;
@@ -673,68 +696,100 @@ body{
 
 .autocomplete{
     &__control{
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-radius: 0;
-        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
-        height: 40px;
+        background-color: #fff !important;
+        border: 1px solid #ccc !important;
+        border-radius: 0 !important;
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1) !important;
+        height: 40px !important;
     }
     &__value-container{
-        padding: 0 0 0 20px;
+        padding: 0 0 0 20px !important;
     }
     &__single-value{
-        font-size: 14px;
-        color: #000;
-        margin: 0;
+        font-size: 14px !important;
+        color: #000 !important;
+        margin: 0 !important;
     }
     &__indicator-separator{
-        display: none;
+        display: none !important;
     }
     &__indicator{
-        padding: 0;
-        position: absolute;
-        right: 10px;
-        width: 20px;
-        height: 20px;
+        padding: 0 !important;
+        position: absolute !important;
+        right: 10px !important;
+        width: 20px !important;
+        height: 20px !important;
 
         &:after{
             content: '';
-            background-image: url('../../assets/img/arrow_red.svg');
-            background-repeat: no-repeat;
-            background-size: 16px;
-            width: 16px;
-            height: 12px;
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translate(0, -50%);
-            display: block;
+            background-image: url('../../assets/img/arrow_red.svg') !important;
+            background-repeat: no-repeat !important;
+            background-size: 16px !important;
+            width: 16px !important;
+            height: 12px !important;
+            position: absolute !important;
+            top: 50% !important;
+            right: 0 !important;
+            transform: translate(0, -50%) !important;
+            display: block !important;
         }
 
         svg{
-            display: none;
+            display: none !important;
         }
     }
     &__menu{
-        margin: 0;
-        border: 1px solid #ccc;
-        border-top: 0;
-        border-radius: 0;
-        top: calc(100% - 1px);
-        box-shadow: 4px 5px 0px rgba(0, 0, 0, 0.1);
+        margin: 0 !important;
+        border: 1px solid #ccc !important;
+        border-top: 0 !important;
+        border-radius: 0 !important;
+        top: calc(100% - 1px) !important;
+        box-shadow: 4px 5px 0px rgba(0, 0, 0, 0.1) !important;
     }
     &__menu-list{
-        padding: 0;
+        padding: 0 !important;
     }
     &__option{
-        padding: 8px 0 8px 20px;
-        font-size: 14px;
-        transition: ease .3s;
+        padding: 8px 0 8px 20px !important;
+        font-size: 14px !important;
+        transition: ease .3s !important;
 
         &--is-focused,
         &--is-selected{
-            background-color: $pbred;
-            color: #fff;
+            background-color: $pbred !important;
+            color: #fff !important;
+        }
+    }
+}
+
+/* Load page */
+.loadPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh - 65px);
+
+    &__heading{
+        margin: 70px 0;
+
+        h2{
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 35px;
+            line-height: 40px;
+            font-weight: 400;
+            color: #000;
+            text-align: center;
+            margin: 0;
+        }
+    }
+    &__loader{
+        text-align: center;
+
+        img{
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
         }
     }
 }

@@ -212,7 +212,7 @@
                 <h2 class="formDog__name">Reksio</h2>
                 <div class="dogSlide__input">
                     <span>Waży</span>
-                    <input type="text" class="input input--text input--small" value="1" />
+                    <input type="number" class="input input--text input--small" value="1" />
                     <span>kg</span>
                 </div>
                 <div class="dogSlide__list">
@@ -594,7 +594,7 @@
         <form>
             <div class="dogHealth">
                 <h2 class="formDog__name">Reksio</h2>
-                <div class="groupCheckbox">
+                <div class="groupCheckbox groupCheckbox--error">
                     <div class="groupCheckbox__option">
                         <input type="radio" class="option radioEngine" name="health_reksio" />
                         <label>Nie ma problemów</label>
@@ -603,94 +603,97 @@
                         <input type="radio" class="option radioEngine" name="health_reksio" />
                         <label>Cierpi na</label>
                     </div>
+                    <div class="groupCheckbox__notice">
+                        <p>Wybierz problemy zdrowotne</p>
+                    </div>
                 </div>
                 <div class="groupOptions">
-                    <div class="groupOptions__option groupOptions__option--bad">
+                    <div class="groupOptions__option groupOptions__option--required">
                         <div class="checkField"></div>
                         <input type="checkbox" class="checkbox checkboxEngine" name="healthOption_reksio_1" />
                         <p>Zapalenie trzuski</p>
                     </div>
-                    <div class="groupOptions__option">
+                    <div class="groupOptions__option groupOptions__option--required">
                         <div class="checkField"></div>
                         <input type="checkbox" class="checkbox checkboxEngine" name="healthOption_reksio_2" />
                         <p>Cukrzyca</p>
                     </div>
-                    <div class="groupOptions__option">
+                    <div class="groupOptions__option groupOptions__option--required">
                         <div class="checkField"></div>
                         <input type="checkbox" class="checkbox checkboxEngine" name="healthOption_reksio_3" />
                         <p>Skóra i sierść</p>
                     </div>
-                    <div class="groupOptions__option groupOptions__option--bad">
+                    <div class="groupOptions__option groupOptions__option--required groupOptions__option--bad">
                         <div class="checkField"></div>
                         <input type="checkbox" class="checkbox checkboxEngine" name="healthOption_reksio_4" />
                         <p>Wątroba</p>
                     </div>
-                    <div class="groupOptions__option">
+                    <div class="groupOptions__option groupOptions__option--required">
                         <div class="checkField"></div>
                         <input type="checkbox" class="checkbox checkboxEngine" name="healthOption_reksio_5" />
                         <p>Stawy</p>
                     </div>
-                    <div class="groupOptions__option">
+                    <div class="groupOptions__option groupOptions__option--required">
                         <div class="checkField"></div>
                         <input type="checkbox" class="checkbox checkboxEngine" name="healthOption_reksio_6" />
                         <p>Nowotwór</p>
                     </div>
-                    <div class="groupOptions__option">
+                    <div class="groupOptions__option groupOptions__option--required">
                         <div class="checkField"></div>
                         <input type="checkbox" class="checkbox checkboxEngine" name="healthOption_reksio_7" />
                         <p>Nadwaga / otyłość</p>
                     </div>
-                    <div class="groupOptions__option">
+                    <div class="groupOptions__option groupOptions__option--required">
                         <div class="checkField"></div>
                         <input type="checkbox" class="checkbox checkboxEngine" name="healthOption_reksio_8" />
                         <p>Wrażliwy żołądek</p>
                     </div>
-                    <div class="groupOptions__option">
+                    <div class="groupOptions__option groupOptions__option--required">
                         <div class="checkField"></div>
                         <input type="checkbox" class="checkbox checkboxEngine" name="healthOption_reksio_9" />
                         <p>Serce</p>
                     </div>
-                    <div class="groupOptions__option">
+                    <div class="groupOptions__option groupOptions__option--required">
                         <div class="checkField"></div>
                         <input type="checkbox" class="checkbox checkboxEngine" name="healthOption_reksio_10" />
                         <p>Padaczka</p>
                     </div>
-                    <div class="groupOptions__option">
+                    <div class="groupOptions__option groupOptions__option--required">
                         <div class="checkField"></div>
                         <input type="checkbox" class="checkbox checkboxEngine" name="healthOption_reksio_11" />
                         <p>Serce</p>
                     </div>
-                    <div class="groupOptions__option groupOptions__option--bad">
+                    <div class="groupOptions__option groupOptions__option--required groupOptions__option--bad">
                         <div class="checkField"></div>
                         <input type="checkbox" class="checkbox checkboxEngine" name="healthOption_reksio_12" />
                         <p>Nieswoiste zapalenie jelit (IBD)</p>
                     </div>
-                    <div class="groupOptions__option groupOptions__option--bad">
+                    <div class="groupOptions__option groupOptions__option--required groupOptions__option--bad">
                         <div class="checkField"></div>
                         <input type="checkbox" class="checkbox checkboxEngine" name="healthOption_reksio_13" />
                         <p>Nerki</p>
                     </div>
-                    <div class="groupOptions__option groupOptions__option--bad">
+                    <div class="groupOptions__option groupOptions__option--required groupOptions__option--bad">
                         <div class="checkField"></div>
                         <input type="checkbox" class="checkbox checkboxEngine" name="healthOption_reksio_14" />
                         <p>Kamienie nerkowe</p>
                     </div>
-                    <div class="groupOptions__option">
+                    <div class="groupOptions__option groupOptions__option--required">
                         <div class="checkField"></div>
                         <input type="checkbox" class="checkbox checkboxEngine" name="healthOption_reksio_15" />
                         <p>Nietolerancja pokarmowa</p>
                     </div>
-                    <div class="groupOptions__option">
+                    <div class="groupOptions__option groupOptions__option--required">
                         <div class="checkField"></div>
                         <input type="checkbox" class="checkbox checkboxEngine" name="healthOption_reksio_16" />
                         <p>Rekonwalescencja</p>
                     </div>
-                    <div class="groupOptions__option">
+                    <div class="groupOptions__option groupOptions__option--required">
                         <div class="checkField"></div>
                         <input type="checkbox" class="checkbox checkboxEngine" name="healthOption_reksio_17" />
                         <p>Zaburzenia wchłaniania jelitowego</p>
                     </div>
-                    <div class="groupOptions__option groupOptions__option--bad">
+                    <div class="groupOptions__option groupOptions__option--required groupOptions__option--bad">
                         <div class="checkField"></div>
                         <input type="checkbox" class="checkbox checkboxEngine" name="healthOption_reksio_18" />
                         <p>Hiperlipidemia</p>
