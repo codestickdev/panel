@@ -854,6 +854,33 @@
     max-width: 420px;
     margin: 0 auto 20px;
 
+    &>h3{
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        line-height: 22px;
+        font-family: 'Bebas Neue', sans-serif;
+        margin: 0 0 12px;
+        font-weight: 300;
+        text-align: left;
+
+        img{
+            margin-left: 5px;
+            max-width: 24px;
+            margin-top: -4px;
+
+            &:first-of-type{
+                margin-left: 8px;
+            }
+        }
+    }
+    &>p{
+        font-size: 12px;
+        line-height: 14px;
+        color: $primarycolor;
+        margin: 0 0 10px;
+        text-align: left;
+    }
     &__option{
         width: 100%;
         margin: 0 0 20px;
@@ -1007,11 +1034,17 @@
         }
         
         p{
+            display: flex;
+            align-items: center;
             font-size: 10px;
             line-height: 12px;
             color: #000;
             margin: 0;
             text-align: left;
+
+            img{
+                margin-left: 5px;
+            }
         }
     }
 }
@@ -1076,7 +1109,13 @@
     margin: 20px auto;
 
     &__wrap{
-        margin-left: 10px;
+
+        &>p{
+            font-size: 12px;
+            line-height: 14px;
+            color: $primarycolor;
+            text-align: left;
+        }
     }
 
     .singleCheckbox{
@@ -1126,7 +1165,7 @@
     color: $primarycolor;
     max-width: 420px;
     margin: 0 auto 20px;
-    text-align: center;
+    text-align: left;
 
     &:first-of-type{
         margin-top: 20px;
@@ -1134,6 +1173,12 @@
 
     &:last-of-type{
         margin: 0 auto;
+    }
+
+    &--bold{
+        font-size: 12px;
+        line-height: 14px;
+        color: #000;
     }
 }
 @media (max-width: 530px){

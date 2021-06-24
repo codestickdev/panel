@@ -2472,6 +2472,35 @@ body {
   margin: 0 auto 20px;
 }
 
+.paymentSelect > h3 {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: 'Bebas Neue', sans-serif;
+  margin: 0 0 12px;
+  font-weight: 300;
+  text-align: left;
+}
+
+.paymentSelect > h3 img {
+  margin-left: 5px;
+  max-width: 24px;
+  margin-top: -4px;
+}
+
+.paymentSelect > h3 img:first-of-type {
+  margin-left: 8px;
+}
+
+.paymentSelect > p {
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0 0 10px;
+  text-align: left;
+}
+
 .paymentSelect__option {
   width: 100%;
   margin: 0 0 20px;
@@ -2616,11 +2645,17 @@ body {
 }
 
 .paymentFeatures__position p {
+  display: flex;
+  align-items: center;
   font-size: 10px;
   line-height: 12px;
   color: #000;
   margin: 0;
   text-align: left;
+}
+
+.paymentFeatures__position p img {
+  margin-left: 5px;
 }
 
 .summaryInfo {
@@ -2681,8 +2716,11 @@ body {
   margin: 20px auto;
 }
 
-.summaryAcceptance__wrap {
-  margin-left: 10px;
+.summaryAcceptance__wrap > p {
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: left;
 }
 
 .summaryAcceptance .singleCheckbox {
@@ -2728,7 +2766,7 @@ body {
   color: rgba(0, 0, 0, 0.5);
   max-width: 420px;
   margin: 0 auto 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .summaryText:first-of-type {
@@ -2737,6 +2775,12 @@ body {
 
 .summaryText:last-of-type {
   margin: 0 auto;
+}
+
+.summaryText--bold {
+  font-size: 12px;
+  line-height: 14px;
+  color: #000;
 }
 
 @media (max-width: 530px) {

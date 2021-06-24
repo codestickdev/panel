@@ -5,7 +5,7 @@
         <div class="cart__column">
             <div class="cart__accordion accordion">
                 <div class="accordion__heading">
-                    <h2>Dane osobowe</h2>
+                    <h2>Twoje konto</h2>
                 </div>
                 <div class="accordion__contentWrap">
                     <div class="accordion__content">
@@ -13,6 +13,7 @@
                         <input type="text" class="input input--text" placeholder="Nazwisko"/>
                         <input type="email" class="input input--text" placeholder="Adres e-mail"/>
                         <input type="phone" class="input input--text" placeholder="Telefon"/>
+                        <input type="password" class="input input--password" placeholder="Hasło"/>
                         <div class="singleCheckbox">
                             <input type="checkbox" class="checkboxEngine" name="daneOsobowecheckbox"/>
                             <label for="daneOsobowecheckbox">Chcę otrzymać fakturę</label>
@@ -25,19 +26,6 @@
                             <input type="text" class="input input--text" placeholder="Kod pocztowy"/>
                             <input type="text" class="input input--text" placeholder="Miasto"/>
                         </div>
-                        <div class="btn btn--nextStepForm btn--arrowDown"><span>Dalej</span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="cart__accordion accordion">
-                <div class="accordion__heading">
-                    <h2>Panel klienta</h2>
-                </div>
-                <div class="accordion__contentWrap">
-                    <div class="accordion__content">
-                        <p class="subtext">Kolejne zamówienia będą realizowane z poziomu Panelu Klienta.<br/>Utwórz swoje hasło logowania.</p>
-                        <input type="password" class="input input--password" placeholder="Hasło"/>
-                        <p class="small">Hasło musi zawierać minimum 8 znaków.</p>
                         <div class="btn btn--nextStepForm btn--arrowDown"><span>Dalej</span></div>
                     </div>
                 </div>
@@ -192,87 +180,27 @@
                     <h2>Płatność</h2>
                 </div>
                 <div class="accordion__contentWrap">
-                    <div class="switchTabs">
-                        <div class="tab selected" data="01">
-                            <h4>Cykliczna <span>10 zł taniej</span></h4>
-                        </div>
-                        <div class="tab" data="02" priceadd="10.00">
-                            <h4>Jednorazowa</h4>
-                        </div>
-                    </div>
                     <div class="accordion__content accordion__content--switch contentShow ready visible" data="01">
-                        <p class="subtext">Zaosczędź czas oraz pieniądze i nie myśl o obowiązkach.</p>
                         <div class="paymentSelect">
+                            <h3>Cykliczna płatność kartą
+                                <img src="./assets/img/mastercard_logo.svg"/>
+                                <img src="./assets/img/visa_logo.svg"/>
+                            </h3>
+                            <p>Podepnij kartę, aby zaoszczędzić swój czas i nie myśleć o obowiązkach.</p>
                             <div class="paymentSelect__option">
-                                <div class="wrap">
-                                    <input type="radio" class="radioEngine" name="paymentSelect"/>
-                                    <div class="checkbox">
-                                        <div></div>
-                                    </div>
-                                    <div class="content">
-                                        <h3>Płatność kartą<img src="assets/img/stripe_logo.svg"/></h3>
-                                    </div>
-                                </div>
                                 <div class="paymentField">
                                     <input type="number" class="cardNumber" placeholder="Numer karty"/>
                                     <input type="number" class="cardExpire" placeholder="MM/RR" maxlength="5"/>
                                     <input type="number" class="cardCVC" placeholder="Kod CVC" maxlength="3"/>
                                 </div>
                             </div>
-                            <div class="paymentSelect__option">
-                                <div class="wrap">
-                                    <input type="radio" class="radioEngine" name="paymentSelect"/>
-                                    <div class="checkbox">
-                                        <div></div>
-                                    </div>
-                                    <div class="content">
-                                        <h3>Google Pay<img src="assets/img/gpay_logo.svg"/></h3>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="paymentFeatures">
                             <div class="paymentFeatures__position">
-                                <p>Anuluj w dowolnym momencie bez opłat.</p>
+                                <p>Bez zobowiązań: anuluj w dowolnym momencie bez opłat.</p>
                             </div>
                             <div class="paymentFeatures__position">
-                                <p>Dostosuj dostawy i smaki pod Twoje potrzeby.</p>
-                            </div>
-                        </div>
-                        <div class="btn btn--nextStepForm btn--arrowDown"><span>Dalej</span></div>
-                    </div>
-                    <div class="accordion__content accordion__content--switch contentShow" data="02">
-                        <p class="subtext">Zaosczędź czas oraz pieniądze i nie myśl o obowiązkach.</p>
-                        <div class="paymentSelect">
-                            <div class="paymentSelect__option">
-                                <div class="wrap">
-                                    <input type="radio" class="radioEngine" name="paymentSelect"/>
-                                    <div class="checkbox">
-                                        <div></div>
-                                    </div>
-                                    <div class="content">
-                                        <h3>Przedpłata<img src="assets/img/p24_logo.svg"/></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="paymentSelect__option">
-                                <div class="wrap">
-                                    <input type="radio" class="radioEngine" name="paymentSelect"/>
-                                    <div class="checkbox">
-                                        <div></div>
-                                    </div>
-                                    <div class="content">
-                                        <h3>BLIK<img src="assets/img/blik_logo.svg"/></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="paymentFeatures">
-                            <div class="paymentFeatures__position">
-                                <p>Anuluj w dowolnym momencie bez opłat.</p>
-                            </div>
-                            <div class="paymentFeatures__position">
-                                <p>Dostosuj dostawy i smaki pod Twoje potrzeby.</p>
+                                <p>Bezpieczny proces płatności wspiera.<img src="./assets/img/stripe_logo.svg"/></p>
                             </div>
                         </div>
                         <div class="btn btn--nextStepForm btn--arrowDown"><span>Dalej</span></div>
@@ -310,28 +238,17 @@
                             </div>
                         </div>
                         <div class="summaryAcceptance">
-                            <div class="singleCheckbox">
-                                <input type="checkbox" class="checkboxEngine" name="selectAll"/>
-                                <label for="selectAll"><b>Zaznacz wszystkie</b></label>
-                            </div>
                             <div class="summaryAcceptance__wrap">
                                 <div class="singleCheckbox error">
                                     <input type="checkbox" class="checkboxEngine" name="acceptance1"/>
-                                    <label for="acceptance1">Akceptuję <a href="#">regulamin serwisu Psibufet</a>.</label>
+                                    <label for="acceptance1">Akceptuję <a href="#">regulamin serwisu Psibufet</a>*.</label>
                                     <div class="singleCheckbox__error" error-msg="Pole wymagane."></div>
                                 </div>
-                                <div class="singleCheckbox">
-                                    <input type="checkbox" class="checkboxEngine" name="acceptance2"/>
-                                    <label for="acceptance2">Wyrażam zgodę na otrzymywanie ofert PsiBufet drogą elektroniczną.</label>
-                                </div>
-                                <div class="singleCheckbox">
-                                    <input type="checkbox" class="checkboxEngine" name="acceptance3"/>
-                                    <label for="acceptance3">Wyrażam zgodę na otrzymywanie ofert PsiBufet drogą elektroniczną.</label>
-                                </div>
+                                <p class="info">*Pole wymagane</p>
                             </div>
                         </div>
                         <div class="btn btn--nextStepForm"><span>Kup i zapłać</span></div>
-                        <p class="summaryText">Składając zamówienie wyrażasz zgodę na prowadzenie cyklicznych dostaw karmy PsiBufet w formie subskrypcji. Przypomnienie o kolejnych dostawach otrzymasz drogą elektroniczną. Planem żywienia i dostawami możesz wygodnie zarządzać z Panelu Klienta.</p>
+                        <p class="summaryText summaryText--bold">Składając zamówienie wyrażasz zgodę na prowadzenie cyklicznych dostaw karmy PsiBufet w formie subskrypcji. Przypomnienie o kolejnych dostawach otrzymasz drogą elektroniczną. Planem żywienia i dostawami możesz wygodnie zarządzać z Panelu Klienta.</p>
                         <p class="summaryText">Administratorem Twoich danych osobowych przetwarzanych w związku z udzielanymi zgodami jest Feedwell sp. z o.o. z siedzibą w Warszawie i będą one przetwarzane w celu prowadzenia komunikacji marketingowej za pośrednictwem wybranych kanałów. Zgody te możesz w każdej chwili wycofać. Informacje o Twoich prawach z tym związanych i więcej szczegółów znajdziesz w Polityce Prywatności.</p>
                     </div>
                 </div>
