@@ -49,8 +49,6 @@
                     </div>
                     <div class="foodTile__gallery">
                         <img src="./assets/img/foodTile_image_wolowina.png"/>
-                        <img src="./assets/img/foodTile_image_wolowina.png"/>
-                        <img src="./assets/img/foodTile_image_wolowina.png"/>
                     </div>
                     <div class="foodTile__name" style="background-color: #4769B2;">
                         <h3>Wołowe Love</h3>
@@ -73,15 +71,13 @@
                     </div>
                     <div class="foodTile__gallery">
                         <img src="./assets/img/foodTile_image_indyk.png"/>
-                        <img src="./assets/img/foodTile_image_indyk.png"/>
-                        <img src="./assets/img/foodTile_image_indyk.png"/>
                     </div>
                     <div class="foodTile__name" style="background-color: #ED7433;">
                         <h3>Indyczy kąsek</h3>
                         <img src="./assets/img/foodTile_icon_indyk.svg"/>
                     </div>
                     <div class="foodTile__content">
-                        <p class="desc">Orientalne połączenie chudego mięsa z indyka, dyni, brokułów, jabłek i kurkumy.</p>
+                        <p class="desc">Wyjątkowa mieszanka chudego mięsa z indyka, szpinaku, soczystej dyni oraz marchewki.</p>
                         <p class="openFoodModal" data="data_indyk">Skład</p>
                     </div>
                     <div class="foodTile__status">
@@ -97,15 +93,13 @@
                     </div>
                     <div class="foodTile__gallery">
                         <img src="./assets/img/foodTile_image_kurczak.png"/>
-                        <img src="./assets/img/foodTile_image_kurczak.png"/>
-                        <img src="./assets/img/foodTile_image_kurczak.png"/>
                     </div>
                     <div class="foodTile__name" style="background-color: #4EACB6;">
                         <h3>Kurczę Pieczone</h3>
                         <img src="./assets/img/foodTile_icon_kurczak.svg"/>
                     </div>
                     <div class="foodTile__content">
-                        <p class="desc">Kompozycja mięsa z kurczaka, gotowanej marchewki, jabłek i zielonego groszku.</p>
+                        <p class="desc">Kompozycja delikatnego mięsa z kurczaka, jabłka, słodkich batatów oraz zielonego groszku.</p>
                         <p class="openFoodModal" data="data_kurczak">Skład</p>
                     </div>
                     <div class="foodTile__status">
@@ -128,15 +122,13 @@
                     </div>
                     <div class="foodTile__gallery">
                         <img src="./assets/img/foodTile_image_jagnie.png"/>
-                        <img src="./assets/img/foodTile_image_jagnie.png"/>
-                        <img src="./assets/img/foodTile_image_jagnie.png"/>
                     </div>
                     <div class="foodTile__name" style="background-color: #F7BE45;">
                         <h3>Jagnię Wcina</h3>
                         <img src="./assets/img/foodTile_icon_jagnie.svg"/>
                     </div>
                     <div class="foodTile__content">
-                        <p class="desc">Chude mięso z hodowli w Jeleniej Górze uzupełniają brokuły, marchew oraz żurawina.</p>
+                        <p class="desc">Pyszna jagnięcina, słodka dynia, krucha marchew, a także zielony groszek.</p>
                         <p class="openFoodModal" data="data_jagnie">Skład</p>
                     </div>
                     <div class="foodTile__status">

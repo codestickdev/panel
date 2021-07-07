@@ -9,16 +9,10 @@
                 <div class="gallery__image">
                     <img class="no-lazyload" src="./assets/img/foodTile_image_wolowina.png"/>
                 </div>
-                <div class="gallery__image">
-                    <img class="no-lazyload" src="./assets/img/foodTile_image_wolowina.png"/>
-                </div>
-                <div class="gallery__image">
-                    <img class="no-lazyload" src="./assets/img/foodTile_image_wolowina.png"/>
-                </div>
             </div>
             <div class="title" style="background-color: #4769B2"><p>Wołowe Love<img class="no-lazyload" src="./assets/img/foodTile_icon_wolowina.svg"/></p></div>
             <div class="desc">
-                <p>Połączenie krwistej wołowiny, czerwonej soczewicy, słodkiego buraka oraz szpinaku.</p>
+                <p>Połączenie krwistej wołowiny, czerwonego buraka, marchewki oraz szpinaku. Dieta bogata w żelazo to idealny wybór dla aktywnego czworonoga.</p>
             </div>
             <div class="usp">
                 <div class="usp__pos">
@@ -96,16 +90,10 @@
                 <div class="gallery__image">
                     <img class="no-lazyload" src="./assets/img/foodTile_image_indyk.png"/>
                 </div>
-                <div class="gallery__image">
-                    <img class="no-lazyload" src="./assets/img/foodTile_image_indyk.png"/>
-                </div>
-                <div class="gallery__image">
-                    <img class="no-lazyload" src="./assets/img/foodTile_image_indyk.png"/>
-                </div>
             </div>
             <div class="title" style="background-color: #ED7433"><p>Indyczy Kąsek<img class="no-lazyload" src="./assets/img/foodTile_icon_indyk.svg"/></p></div>
             <div class="desc">
-                <p>Orientalne połączenie chudego mięsa z indyka, dyni, brokułów, jabłek i kurkumy.</p>
+                <p>Wyjątkowa mieszanka chudego mięsa z indyka, szpinaku, soczystej dyni oraz marchewki. Lekkostrawny posiłek dla psiaków z delikatnym żołądkiem.</p>
             </div>
             <div class="usp">
                 <div class="usp__pos">
@@ -183,16 +171,10 @@
                 <div class="gallery__image">
                     <img class="no-lazyload" src="./assets/img/foodTile_image_kurczak.png"/>
                 </div>
-                <div class="gallery__image">
-                    <img class="no-lazyload" src="./assets/img/foodTile_image_kurczak.png"/>
-                </div>
-                <div class="gallery__image">
-                    <img class="no-lazyload" src="./assets/img/foodTile_image_kurczak.png"/>
-                </div>
             </div>
             <div class="title" style="background-color: #4EACB6"><p>Kurczę pieczone<img class="no-lazyload" src="./assets/img/foodTile_icon_kurczak.svg"/></p></div>
             <div class="desc">
-                <p>Kompozycja mięsa z kurczaka, gotowanej marchewki, jabłek i zielonego groszku.</p>
+                <p>Kompozycja delikatnego mięsa z kurczaka, jabłka, słodkich batatów oraz zielonego groszku. Niskokaloryczna dieta, idealna do poprawy sylwetki Twojego pupila.</p>
             </div>
             <div class="usp">
                 <div class="usp__pos">
@@ -270,16 +252,10 @@
                 <div class="gallery__image">
                     <img class="no-lazyload" src="./assets/img/foodTile_image_jagnie.png"/>
                 </div>
-                <div class="gallery__image">
-                    <img class="no-lazyload" src="./assets/img/foodTile_image_jagnie.png"/>
-                </div>
-                <div class="gallery__image">
-                    <img class="no-lazyload" src="./assets/img/foodTile_image_jagnie.png"/>
-                </div>
             </div>
             <div class="title" style="background-color: #F7BE45"><p>Jagnię wcina<img class="no-lazyload" src="./assets/img/foodTile_icon_jagnie.svg"/></p></div>
             <div class="desc">
-                <p>Chude mięso z hodowli w Jeleniej Górze uzupełniają brokuły, marchew oraz żurawina.</p>
+                <p>Pyszna jagnięcina, słodka dynia, krucha marchew, a także zielony groszek. Najlepszy wybór dla każdego wybrednego czworonoga.</p>
             </div>
             <div class="usp">
                 <div class="usp__pos">

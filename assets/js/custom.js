@@ -179,13 +179,13 @@ $(document).ready(function(){
 
 
 /* Food Tile Gallery */
-$(document).ready(function(){
-    $('.foodTile__gallery').slick({
-        arrows: true,
-        dots: true,
-        adaptiveHeight: true,
-    });
-});
+// $(document).ready(function(){
+//     $('.foodTile__gallery').slick({
+//         arrows: true,
+//         dots: true,
+//         adaptiveHeight: true,
+//     });
+// });
 
 /* Food modal */
 $(document).ready(function(){
@@ -221,15 +221,15 @@ $(document).ready(function(){
             });
         }, 1000);
 
-        $('.foodModal__content[data="' + dataid + '"] .gallery[data="' + dataid + '"]').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: true,
-            dots: true,
-            adaptiveHeight: true,
-            variableWidth: true,
-            infinite: true,
-        });
+        // $('.foodModal__content[data="' + dataid + '"] .gallery[data="' + dataid + '"]').slick({
+        //     slidesToShow: 1,
+        //     slidesToScroll: 1,
+        //     arrows: true,
+        //     dots: true,
+        //     adaptiveHeight: true,
+        //     variableWidth: true,
+        //     infinite: true,
+        // });
         
         $(closeBtn).on('click', function(){
             $('body').removeClass('noscroll');
