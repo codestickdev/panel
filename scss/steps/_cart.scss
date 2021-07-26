@@ -1547,6 +1547,15 @@
         }
     }
 }
+@media (max-width: 1199px){
+    .dontForget{
+        &__list{
+            p{
+                max-width: 320px;
+            }
+        }
+    }
+}
 
 .googleReview{
     background-color: #fff;

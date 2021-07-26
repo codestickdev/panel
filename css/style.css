@@ -336,7 +336,8 @@ body {
   content: '-';
   color: #fff;
   font-size: 22px;
-  line-height: 13px;
+  line-height: 15px;
+  text-align: center;
   font-family: auto;
   font-weight: 100;
   width: 18px;
@@ -874,8 +875,9 @@ body {
 
 .foodTile__gallery img {
   display: block;
-  object-fit: contain;
-  outline: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .foodTile__gallery .slick-arrow {
@@ -3137,6 +3139,12 @@ body {
   left: 0;
   top: 2px;
   transform: rotate(-90deg);
+}
+
+@media (max-width: 1199px) {
+  .dontForget__list p {
+    max-width: 320px;
+  }
 }
 
 .googleReview {
