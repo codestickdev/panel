@@ -7,5 +7,6 @@
         <script type="text/javascript" src="plugins/slick/slick.min.js"></script>
         <script type="text/javascript" src="plugins/select-dropdown/select-dropdown.js"></script>
         <script type="text/javascript" src="assets/js/custom.js"></script>
+        <script type="text/javascript" src="assets/js/promocode.js"></script>
     </body>
 </html>

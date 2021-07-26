@@ -16,6 +16,9 @@
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     </head>
     <body>
+    <div class="promocode">
+        <p>Masz <span class="amount">wczytywanie</span><span class="type"></span><span class="na"> na pierwsze zamówienie</span>!</p>
+    </div>
     <header class="panelHeader">
         <div class="panelHeader__wrap container">
             <div class="panelHeader__logo">
