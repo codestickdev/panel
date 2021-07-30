@@ -356,3 +356,17 @@ $(document).ready(function(){
         $(this).parent().parent().parent().removeClass('cartValue--active');
     });
 });
+
+/*
+ *  Password toggle
+ */
+$(document).ready(function(){
+    $('.passToggle').on('click', function(){
+        if($(this).parent().hasClass('visible')){
+            $(this).parent().find('input').attr('type', 'password');
+        }else{
+            $(this).parent().find('input').attr('type', 'text');
+        }
+        $(this).parent().toggleClass('visible');
+    });
+});

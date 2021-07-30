@@ -980,7 +980,7 @@ body {
   align-items: center;
   flex-direction: column;
   min-height: 230px;
-  padding: 30px 40px 0;
+  padding: 30px 40px 40px;
   background-color: #fff;
 }
 
@@ -1939,6 +1939,37 @@ body {
   margin: 0 0 17px;
 }
 
+.accordion__inputWrap {
+  max-width: 420px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.accordion__inputWrap .passToggle {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  transition: ease .3s;
+}
+
+.accordion__inputWrap .passToggle:hover {
+  opacity: .7;
+}
+
+.accordion__inputWrap .passToggle img.on {
+  display: none;
+}
+
+.accordion__inputWrap.visible .passToggle img.off {
+  display: none;
+}
+
+.accordion__inputWrap.visible .passToggle img.on {
+  display: block;
+}
+
 .accordion--twoArrows .accordion__heading h2 {
   font-size: 25px;
   line-height: 30px;
@@ -2009,6 +2040,9 @@ body {
   .accordion__content .btn--nextStepForm {
     display: block;
     width: 100%;
+  }
+  .accordion__inputWrap {
+    max-width: none;
   }
 }
 

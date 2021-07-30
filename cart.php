@@ -13,7 +13,13 @@
                         <input type="text" class="input input--text" placeholder="Nazwisko"/>
                         <input type="email" class="input input--text" placeholder="Adres e-mail"/>
                         <input type="phone" class="input input--text" placeholder="Telefon"/>
-                        <input type="password" class="input input--password" placeholder="Hasło"/>
+                        <div class="accordion__inputWrap">
+                            <input type="password" class="input input--password" placeholder="Hasło"/>
+                            <div class="passToggle">
+                                <img class="off" src="./assets/img/pass_on.svg"/>
+                                <img class="on" src="./assets/img/pass_off.svg"/>
+                            </div>
+                        </div>
                         <div class="singleCheckbox">
                             <input type="checkbox" class="checkboxEngine" name="daneOsobowecheckbox"/>
                             <label for="daneOsobowecheckbox">Chcę otrzymać fakturę</label>

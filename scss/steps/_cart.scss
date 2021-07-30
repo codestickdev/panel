@@ -286,6 +286,42 @@
             margin: 0 0 17px;
         }
     }
+    &__inputWrap{
+        max-width: 420px;
+        margin: 0 auto;
+        position: relative;
+
+        .passToggle{
+            position: absolute;
+            right: 13px;
+            top: 50%;
+            transform: translate(0, -50%);
+            cursor: pointer;
+            transition: ease .3s;
+            
+            &:hover{
+                opacity: .7;
+            }
+
+            img{
+                &.on{
+                    display: none;
+                }
+            }
+        }
+        &.visible{
+            .passToggle{
+                img{
+                    &.off{
+                        display: none;
+                    }
+                    &.on{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
     &--twoArrows{
         .accordion__heading{
             h2{
@@ -376,6 +412,9 @@
                     width: 100%;
                 }
             }
+        }
+        &__inputWrap{
+            max-width: none;
         }
     }
 }
