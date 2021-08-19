@@ -370,3 +370,17 @@ $(document).ready(function(){
         $(this).parent().toggleClass('visible');
     });
 });
+
+/*
+ *  Place order show loader
+ */
+$('.place-order').on('click', function(){
+    var $this = $(this);
+    $this.hide();
+    $this.parent().find('.placeOrderLoader').addClass('placeOrderLoader--active');
+
+    setTimeout(function(){
+        $this.show();
+        $this.parent().find('.placeOrderLoader').removeClass('placeOrderLoader--active');
+    }, 5000);
+});

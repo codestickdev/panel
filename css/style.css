@@ -1939,6 +1939,44 @@ body {
   margin: 0 0 17px;
 }
 
+.accordion__content .placeOrderLoader {
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  pointer-events: none;
+  display: none;
+  transition: ease .3s;
+}
+
+.accordion__content .placeOrderLoader--active {
+  display: block;
+}
+
+.accordion__content .placeOrderLoader__wrap img {
+  display: block;
+  max-width: 50px;
+  margin: 0 auto 15px;
+  filter: invert(48%) sepia(26%) saturate(1544%) hue-rotate(318deg) brightness(93%) contrast(103%);
+  animation: spin 1s linear infinite;
+}
+
+.accordion__content .placeOrderLoader__wrap p {
+  font-size: 14px;
+  line-height: 16px;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .accordion__inputWrap {
   max-width: 420px;
   margin: 0 auto;

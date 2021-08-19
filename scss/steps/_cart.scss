@@ -285,6 +285,43 @@
             color: $primarycolor;
             margin: 0 0 17px;
         }
+        .placeOrderLoader{
+            width: 100%;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            pointer-events: none;
+            display: none;
+            transition: ease .3s;
+        
+            &--active{
+                display: block;
+            }
+        
+            &__wrap{
+                img{
+                    display: block;
+                    max-width: 50px;
+                    margin: 0 auto 15px;
+                    filter: invert(48%) sepia(26%) saturate(1544%) hue-rotate(318deg) brightness(93%) contrast(103%);
+                    -webkit-animation: spin 1s linear infinite;
+                    -moz-animation: spin 1s linear infinite;
+                    animation: spin 1s linear infinite;
+                }
+                p{
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #000;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+        }
+        @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+        @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+        @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
     }
     &__inputWrap{
         max-width: 420px;

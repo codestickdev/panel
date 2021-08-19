@@ -253,7 +253,13 @@
                                 <p class="info">*Pole wymagane</p>
                             </div>
                         </div>
-                        <div class="btn btn--nextStepForm"><span>Kup i zapłać</span></div>
+                        <div class="btn btn--nextStepForm place-order"><span>Kup i zapłać</span></div>
+                        <div class="placeOrderLoader">
+                            <div class="placeOrderLoader__wrap">
+                                <img src="./assets/img/spinner.svg"/>
+                                <p>Trwa przekierowanie...</p>
+                            </div>
+                        </div>
                         <p class="summaryText summaryText--bold">Składając zamówienie wyrażasz zgodę na prowadzenie cyklicznych dostaw karmy PsiBufet w formie subskrypcji. Przypomnienie o kolejnych dostawach otrzymasz drogą elektroniczną. Planem żywienia i dostawami możesz wygodnie zarządzać z Panelu Klienta.</p>
                         <p class="summaryText">Administratorem Twoich danych osobowych przetwarzanych w związku z udzielanymi zgodami jest Feedwell sp. z o.o. z siedzibą w Warszawie i będą one przetwarzane w celu prowadzenia komunikacji marketingowej za pośrednictwem wybranych kanałów. Zgody te możesz w każdej chwili wycofać. Informacje o Twoich prawach z tym związanych i więcej szczegółów znajdziesz w Polityce Prywatności.</p>
                     </div>
