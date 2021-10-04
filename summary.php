@@ -9,10 +9,6 @@
     </section>
     <section class="summaryContent">
         <div class="summaryCart">
-            <div class="summaryCart__heading">
-                <h2>Twój koszyk</h2>
-                <p>Składając zamówienie wyrażasz zgodę na prowadzenie cyklicznych dostaw karmy PsiBufet w formie subskrypcji. Przypomnienie o kolejnych dostawach otrzymasz drogą elektroniczną. Planem żywienia i dostawami możesz wygodnie zarządzać z Panelu Klienta.</p>
-            </div>
             <div class="summaryCart__content">
                 <div class="switchTabs">
                     <div class="tab selected" data="01">
@@ -23,12 +19,12 @@
                     </div>
                 </div>
                 <div class="cartSummary__content contentShow ready visible" data="01">
+                    <h2 class="heading">Jedzienie na 2 tygodnie</h2>
                     <div class="info">
+                        <h2>Zawartość paczki</h2>
                         <h3>28 <small>x</small> 500g</h3>
-                        <p>(wielkość opakowania)</p>
                     </div>
                     <div class="summary summary--items">
-                        <h3 class="summary__title">Plan żywienia twojego psa:</h3>
                         <div class="summary__pos">
                             <p><b>4x</b></p>
                             <p>Wołowe Love</p>
@@ -51,16 +47,23 @@
                     </div>
                     <div class="summary">
                         <div class="summary__pos">
-                            <p>Karma:</p>
-                            <p class="price"><span class="value">5<small>20</small></span> zł / dzień</p>
+                            <p>Karma na 14 dni:</p>
+                            <div class="priceWrap">
+                                <p class="priceWrap__normal">
+                                    <span class="value">5<small>20</small></span> zł
+                                </p>
+                                <p class="priceWrap__discount">
+                                    <span class="value">4<small>11</small></span> zł / dzień
+                                </p>
+                            </div>
                         </div>
-                        <div class="summary__pos">
-                            <p>Okres:</p>
-                            <p>14 dni</p>
+                        <div class="summary__pos summary__pos--discount">
+                            <p>Rabat:</p>
+                            <p class="price">- <span class="value">14<small>56</small></span> zł</p>
                         </div>
                         <div class="summary__pos">
                             <p>Dostawa:</p>
-                            <p><span>0</span> zł</p>
+                            <p><span>ZA DARMO!</span></p>
                         </div>
                     </div>
                     <div class="total">
@@ -69,25 +72,22 @@
                     </div>
                 </div>
                 <div class="cartSummary__content contentShow contentShow--nextdelivery" data="02">
+                    <h2 class="heading">Jedzienie na 4 tygodnie</h2>
                     <div class="info">
+                        <h2>Zawartość paczki</h2>
                         <h3>28 <small>x</small> 500g</h3>
-                        <p>(wielkość opakowania)</p>
                     </div>
                     <div class="summary">
+                        <div class="alert alert--success">
+                            <p>Możesz w każdym momencie zmienić plan lub wstrzymać dostawy.</p>
+                        </div>
                         <div class="summary__pos">
-                            <p>Karma:</p>
+                            <p>Karma na 28 dni:</p>
                             <p class="price"><span class="value">5<small>20</small></span> zł / dzień</p>
                         </div>
                         <div class="summary__pos">
-                            <p>Okres:</p>
-                            <p>14 dni</p>
-                        </div>
-                        <div class="summary__pos">
                             <p>Dostawa:</p>
-                            <p><span>0</span> zł</p>
-                        </div>
-                        <div class="alert alert--success">
-                            <p>Możesz w każdym momencie zmienić plan lub wstrzymać dostawy.</p>
+                            <p><span>ZA DARMO!</span></p>
                         </div>
                     </div>
                     <div class="total">
@@ -102,7 +102,7 @@
                 <h2>Rabat (opcjonalnie)</h2>
             </div>
             <div class="accordion__contentWrap">
-                <div class="accordion__content">
+                <div class="accordion__content inputname">
                     <input type="text" class="input input--text" placeholder="Wpisz kod rabatowy"/>
                 </div>
             </div>

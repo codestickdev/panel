@@ -81,6 +81,10 @@
                 .input{
                     margin: 0;
                     max-width: 265px;
+
+                    &::placeholder{
+                        color: $primarycolor;
+                    }
                 }
 
                 span{

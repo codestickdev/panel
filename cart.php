@@ -9,11 +9,19 @@
                 </div>
                 <div class="accordion__contentWrap">
                     <div class="accordion__content">
-                        <input type="text" class="input input--text" placeholder="Imię"/>
-                        <input type="text" class="input input--text" placeholder="Nazwisko"/>
-                        <input type="email" class="input input--text" placeholder="Adres e-mail"/>
-                        <input type="phone" class="input input--text" placeholder="Telefon"/>
-                        <div class="accordion__inputWrap">
+                        <div class="inputWrapper inputname">
+                            <input type="text" class="input input--text" placeholder="Imię"/>
+                        </div>
+                        <div class="inputWrapper inputname">
+                            <input type="text" class="input input--text" placeholder="Nazwisko"/>
+                        </div>
+                        <div class="inputWrapper inputname">
+                            <input type="email" class="input input--text" placeholder="Adres e-mail"/>
+                        </div>
+                        <div class="inputWrapper inputname">
+                            <input type="phone" class="input input--text" placeholder="Telefon"/>
+                        </div>
+                        <div class="accordion__inputWrap inputname">
                             <input type="password" class="input input--password" placeholder="Hasło"/>
                             <div class="passToggle">
                                 <img class="off" src="./assets/img/pass_on.svg"/>
@@ -26,11 +34,21 @@
                         </div>
                         <div class="invoice">
                             <h3 class="invoice__heading">Dane do faktury</h3>
-                            <input type="text" class="input input--text" placeholder="Nazwa firmy"/>
-                            <input type="text" class="input input--text" placeholder="Numer NIP"/>
-                            <input type="text" class="input input--text" placeholder="Ulica i numer lokalu"/>
-                            <input type="text" class="input input--text" placeholder="Kod pocztowy"/>
-                            <input type="text" class="input input--text" placeholder="Miasto"/>
+                            <div class="inputWrapper inputname">
+                                <input type="text" class="input input--text" placeholder="Nazwa firmy"/>
+                            </div>
+                            <div class="inputWrapper inputname">
+                                <input type="text" class="input input--text" placeholder="Numer NIP"/>
+                            </div>
+                            <div class="inputWrapper inputname">
+                                <input type="text" class="input input--text" placeholder="Ulica i numer lokalu"/>
+                            </div>
+                            <div class="inputWrapper inputname">
+                                <input type="text" class="input input--text" placeholder="Kod pocztowy"/>
+                            </div>
+                            <div class="inputWrapper inputname">
+                                <input type="text" class="input input--text" placeholder="Miasto"/>
+                            </div>
                         </div>
                         <div class="btn btn--nextStepForm btn--arrowDown"><span>Dalej</span></div>
                     </div>
@@ -42,9 +60,15 @@
                 </div>
                 <div class="accordion__contentWrap">
                     <div class="accordion__content">
-                        <input type="text" class="input input--text" placeholder="Ulica i numer lokalu"/>
-                        <input type="text" class="input input--text" placeholder="Kod pocztowy"/>
-                        <input type="text" class="input input--text" placeholder="Miasto"/>
+                        <div class="inputWrapper inputname">
+                            <input type="text" class="input input--text" placeholder="Ulica i numer lokalu"/>
+                        </div>
+                        <div class="inputWrapper inputname">
+                            <input type="text" class="input input--text" placeholder="Kod pocztowy"/>
+                        </div>
+                        <div class="inputWrapper inputname">
+                            <input type="text" class="input input--text" placeholder="Miasto"/>
+                        </div>
                         <div class="btn btn--nextStepForm btn--arrowDown"><span>Dalej</span></div>
                     </div>
                 </div>
@@ -96,7 +120,9 @@
                                 </div>
                             </div>
                         </div>
-                        <input type="text" class="input input--text" placeholder="Wiadomość dla kuriera (kod do klatki)"/>
+                        <div class="inputWrapper inputname">
+                            <input type="text" class="input input--text" placeholder="Wiadomość dla kuriera (kod do klatki)"/>
+                        </div>
                         <div class="btn btn--nextStepForm btn--arrowDown"><span>Dalej</span></div>
                     </div>
                 </div>

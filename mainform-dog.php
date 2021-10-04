@@ -9,12 +9,12 @@
 
     <section class="formWrap">
         <form>
-            <div class="inputWrapper">
+            <div class="inputWrapper inputname">
                 <div class="inputWrapper__notice" data-errormsg="Podaj imię psa"></div>
                 <input type="text" class="input input--text" placeholder="Imię psa"/>
                 <div class="inputWrapper__delete"></div>
             </div>
-            <div class="inputWrapper inputWrapper--delete">
+            <div class="inputWrapper inputname inputWrapper--delete">
                 <div class="inputWrapper__notice" data-errormsg="Podaj imię psa"></div>
                 <input type="text" class="input input--text" placeholder="Imię psa"/>
                 <div class="inputWrapper__delete"></div>

@@ -1,34 +1,10 @@
 .summaryContent{
-    max-width: 590px;
+    max-width: 450px;
     margin: 0 auto 30px;
 
     .summaryCart{
         background-color: #fff;
-        border: 1px solid rgba(0, 0, 0, 0.2);
-        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
         margin-bottom: 10px;
-        padding: 16px 40px 40px;
-
-        &__heading{
-            margin: 0 0 20px;
-
-            h2{
-                font-family: 'Bebas Neue';
-                font-size: 21px;
-                line-height: 25px;
-                font-weight: 400;
-                color: #000;
-                margin: 0 0 15px;
-                text-align: center;
-            }
-            p{
-                font-size: 14px;
-                line-height: 16px;
-                color: $primarycolor;
-                margin: 0;
-                text-align: center;
-            }
-        }
 
         &__content{
             border: 1px solid $primarycolorlight;
@@ -41,11 +17,119 @@
             .contentShow{
                 &--nextdelivery{
                     .summary{
-                        max-width: 335px;
-                        padding: 0;
-                        border: 0;
+                        .alert{
+                            margin-bottom: 20px;
+                        }
                     }
                 }
+            }
+            .heading{
+                font-size: 25px;
+                line-height: 30px;
+                font-family: 'Bebas Neue', sans-serif;
+                font-weight: normal;
+                text-align: center;
+                margin: 20px 0 0;
+                color: #000;
+            }
+            .info{
+                background: rgba(247, 190, 69, 0.2);
+                max-width: 350px;
+                height: 73px;
+                margin: 15px auto 20px;
+
+                &:before{
+                    content: '';
+                    background-image: url('../assets/img/cartSummary_boxLeft.svg');
+                    background-size: 85px;
+                    width: 85px;
+                    height: 61px;
+                    left: 5px;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                }
+                &:after{
+                    display: none;
+                }
+
+                h2{
+                    font-size: 25px;
+                    line-height: 30px;
+                    font-family: 'Bebas Neue', sans-serif;
+                    color: #000;
+                    font-weight: normal;
+                    text-transform: uppercase;
+                    margin: 0;
+                }
+                h3{
+                    font-size: 25px;
+                    line-height: 30px;
+                    margin: 0 0 -6px;
+                }
+            }
+            .summary{
+                max-width: 380px;
+
+                &__pos{
+                    max-width: 360px;
+                    margin: 0 auto;
+                    padding: 3px 10px;
+
+                    @media (min-width: 768px){
+                        p{
+                            font-size: 16px;
+                            line-height: 19px;
+    
+                            .value{
+                                padding-right: 14px;
+    
+                                small{
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+
+                    .priceWrap{
+                        display: flex;
+
+                        &__normal{
+                            color:rgba(0, 0, 0, .5);
+                            text-decoration: line-through;
+                            margin-right: 10px;
+                        }
+                    }
+                    
+                    &--discount{
+                        background-color: rgba(18, 157, 111, 0.2);
+                    }
+                }
+                &--items{
+                    .summary__pos{
+                        max-width: 200px;
+                    }
+                }
+            }
+            .alert{
+                padding: 0;
+
+                &--success{
+                    background-color: unset;
+                }
+                p{
+                    font-size: 16px;
+                    line-height: 22px;
+                    font-weight: 500;
+                    color: $greencolor;
+                    text-align: center;
+
+                    &:before{
+                        display: none;
+                    }
+                }
+            }
+            .total{
+                max-width: 340px;
             }
         }
     }
@@ -57,15 +141,51 @@
         .summaryCart{
             padding: 16px 20px 20px;
 
-            &__heading{
-                margin: 0 0 15px;
+            &__content{
 
-                h2{
-                    margin: 0 0 5px;
+                .heading{
+                    font-size: 18px;
+                    line-height: 22px;
                 }
-                p{
-                    font-size: 10px;
-                    line-height: 12px;
+                .info{
+                    max-width: 252px;
+                    height: 53px;
+
+                    &:before{
+                        background-size: 61px;
+                        width: 61px;
+                        height: 44px;
+                    }
+                    h2,
+                    h3{
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                }
+                .summary{
+                    max-width: 252px;
+
+                    &__pos{
+                        p{
+                            font-size: 12px;
+                            line-height: 14px;
+                        }
+                        .priceWrap{
+                            &__normal{
+                                margin-right: 6px;
+                            }
+                        }
+                    }
+                }
+                .alert{
+                    p{
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+                }
+                .total{
+                    max-width: 252px;
+                    padding: 0 10px;
                 }
             }
         }
@@ -73,6 +193,12 @@
 }
 
 .summaryCoupon{
+    .accordion{
+        &__content{
+            padding-bottom: 0;
+            margin-bottom: 20px;
+        }
+    }
     .input{
         margin: 0 auto;
     }

@@ -384,3 +384,21 @@ $('.place-order').on('click', function(){
         $this.parent().find('.placeOrderLoader').removeClass('placeOrderLoader--active');
     }, 5000);
 });
+
+/*
+ *  Input focus name show
+ */
+$(document).ready(function(){
+    $('.inputname').each(function(){
+        var placeholder = $(this).find('input.input').attr('placeholder');
+        $(this).attr('data-name', placeholder);
+    });
+    $('input.input').on('focusin', function(){
+        $(this).parent('.inputname').addClass('inputname--active');
+    });
+    $('input.input').on('focusout', function(){
+        if($(this).val() == ''){
+            $(this).parent('.inputname').removeClass('inputname--active');
+        }
+    });
+});

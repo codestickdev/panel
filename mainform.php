@@ -12,11 +12,11 @@
 
     <section class="formClient formWrap">
         <form>
-            <div class="inputWrapper inputWrapper--error">
+            <div class="inputWrapper inputname inputWrapper--error">
                 <div class="inputWrapper__notice" data-errormsg="Podaj swoje imię"></div>
                 <input type="text" class="input input--text" placeholder="Twoje imię"/>
             </div>
-            <div class="inputWrapper inputWrapper--errorBottom">
+            <div class="inputWrapper inputname inputWrapper--errorBottom">
                 <div class="inputWrapper__notice" data-errormsg="Podaj adres e-mail"></div>
                 <input type="email" class="input input--text" placeholder="Adres e-mail"/>
             </div>
