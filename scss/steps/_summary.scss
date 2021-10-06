@@ -12,6 +12,16 @@
 
             .switchTabs{
                 border-top: 0;
+
+                .tab{
+                    height: 50px;
+
+                    h4{
+                        font-size: 25px;
+                        line-height: 30px;
+                        margin-bottom: -3px;
+                    }
+                }
             }
 
             .contentShow{
@@ -36,7 +46,7 @@
                 background: rgba(247, 190, 69, 0.2);
                 max-width: 350px;
                 height: 73px;
-                margin: 15px auto 20px;
+                margin: 15px auto 14px;
 
                 &:before{
                     content: '';
@@ -106,12 +116,13 @@
                 }
                 &--items{
                     .summary__pos{
-                        max-width: 200px;
+                        max-width: 235px;
                     }
                 }
             }
             .alert{
                 padding: 0;
+                margin: 14px auto 0;
 
                 &--success{
                     background-color: unset;
@@ -130,6 +141,11 @@
             }
             .total{
                 max-width: 340px;
+
+                p{
+                    font-size: 18px;
+                    line-height: 21px;
+                }
             }
         }
     }
@@ -137,12 +153,21 @@
 @media (max-width: 767px){
     .summaryContent{
         padding: 0 20px;
+        max-width: 360px;
         
         .summaryCart{
-            padding: 16px 20px 20px;
-
             &__content{
+                .switchTabs{
+                    .tab{
+                        height: 35px;
 
+                        h4{
+                            font-size: 18px;
+                            line-height: 22px;
+                            margin-bottom: -1px;
+                        }
+                    }
+                }
                 .heading{
                     font-size: 18px;
                     line-height: 22px;
@@ -150,6 +175,7 @@
                 .info{
                     max-width: 252px;
                     height: 53px;
+                    margin: 15px auto 10px;
 
                     &:before{
                         background-size: 61px;
@@ -176,6 +202,11 @@
                             }
                         }
                     }
+                    &--items{
+                        .summary__pos{
+                            max-width: 175px;
+                        }
+                    }
                 }
                 .alert{
                     p{
@@ -185,7 +216,12 @@
                 }
                 .total{
                     max-width: 252px;
-                    padding: 0 10px;
+                    padding: 4px 10px;
+
+                    p{
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
                 }
             }
         }

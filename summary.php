@@ -3,8 +3,8 @@
 <main class="panel panel--summary">
     <section class="stepHeading">
         <div class="stepHeading__wrap">
-            <h2 class="marker"><span>Super, mamy to!</span></h2>
-            <h4>Sprawdź zawartość koszyka</h4>
+            <h2 class="marker"><span>Super</span>, mamy to!</h2>
+            <h4>Oto Twoje zamówienie</h4>
         </div>
     </section>
     <section class="summaryContent">

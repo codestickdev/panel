@@ -3329,6 +3329,16 @@ body {
   border-top: 0;
 }
 
+.summaryContent .summaryCart__content .switchTabs .tab {
+  height: 50px;
+}
+
+.summaryContent .summaryCart__content .switchTabs .tab h4 {
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: -3px;
+}
+
 .summaryContent .summaryCart__content .contentShow--nextdelivery .summary .alert {
   margin-bottom: 20px;
 }
@@ -3347,7 +3357,7 @@ body {
   background: rgba(247, 190, 69, 0.2);
   max-width: 350px;
   height: 73px;
-  margin: 15px auto 20px;
+  margin: 15px auto 14px;
 }
 
 .summaryContent .summaryCart__content .info:before {
@@ -3419,11 +3429,12 @@ body {
 }
 
 .summaryContent .summaryCart__content .summary--items .summary__pos {
-  max-width: 200px;
+  max-width: 235px;
 }
 
 .summaryContent .summaryCart__content .alert {
   padding: 0;
+  margin: 14px auto 0;
 }
 
 .summaryContent .summaryCart__content .alert--success {
@@ -3446,12 +3457,23 @@ body {
   max-width: 340px;
 }
 
+.summaryContent .summaryCart__content .total p {
+  font-size: 18px;
+  line-height: 21px;
+}
+
 @media (max-width: 767px) {
   .summaryContent {
     padding: 0 20px;
+    max-width: 360px;
   }
-  .summaryContent .summaryCart {
-    padding: 16px 20px 20px;
+  .summaryContent .summaryCart__content .switchTabs .tab {
+    height: 35px;
+  }
+  .summaryContent .summaryCart__content .switchTabs .tab h4 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: -1px;
   }
   .summaryContent .summaryCart__content .heading {
     font-size: 18px;
@@ -3460,6 +3482,7 @@ body {
   .summaryContent .summaryCart__content .info {
     max-width: 252px;
     height: 53px;
+    margin: 15px auto 10px;
   }
   .summaryContent .summaryCart__content .info:before {
     background-size: 61px;
@@ -3481,13 +3504,20 @@ body {
   .summaryContent .summaryCart__content .summary__pos .priceWrap__normal {
     margin-right: 6px;
   }
+  .summaryContent .summaryCart__content .summary--items .summary__pos {
+    max-width: 175px;
+  }
   .summaryContent .summaryCart__content .alert p {
     font-size: 12px;
     line-height: 16px;
   }
   .summaryContent .summaryCart__content .total {
     max-width: 252px;
-    padding: 0 10px;
+    padding: 4px 10px;
+  }
+  .summaryContent .summaryCart__content .total p {
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 
