@@ -27,7 +27,7 @@
     display: none;
     align-items: center;
     justify-content: center;
-    background-color: $greencolor;
+    background-color: #fff;
     width: 100%;
     box-shadow: -2px -2px 0px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -49,7 +49,7 @@
         width: 100%;
         position: absolute;
         bottom: 0;
-        background-color: $greencolor;
+        background-color: #fff;
         z-index: 3;
 
         &:before,
@@ -63,7 +63,6 @@
             position: absolute;
             top: 50%;
             transform: translate(0, -50%);
-            filter: brightness(20);
             transition: ease .3s;
         }
         &:before{
@@ -78,7 +77,7 @@
             font-size: 21px;
             line-height: 25px;
             font-weight: 400;
-            color: #fff;
+            color: #000;
             margin: 0;
             transition: cubic-bezier(0.73, -0.01, 0, 0.99) .8s;
     
@@ -1098,28 +1097,30 @@
         margin: 0 0 12px;
         position: relative;
 
-        &:before{
-            content: '';
-            background-image: url('../assets/img/paymentPosition_ico.svg');
-            background-repeat: no-repeat;
-            background-size: 16px;
-            width: 16px;
-            height: 16px;
-            display: inline-block;
-            margin-right: 10px;
+        &>img{
+            max-width: 22px;
+            margin-right: 8px;
         }
         
         p{
             display: flex;
             align-items: center;
-            font-size: 10px;
-            line-height: 12px;
+            font-size: 12px;
+            line-height: 14px;
             color: #000;
             margin: 0;
             text-align: left;
+        }
+    }
+}
+@media (max-width: 575px){
+    .paymentFeatures{
+        &__position{
+            margin: 0 0 8px; 
 
-            img{
-                margin-left: 5px;
+            p{
+                font-size: 10px;
+                line-height: 12px;
             }
         }
     }
@@ -1185,12 +1186,12 @@
     margin: 20px auto;
 
     &__wrap{
-
         &>p{
-            font-size: 12px;
-            line-height: 14px;
+            font-size: 8px;
+            line-height: 9px;
             color: $primarycolor;
             text-align: left;
+            margin: 10px 0 0;
         }
     }
 
@@ -1236,12 +1237,12 @@
 }
 
 .summaryText{
-    font-size: 9px;
-    line-height: 11px;
+    font-size: 8px;
+    line-height: 10px;
     color: $primarycolor;
     max-width: 420px;
     margin: 0 auto 20px;
-    text-align: left;
+    text-align: justify;
 
     &:first-of-type{
         margin-top: 20px;
@@ -1252,8 +1253,8 @@
     }
 
     &--bold{
-        font-size: 12px;
-        line-height: 14px;
+        font-size: 10px;
+        line-height: 12px;
         color: #000;
     }
 }

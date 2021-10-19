@@ -1722,7 +1722,7 @@ body {
   display: none;
   align-items: center;
   justify-content: center;
-  background-color: #129D6F;
+  background-color: #fff;
   width: 100%;
   box-shadow: -2px -2px 0px rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -1746,7 +1746,7 @@ body {
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: #129D6F;
+  background-color: #fff;
   z-index: 3;
 }
 
@@ -1760,7 +1760,6 @@ body {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  filter: brightness(20);
   transition: ease .3s;
 }
 
@@ -1777,7 +1776,7 @@ body {
   font-size: 21px;
   line-height: 25px;
   font-weight: 400;
-  color: #fff;
+  color: #000;
   margin: 0;
   transition: cubic-bezier(0.73, -0.01, 0, 0.99) 0.8s;
 }
@@ -2751,29 +2750,29 @@ body {
   position: relative;
 }
 
-.paymentFeatures__position:before {
-  content: '';
-  background-image: url("../assets/img/paymentPosition_ico.svg");
-  background-repeat: no-repeat;
-  background-size: 16px;
-  width: 16px;
-  height: 16px;
-  display: inline-block;
-  margin-right: 10px;
+.paymentFeatures__position > img {
+  max-width: 22px;
+  margin-right: 8px;
 }
 
 .paymentFeatures__position p {
   display: flex;
   align-items: center;
-  font-size: 10px;
-  line-height: 12px;
+  font-size: 12px;
+  line-height: 14px;
   color: #000;
   margin: 0;
   text-align: left;
 }
 
-.paymentFeatures__position p img {
-  margin-left: 5px;
+@media (max-width: 575px) {
+  .paymentFeatures__position {
+    margin: 0 0 8px;
+  }
+  .paymentFeatures__position p {
+    font-size: 10px;
+    line-height: 12px;
+  }
 }
 
 .summaryInfo {
@@ -2835,10 +2834,11 @@ body {
 }
 
 .summaryAcceptance__wrap > p {
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 8px;
+  line-height: 9px;
   color: rgba(0, 0, 0, 0.5);
   text-align: left;
+  margin: 10px 0 0;
 }
 
 .summaryAcceptance .singleCheckbox {
@@ -2879,12 +2879,12 @@ body {
 }
 
 .summaryText {
-  font-size: 9px;
-  line-height: 11px;
+  font-size: 8px;
+  line-height: 10px;
   color: rgba(0, 0, 0, 0.5);
   max-width: 420px;
   margin: 0 auto 20px;
-  text-align: left;
+  text-align: justify;
 }
 
 .summaryText:first-of-type {
@@ -2896,8 +2896,8 @@ body {
 }
 
 .summaryText--bold {
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 10px;
+  line-height: 12px;
   color: #000;
 }
 
@@ -3528,6 +3528,13 @@ body {
 
 .summaryCoupon .input {
   margin: 0 auto;
+  max-width: calc(100% - 60px);
+}
+
+@media (max-width: 530px) {
+  .summaryCoupon .input {
+    max-width: calc(100% - 20px);
+  }
 }
 
 .psibufetPlan {
@@ -4272,7 +4279,7 @@ body {
 
 .calculationFeatures__feature {
   text-align: center;
-  padding: 0 20px;
+  padding: 0 10px;
   max-width: 120px;
   margin: 0 15px;
 }
@@ -5495,7 +5502,8 @@ body.noscroll {
   height: 11px;
   position: absolute;
   right: 0;
-  top: 4px;
+  top: 50%;
+  transform: translate(0, -50%);
   transition: ease .3s;
 }
 
@@ -5508,13 +5516,61 @@ body.noscroll {
   line-height: 40px;
 }
 
+.btn--placeOrder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #129D6F;
+  padding: 0 20px;
+  max-width: 280px;
+  width: 100%;
+}
+
+.btn--placeOrder.disabled {
+  cursor: not-allowed;
+  filter: grayscale(1);
+}
+
+.btn--placeOrder.disabled:hover {
+  opacity: 1;
+}
+
+.btn--placeOrder.disabled:hover span:after {
+  right: 0;
+}
+
+.btn--placeOrder:hover {
+  background-color: #129D6F;
+  opacity: .8;
+}
+
+.btn--placeOrder span {
+  padding: 0 18px 0 27px;
+  line-height: 20px;
+}
+
+.btn--placeOrder span:before {
+  content: '';
+  background-image: url("../assets/img/lock_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -55%);
+}
+
 .btn--arrowDown:hover span:after {
   right: 0;
-  top: 6px;
+  top: 50%;
+  transform: rotate(90deg) translate(-30%, 0);
 }
 
 .btn--arrowDown span:after {
-  transform: rotate(90deg);
+  transform: rotate(90deg) translate(-50%, 0);
 }
 
 .btn--back {
@@ -5573,7 +5629,7 @@ body.noscroll {
 .btn--foodModal span:after {
   right: auto;
   left: 0;
-  transform: rotate(-180deg);
+  transform: rotate(-180deg) translate(0, 50%);
 }
 
 .btn--foodModal:hover span:after {
@@ -5587,7 +5643,7 @@ body.noscroll {
 }
 
 .btn--button span:after {
-  top: 3px;
+  top: 50%;
 }
 
 .btn--clean {
@@ -5616,7 +5672,6 @@ body.noscroll {
     background-size: 7px;
     width: 7px;
     height: 10px;
-    top: 3px;
   }
   .btn--back span {
     padding: 0;
@@ -5636,6 +5691,12 @@ body.noscroll {
   }
   .btn--clean {
     margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 530px) {
+  .btn--placeOrder {
+    max-width: none;
   }
 }
 

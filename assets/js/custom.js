@@ -30,11 +30,17 @@ $(document).ready(function(){
             if($(this).attr('name') == 'daneOsobowecheckbox'){
                 $('.invoice').slideDown();
             }
+            if($(this).attr('name') == 'acceptance1'){
+                $('.place-order').removeClass('disabled');
+            }
         }else if($(this).is(":not(:checked)")){
             $(this).parent().removeClass('checked');
 
             if($(this).attr('name') == 'daneOsobowecheckbox'){
                 $('.invoice').slideUp();
+            }
+            if($(this).attr('name') == 'acceptance1'){
+                $('.place-order').addClass('disabled');
             }
         }
     });
@@ -376,13 +382,18 @@ $(document).ready(function(){
  */
 $('.place-order').on('click', function(){
     var $this = $(this);
-    $this.hide();
-    $this.parent().find('.placeOrderLoader').addClass('placeOrderLoader--active');
 
-    setTimeout(function(){
-        $this.show();
-        $this.parent().find('.placeOrderLoader').removeClass('placeOrderLoader--active');
-    }, 5000);
+    if($this.hasClass('disabled')){
+        return false;
+    }else{
+        $this.hide();
+        $this.parent().find('.placeOrderLoader').addClass('placeOrderLoader--active');
+
+        setTimeout(function(){
+            $this.show();
+            $this.parent().find('.placeOrderLoader').removeClass('placeOrderLoader--active');
+        }, 5000);
+    }
 });
 
 /*

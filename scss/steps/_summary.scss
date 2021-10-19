@@ -237,5 +237,13 @@
     }
     .input{
         margin: 0 auto;
+        max-width: calc(100% - 60px);
+    }
+}
+@media (max-width: 530px){
+    .summaryCoupon{
+        .input{
+            max-width: calc(100% - 20px);
+        }
     }
 }

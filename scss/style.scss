@@ -350,7 +350,8 @@ body{
             height: 11px;
             position: absolute;
             right: 0;
-            top: 4px;
+            top: 50%;
+            transform: translate(0, -50%);
             transition: ease .3s;
         }
     }
@@ -363,18 +364,66 @@ body{
             line-height: 40px;
         }
     }
+    &--placeOrder{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        background-color: $greencolor;
+        padding: 0 20px;
+        max-width: 280px;
+        width: 100%;
+
+        &.disabled{
+            cursor: not-allowed;
+            filter: grayscale(1);
+
+            &:hover{
+                opacity: 1;
+
+                span{
+                    &:after{
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        &:hover{
+            background-color: $greencolor;
+            opacity: .8;
+        }
+        span{
+            padding: 0 18px 0 27px;
+            line-height: 20px;
+
+            &:before{
+                content: '';
+                background-image: url('../assets/img/lock_ico.svg');
+                background-repeat: no-repeat;
+                background-size: 20px;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translate(0, -55%);
+            }
+        }
+    }
     &--arrowDown{
         &:hover{
             span{
                 &:after{
                     right: 0;
-                    top: 6px;
+                    top: 50%;
+                    transform: rotate(90deg) translate(-30%, 0);
                 }
             }
         }
         span{
             &:after{
-                transform: rotate(90deg);
+                transform: rotate(90deg) translate(-50%, 0);
             }
         }
     }
@@ -432,7 +481,7 @@ body{
             &:after{
                 right: auto;
                 left: 0;
-                transform: rotate(-180deg);
+                transform: rotate(-180deg) translate(0, 50%);
             }
         }
         &:hover{
@@ -450,7 +499,7 @@ body{
 
         span{
             &:after{
-                top: 3px;
+                top: 50%;
             }
         }
     }
@@ -480,7 +529,6 @@ body{
                 background-size: 7px;
                 width: 7px;
                 height: 10px;
-                top: 3px;
             }
         }
 
@@ -506,6 +554,13 @@ body{
         }
         &--clean{
             margin: 0 auto !important;
+        }
+    }
+}
+@media (max-width: 530px){
+    .btn{
+        &--placeOrder{
+            max-width: none;
         }
     }
 }

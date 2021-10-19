@@ -212,13 +212,12 @@
                     <h2>Płatność</h2>
                 </div>
                 <div class="accordion__contentWrap">
-                    <div class="accordion__content accordion__content--switch contentShow ready visible" data="01">
+                    <div class="accordion__content">
                         <div class="paymentSelect">
-                            <h3>Cykliczna płatność kartą
+                            <h3>Zapłać bezpiecznie kartą
                                 <img src="./assets/img/mastercard_logo.svg"/>
                                 <img src="./assets/img/visa_logo.svg"/>
                             </h3>
-                            <p>Podepnij kartę, aby zaoszczędzić swój czas i nie myśleć o obowiązkach.</p>
                             <div class="paymentSelect__option">
                                 <div class="paymentField">
                                     <input type="number" class="cardNumber" placeholder="Numer karty"/>
@@ -229,57 +228,29 @@
                         </div>
                         <div class="paymentFeatures">
                             <div class="paymentFeatures__position">
-                                <p>Bez zobowiązań: anuluj w dowolnym momencie bez opłat.</p>
+                                <img src="./assets/img/paymentInfo_01.svg"/>
+                                <p>Bez zobowiązań: Anuluj w dowolnym momencie bez opłat.</p>
                             </div>
                             <div class="paymentFeatures__position">
-                                <p>Bezpieczny proces płatności wspiera.<img src="./assets/img/stripe_logo.svg"/></p>
+                                <img src="./assets/img/paymentInfo_02.svg"/>
+                                <p>Twoje dane są bezpieczne. Nie zapisujemy numerów kart.</p>
                             </div>
-                        </div>
-                        <div class="btn btn--nextStepForm btn--arrowDown"><span>Dalej</span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="cart__accordion accordion">
-                <div class="accordion__heading">
-                    <h2>Podsumowanie</h2>
-                </div>
-                <div class="accordion__contentWrap">
-                    <div class="accordion__content">
-                        <div class="summaryInfo">
-                            <div class="summaryInfo__box">
-                                <h3>Dane osobowe:</h3>
-                                <p>Adam Link</p>
-                                <p>adam.link@gmail.com</p>
-                                <p>+48 700 880 788</p>
-                            </div>
-                            <div class="summaryInfo__box">
-                                <h3>Dane do wysyłki:</h3>
-                                <p>Adam Link</p>
-                                <p>ul. Filtrowa 77/81</p>
-                                <p>02-032 Warszawa</p>
-                            </div>
-                            <div class="summaryInfo__box">
-                                <h3>Dostawa:</h3>
-                                <p>10.03.2021</p>
-                                <p>Kurier Goodspeed</p>
-                            </div>
-                            <div class="summaryInfo__box">
-                                <h3>Dane osobowe:</h3>
-                                <p>Cykliczna płatność kartą</p>
-                                <p>Do zapłaty: <span>36<small>40</small></span> zł</p>
+                            <div class="paymentFeatures__position">
+                                <img src="./assets/img/paymentInfo_03.svg"/>
+                                <p>Gwarancja czystej miski lub zwrot pieniędzy.</p>
                             </div>
                         </div>
                         <div class="summaryAcceptance">
                             <div class="summaryAcceptance__wrap">
                                 <div class="singleCheckbox error">
                                     <input type="checkbox" class="checkboxEngine" name="acceptance1"/>
-                                    <label for="acceptance1">Akceptuję <a href="#">regulamin serwisu Psibufet</a>*.</label>
+                                    <label for="acceptance1">Akceptuję <a href="#">regulamin serwisu Psibufet</a>.*</label>
                                     <div class="singleCheckbox__error" error-msg="Pole wymagane."></div>
                                 </div>
-                                <p class="info">*Pole wymagane</p>
+                                <p class="info">* Pole wymagane</p>
                             </div>
                         </div>
-                        <div class="btn btn--nextStepForm place-order"><span>Kup i zapłać</span></div>
+                        <div class="btn btn--placeOrder place-order disabled"><span>Zapłać bezpiecznie</span></div>
                         <div class="placeOrderLoader">
                             <div class="placeOrderLoader__wrap">
                                 <img src="./assets/img/spinner.svg"/>
