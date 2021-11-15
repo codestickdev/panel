@@ -3669,7 +3669,7 @@ body {
 .psibufetPlan__karmaInfo p {
   font-size: 16px;
   line-height: 19px;
-  color: rgba(0, 0, 0, 0.5);
+  color: #000;
   font-weight: 500;
   max-width: 420px;
   margin: 0 auto 30px;
@@ -3738,8 +3738,11 @@ body {
   opacity: 1 !important;
 }
 
-.psibufetPlan--edge .psibufetPlan__karmaInfo p.bold {
+.psibufetPlan--edge .psibufetPlan__karmaInfo p {
   color: #000;
+}
+
+.psibufetPlan--edge .psibufetPlan__karmaInfo p.bold {
   max-width: 360px;
 }
 
