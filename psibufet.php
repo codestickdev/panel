@@ -80,6 +80,9 @@
                         </div>
                     </div>
                     <p>PsiBufet pokryje pełne zapotrzebowanie kaloryczne Twojego psa (z uwzględnieniem miejsca na smakołyki).</p>
+                    <div class="warranty">
+                        <p>Gwarantujemy, że <span class="name">{imię psa}</span><br/>wyliże miskę do czysta albo <b>zwrócimy Ci pieniądze.</b></p>
+                    </div>
                 </div>
             </div>
         </div>
