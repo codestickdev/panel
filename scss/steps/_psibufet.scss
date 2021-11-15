@@ -128,7 +128,7 @@
 
             font-size: 16px;
             line-height: 19px;
-            color: $primarycolor;
+            color: #000;
             font-weight: 500;
             max-width: 420px;
             margin: 0 auto 30px;
@@ -199,9 +199,10 @@
         }
         .psibufetPlan__karmaInfo{
             p{
+                color: #000;
+
                 &.bold{
-                    color: #000;
-                    max-width: 360px;
+                    max-width: 360px;   
                 }
             }
         }
