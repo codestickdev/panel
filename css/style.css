@@ -3680,13 +3680,72 @@ body {
   margin: 0 auto;
 }
 
+.psibufetPlan__karmaInfo .warranty {
+  max-width: 400px;
+  margin: 36px auto 0;
+  border: 2px solid #129D6F;
+  padding: 20px 12px;
+  position: relative;
+}
+
+.psibufetPlan__karmaInfo .warranty:before {
+  content: '';
+  background-image: url("../assets/img/warranty_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 32px;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.psibufetPlan__karmaInfo .warranty p {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  color: #000;
+}
+
+.psibufetPlan__karmaInfo .warranty p .name {
+  font-weight: 600;
+}
+
+.psibufetPlan__karmaInfo .warranty p b {
+  font-weight: 600;
+  color: #129D6F;
+}
+
 .psibufetPlan__karmaInfo--discount .discount {
   display: block;
 }
 
+.psibufetPlan--edge .psibufetPlan__wrap .switchTabs .tab {
+  width: 100%;
+  border: 0;
+  box-shadow: none;
+  cursor: auto;
+}
+
+.psibufetPlan--edge .psibufetPlan__wrap .switchTabs .tab h4 {
+  opacity: 1;
+}
+
+.psibufetPlan--edge .psibufetPlan__wrap .contentShow {
+  display: flex !important;
+  opacity: 1 !important;
+}
+
+.psibufetPlan--edge .psibufetPlan__karmaInfo p.bold {
+  color: #000;
+  max-width: 360px;
+}
+
 @media (max-width: 991px) {
   .psibufetPlan__karmaInfo {
-    padding-right: 20px;
+    padding: 0 20px 20px 0;
   }
 }
 
@@ -3707,7 +3766,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 0 15px;
+    margin: 0 0 5px;
   }
   .psibufetPlan__karmaInfo .mobileInfo__image {
     display: block;
@@ -3772,6 +3831,25 @@ body {
     font-size: 10px;
     line-height: 12px;
     margin: 0 auto 15px;
+    max-width: 270px;
+  }
+  .psibufetPlan__karmaInfo p.bold {
+    max-width: 220px;
+  }
+  .psibufetPlan__karmaInfo .warranty {
+    max-width: 270px;
+    margin: 28px auto 0;
+    padding: 10px 8px;
+  }
+  .psibufetPlan__karmaInfo .warranty:before {
+    background-size: 24px;
+    width: 24px;
+    height: 24px;
+    top: -14px;
+  }
+  .psibufetPlan__karmaInfo .warranty p {
+    font-size: 10px;
+    line-height: 12px;
   }
 }
 

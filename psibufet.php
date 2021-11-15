@@ -56,6 +56,66 @@
             </div>
         </div>
     </section>
+
+    <section class="psibufetPlan psibufetPlan--edge">
+        <div class="psibufetPlan__wrap">
+            <div class="switchTabs switchTabs--big">
+                <div class="tab">
+                    <h4>100% PsiBufet</h4>
+                </div>
+            </div>
+            <div class="contentShow">
+                <div class="psibufetPlan__karma">
+                    <img src="./assets/img/planMiska_full.png"/>
+                </div>
+                <div class="psibufetPlan__karmaInfo psibufetPlan__karmaInfo--discount">
+                    <div class="mobileInfo">
+                        <div class="mobileInfo__image">
+                            <img src="./assets/img/planMiska_full.png"/>
+                        </div>
+                        <div class="mobileInfo__price">
+                            <h2 class="discount"><span class="discount__wrap"><span>9<small>90</small></span> zł</span> / dzień</h2>
+                            <h3 class="price">od<span class="price__wrap"><span class="price__price">6<small>45</small></span>zł</span>/ dzień</h3>
+                            <h4 class="portion">Porcja: <span>1000</span> g / dzień</h4>
+                        </div>
+                    </div>
+                    <p>PsiBufet pokryje pełne zapotrzebowanie kaloryczne Twojego psa (z uwzględnieniem miejsca na smakołyki).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="psibufetPlan psibufetPlan--edge">
+        <div class="psibufetPlan__wrap">
+            <div class="switchTabs switchTabs--big">
+                <div class="tab">
+                    <h4>Plan MIX</h4>
+                </div>
+            </div>
+            <div class="contentShow">
+                <div class="psibufetPlan__karma">
+                    <img src="./assets/img/planMiska_half.png"/>
+                </div>
+                <div class="psibufetPlan__karmaInfo psibufetPlan__karmaInfo--discount">
+                    <div class="mobileInfo">
+                        <div class="mobileInfo__image">
+                            <img src="./assets/img/planMiska_half.png"/>
+                        </div>
+                        <div class="mobileInfo__price">
+                            <h2 class="discount"><span class="discount__wrap"><span>9<small>90</small></span> zł</span> / dzień</h2>
+                            <h3 class="price">od<span class="price__wrap"><span class="price__price">6<small>45</small></span>zł</span>/ dzień</h3>
+                            <h4 class="portion">Porcja: <span>1000</span> g / dzień</h4>
+                        </div>
+                    </div>
+                    <p class="bold">Ze względu na ograniczoną pojemność naszych kartonów, dostarczona porcja PsiBufet pokryje 50% zapotrzebowania kalorycznego Twojego psa (z uwzględnieniem miejsca na smakołyki).</p>
+                    <div class="warranty">
+                        <p>Gwarantujemy, że <span class="name">{imię psa}</span><br/>wyliże miskę do czysta albo <b>zwrócimy Ci pieniądze.</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="accordion accordion--twoArrows psibufetHow">
         <div class="accordion__heading">
             <h2>Jak podawać karmy?</h2>
