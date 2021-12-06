@@ -1746,12 +1746,13 @@ body {
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: #fff;
+  background-color: #129D6F;
   z-index: 3;
 }
 
 .cartValue__heading:before, .cartValue__heading:after {
   content: '';
+  filter: invert(100%) sepia(110%) saturate(0%) hue-rotate(328deg) brightness(106%) contrast(701%);
   background-image: url("../assets/img/arrow_red.svg");
   background-repeat: no-repeat;
   background-size: 10px;
@@ -1776,7 +1777,7 @@ body {
   font-size: 21px;
   line-height: 25px;
   font-weight: 400;
-  color: #000;
+  color: #fff;
   margin: 0;
   transition: cubic-bezier(0.73, -0.01, 0, 0.99) 0.8s;
 }
