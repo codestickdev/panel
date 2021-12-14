@@ -142,76 +142,8 @@
                 </div>
                 <div class="accordion__contentWrap">
                     <div class="accordion__content">
-                        <div class="calendar">
-                            <div class="calendar__nav">
-                                <div class="arrow arrow--left"><img src="assets/img/arrow_red.svg"/></div>
-                                <div class="monthName">Marzec 2021</div>
-                                <div class="arrow arrow--right"><img src="assets/img/arrow_red.svg"/></div>
-                            </div>
-                            <div class="calendar__content">
-                                <table border="1">
-                                    <thead>
-                                        <tr>
-                                            <th>Pn.</th>
-                                            <th>Wt.</th>
-                                            <th>Śr.</th>
-                                            <th>Czw.</th>
-                                            <th>Pt.</th>
-                                            <th>Sob.</th>
-                                            <th>Ndz.</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="notAvailable">1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>4</td>
-                                            <td class="notAvailable">5</td>
-                                            <td class="notAvailable">6</td>
-                                            <td class="notAvailable">7</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="notAvailable">8</td>
-                                            <td>9</td>
-                                            <td class="checked">10</td>
-                                            <td>11</td>
-                                            <td class="notAvailable">12</td>
-                                            <td class="notAvailable">13</td>
-                                            <td class="notAvailable">14</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="notAvailable">15</td>
-                                            <td>16</td>
-                                            <td>17</td>
-                                            <td>18</td>
-                                            <td class="notAvailable">19</td>
-                                            <td class="notAvailable">20</td>
-                                            <td class="notAvailable">21</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="notAvailable">22</td>
-                                            <td>23</td>
-                                            <td>24</td>
-                                            <td>25</td>
-                                            <td class="notAvailable">26</td>
-                                            <td class="notAvailable">27</td>
-                                            <td class="notAvailable">28</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="notAvailable">29</td>
-                                            <td>30</td>
-                                            <td>31</td>
-                                            <td class="nextMonth">1</td>
-                                            <td class="nextMonth">2</td>
-                                            <td class="nextMonth">3</td>
-                                            <td class="nextMonth">4</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <h4 class="calendar__selectedDate">Wybrana data: <span>10.04.2021 (środa)</span></h4>
+                        <div class="deliveryCalendar"></div>
+                        <h4 class="calendar__selectedDate">Wybrana data: <span><span class="deliveryDate">10.04.2021</span> (<span class="deliveryDay">środa</span>)</span></h4>
                         <div class="btn btn--nextStepForm btn--arrowDown"><span>Dalej</span></div>
                     </div>
                 </div>

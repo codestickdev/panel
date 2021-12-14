@@ -70,6 +70,28 @@ $(document).ready(function(){
     });
 });
 
+/**
+ * Courier data picker
+ */
+$(document).ready(function(){
+    $('.deliveryCalendar').datepicker({
+        dayNames: ['Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota'],
+        dayNamesMin: ['Ndz.', 'Pn.', 'Wt.', 'Śr.', 'Czw.', 'Pt.', 'Sob.'],
+        monthNames: ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Pażdziernik', 'Listopad', 'Grudzień'],
+        monthNamesShort: ['Sty', 'Lut', 'Mar', 'Kwi', 'Maj', 'Cze', 'Lip', 'Sie', 'Wrz', 'Paź', 'Lis', 'Gru'],
+        firstDay: 1,
+        dateFormat: 'dd.mm.yy',
+        onSelect: function(dateText, inst) { 
+            var dayNames = ['Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota'];
+            var date = $(this).datepicker('getDate');
+            var d = new Date(date).getDay();
+
+            $('.deliveryDate').text(dateText);
+            $('.deliveryDay').text(dayNames[d]);
+        }
+    });
+});
+
 /* Accordion engine */
 $(document).ready(function(){
     var firstAcc = $('.cart__column').find('.cart__accordion').first();
