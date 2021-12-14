@@ -2278,17 +2278,29 @@ body {
   opacity: 1;
 }
 
+.courierTab .inputWrapper.pickup {
+  display: none;
+  margin-bottom: 20px;
+}
+
 .courierSelect {
   max-width: 420px;
-  padding: 0 20px;
-  margin: 0 auto;
+  margin: 0 auto 10px;
+}
+
+.courierSelect__title {
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0 0 18px;
+  text-align: center;
 }
 
 .courierSelect__option {
   display: flex;
   justify-content: space-between;
   position: relative;
-  margin: 0 0 20px;
+  padding: 8px 13px;
   cursor: pointer;
 }
 
@@ -2330,7 +2342,7 @@ body {
 }
 
 .courierSelect__option .content {
-  width: calc(100% - 115px);
+  width: 100%;
   text-align: left;
 }
 
@@ -2347,12 +2359,24 @@ body {
   font-size: 14px;
   line-height: 16px;
   color: rgba(0, 0, 0, 0.5);
-  max-width: 250px;
   margin: 0;
 }
 
-.courierSelect__option .logo {
-  width: 75px;
+.courierSelect__option .content p.delivery {
+  padding-left: 18px;
+  position: relative;
+}
+
+.courierSelect__option .content p.delivery:before {
+  content: '';
+  background-image: url("../assets/img/arrow_red.svg");
+  background-size: 8px;
+  width: 8px;
+  height: 6px;
+  position: absolute;
+  left: 6px;
+  top: 5px;
+  transform: rotate(-90deg);
 }
 
 .courierSelect__option.checked .checkbox div {
@@ -2360,38 +2384,36 @@ body {
   border-color: #129D6F;
 }
 
-.courierSelect__option--best .logo {
+.courierSelect__option--best {
+  border: 1px solid #129D6F;
   position: relative;
+  padding: 13px;
+  margin: 0 0 4px;
 }
 
-.courierSelect__option--best .logo:before {
-  content: '';
-  background-image: url("../assets/img/couriers/courierBest.svg");
-  background-repeat: no-repeat;
-  background-size: 133px;
-  width: 133px;
-  height: 40px;
+.courierSelect__option--best:before {
+  content: 'Najlepszy wybór';
+  font-size: 12px;
+  line-height: 14px;
+  color: #129D6F;
+  font-weight: 600;
   position: absolute;
-  top: -75%;
+  padding: 0 10px;
+  background-color: #fff;
+  max-width: fit-content;
+  max-width: -moz-max-content;
+  max-width: -webkit-fit-content;
+  position: absolute;
+  top: -8px;
+  left: 0;
   right: 0;
-  left: -35%;
   margin: 0 auto;
+  z-index: 2;
 }
 
 @media (max-width: 767px) {
   .courierSelect__option {
     position: relative;
-  }
-  .courierSelect__option .logo {
-    position: unset;
-  }
-  .courierSelect__option .logo:before {
-    background-size: 80px;
-    width: 80px;
-    height: 26px;
-    top: -35px;
-    left: 0;
-    right: auto;
   }
 }
 
@@ -2399,9 +2421,28 @@ body {
   .courierSelect {
     padding: 0;
   }
+  .courierSelect__title {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 0 15px;
+  }
   .courierSelect__option .content p {
     font-size: 10px;
     line-height: 12px;
+  }
+  .courierSelect__option .content p.delivery {
+    padding-left: 15px;
+  }
+  .courierSelect__option .content p.delivery:before {
+    background-size: 7px;
+    width: 7px;
+    height: 5px;
+    left: 4px;
+    top: 3px;
+  }
+  .courierSelect__option--best:before {
+    font-size: 10px;
+    padding: 0 7px;
   }
 }
 
@@ -5745,6 +5786,44 @@ body.noscroll {
   background-color: unset;
 }
 
+.btn--pickup {
+  background-color: #fff;
+  border: 1px solid #000;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+  padding: 0 35px;
+  height: 40px;
+  margin: 0;
+}
+
+.btn--pickup:hover {
+  background-color: #f5f5f5;
+}
+
+.btn--pickup span {
+  font-size: 14px;
+  line-height: 39px;
+  color: #000;
+  padding-left: 22px;
+  padding-right: 5px;
+}
+
+.btn--pickup span:after {
+  display: none;
+}
+
+.btn--pickup span:before {
+  content: '';
+  background-image: url("../assets/img/marker_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  width: 15px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
 @media (max-width: 767px) {
   .btn span {
     font-size: 14px;
@@ -5779,6 +5858,11 @@ body.noscroll {
 @media (max-width: 530px) {
   .btn--placeOrder {
     max-width: none;
+  }
+  .btn--pickup {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
   }
 }
 

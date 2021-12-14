@@ -73,11 +73,12 @@
                     </div>
                 </div>
             </div>
-            <div class="cart__accordion accordion">
+            <div class="cart__accordion accordion courierTab">
                 <div class="accordion__heading">
-                    <h2>Kurier</h2>
+                    <h2>Forma dostawy</h2>
                 </div>
                 <div class="accordion__contentWrap">
+                    <p class="courierSelect__title">Jak mamy dostarczyć Twoje zamówienie?</p>
                     <div class="accordion__content">
                         <div class="courierSelect">
                             <div class="courierSelect__option courierSelect__option--best">
@@ -86,11 +87,9 @@
                                     <div></div>
                                 </div>
                                 <div class="content">
-                                    <h3>Dostawa pod drzwi</h3>
-                                    <p>Przesyłka rano na Twojej wycieraczce.<br/>Brak możliwości opłaty przy odbiorze.</p>
-                                </div>
-                                <div class="logo">
-                                    <img src="assets/img/couriers/goodspeed_logo.svg"/>
+                                    <h3>Wieczorem do rąk własnych</h3>
+                                    <p>Otrzymasz idealnie zamrożoną karmę w dniu wysyłki.</p>
+                                    <p class="delivery">Dostawa: poniedziałek - piątek w godz. 18 - 22</p>
                                 </div>
                             </div>
                             <div class="courierSelect__option">
@@ -99,11 +98,9 @@
                                     <div></div>
                                 </div>
                                 <div class="content">
-                                    <h3>Przesyłka kurierska</h3>
-                                    <p>Standardowa przesyłka kurierska.</p>
-                                </div>
-                                <div class="logo">
-                                    <img src="assets/img/couriers/dhl_logo.svg"/>
+                                    <h3>Rano pod Twoimi drzwiami</h3>
+                                    <p>Podaj kod do domofonu aby kurier Cię nie obudził.</p>
+                                    <p class="delivery">Dostawa: wtorek - sobota w nocy</p>
                                 </div>
                             </div>
                             <div class="courierSelect__option">
@@ -112,16 +109,28 @@
                                     <div></div>
                                 </div>
                                 <div class="content">
-                                    <h3>Odbiór w sklepie</h3>
-                                    <p>Odbierz w punkcie DHL, min. Żabka, InMedio, Shell, Relay.</p>
+                                    <h3>Tradycyjnym kurierem</h3>
+                                    <p>Otrzymasz idealnie zamrożoną karmę w dniu wysyłki.</p>
+                                    <p class="delivery">Dostawa: wtorek - czwartek</p>
                                 </div>
-                                <div class="logo">
-                                    <img src="assets/img/couriers/zabka_logo.svg"/>
+                            </div>
+                            <div class="courierSelect__option">
+                                <input type="radio" class="radioEngine" name="courierSelect" value="pickup"/>
+                                <div class="checkbox">
+                                    <div></div>
+                                </div>
+                                <div class="content">
+                                    <h3>odbiór w punkcie</h3>
+                                    <p>Odbierz paczkę tak szybko jak to możliwe.</p>
+                                    <p class="delivery">Dostawa: czwartek, do punktu odbioru.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="inputWrapper inputname">
                             <input type="text" class="input input--text" placeholder="Wiadomość dla kuriera (kod do klatki)"/>
+                        </div>
+                        <div class="inputWrapper pickup">
+                            <p class="btn btn--pickup btn--clean"><span>Wybierz punkt odbioru</span></p>
                         </div>
                         <div class="btn btn--nextStepForm btn--arrowDown"><span>Dalej</span></div>
                     </div>

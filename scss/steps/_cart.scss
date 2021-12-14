@@ -614,16 +614,32 @@
     }
 }
 
+.courierTab{
+    .inputWrapper{
+        &.pickup{
+            display: none;
+            margin-bottom: 20px;
+        }
+    }
+}
+
 .courierSelect{
     max-width: 420px;
-    padding: 0 20px;
-    margin: 0 auto;
+    margin: 0 auto 10px;
+
+    &__title{
+        font-size: 14px;
+        line-height: 16px;
+        color: $primarycolor;
+        margin: 0 0 18px;
+        text-align: center;
+    }
 
     &__option{
         display: flex;
         justify-content: space-between;
         position: relative;
-        margin: 0 0 20px;
+        padding: 8px 13px;
         cursor: pointer;
 
         input{
@@ -662,7 +678,7 @@
             }
         }
         .content{
-            width: calc(100% - 115px);
+            width: 100%;
             text-align: left;
 
             h3{
@@ -677,12 +693,25 @@
                 font-size: 14px;
                 line-height: 16px;
                 color: $primarycolor;
-                max-width: 250px;
                 margin: 0;
+
+                &.delivery{
+                    padding-left: 18px;
+                    position: relative;
+                    
+                    &:before{
+                        content: '';
+                        background-image: url('../assets/img/arrow_red.svg');
+                        background-size: 8px;
+                        width: 8px;
+                        height: 6px;
+                        position: absolute;
+                        left: 6px;
+                        top: 5px;
+                        transform: rotate(-90deg);
+                    }
+                }
             }
-        }
-        .logo{
-            width: 75px;
         }
 
         &.checked{
@@ -694,22 +723,29 @@
             }
         }
         &--best{
-            .logo{
-                position: relative;
+            border: 1px solid $greencolor;
+            position: relative;
+            padding: 13px;
+            margin: 0 0 4px;
 
-                &:before{
-                    content: '';
-                    background-image: url('../assets/img/couriers/courierBest.svg');
-                    background-repeat: no-repeat;
-                    background-size: 133px;
-                    width: 133px;
-                    height: 40px;
-                    position: absolute;
-                    top: -75%;
-                    right: 0;
-                    left: -35%;
-                    margin: 0 auto;
-                }
+            &:before{
+                content: 'Najlepszy wybór';
+                font-size: 12px;
+                line-height: 14px;
+                color: $greencolor;
+                font-weight: 600;
+                position: absolute;
+                padding: 0 10px;
+                background-color: #fff;
+                max-width: fit-content;
+                max-width: -moz-max-content;
+                max-width: -webkit-fit-content;
+                position: absolute;
+                top: -8px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                z-index: 2;
             }
         }
     }
@@ -718,19 +754,6 @@
     .courierSelect{
         &__option{
             position: relative;
-
-            .logo{
-                position: unset;
-
-                &:before{
-                    background-size: 80px;
-                    width: 80px;
-                    height: 26px;
-                    top: -35px;
-                    left: 0;
-                    right: auto;
-                }
-            }
         }
     }
 }
@@ -738,11 +761,35 @@
     .courierSelect{
         padding: 0;
 
+        &__title{
+            font-size: 12px;
+            line-height: 14px;
+            margin: 0 0 15px;
+        }
+
         &__option{
             .content{
                 p{
                     font-size: 10px;
                     line-height: 12px;
+
+                    &.delivery{
+                        padding-left: 15px;
+                        
+                        &:before{
+                            background-size: 7px;
+                            width: 7px;
+                            height: 5px;
+                            left: 4px;
+                            top: 3px;
+                        }
+                    }
+                }
+            }
+            &--best{
+                &:before{
+                    font-size: 10px;
+                    padding: 0 7px;
                 }
             }
         }

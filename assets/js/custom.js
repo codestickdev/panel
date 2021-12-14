@@ -53,6 +53,23 @@ $(document).ready(function(){
     });
 });
 
+/**
+ * Courier select
+ */
+$(document).ready(function(){
+    $('input[name="courierSelect"]').on('click', function(){
+        var val = $(this).val();
+        var parent = $(this).parents('.courierTab');
+        if(val == 'pickup'){
+            parent.find('.inputWrapper.inputname').hide();
+            parent.find('.inputWrapper.pickup').show();
+        }else{
+            parent.find('.inputWrapper.inputname').show();
+            parent.find('.inputWrapper.pickup').hide();
+        }
+    });
+});
+
 /* Accordion engine */
 $(document).ready(function(){
     var firstAcc = $('.cart__column').find('.cart__accordion').first();
