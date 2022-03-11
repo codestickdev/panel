@@ -98,6 +98,8 @@ body {
   height: 60px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   background-color: #fff;
+  position: relative;
+  z-index: 4;
 }
 
 .panelHeader__wrap {
@@ -1694,6 +1696,147 @@ body {
 
 /*  Steps
 ----------------- */
+.firstInfo {
+  padding: 24px 0;
+  min-height: calc(100vh - 335px);
+  position: relative;
+}
+
+.firstInfo:after {
+  content: '';
+  background-image: url("../assets/img/firstStep_dog.png");
+  background-repeat: no-repeat;
+  background-size: 386px;
+  width: 386px;
+  height: 503px;
+  position: absolute;
+  right: -130px;
+  bottom: -50px;
+  z-index: 1;
+}
+
+.firstInfo__wrap {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.firstInfo__info {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  padding: 12px 9px 10px;
+  margin: 0 0 24px;
+}
+
+.firstInfo__info:last-of-type {
+  margin: 0;
+}
+
+.firstInfo__info:before {
+  content: attr(data-count) ".";
+  font-size: 33px;
+  line-height: 1;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  position: relative;
+  margin-right: 10px;
+}
+
+.firstInfo__info h3 {
+  font-size: 25px;
+  line-height: 30px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+}
+
+@media (max-width: 1199px) {
+  .firstInfo:after {
+    right: -150px;
+  }
+  .firstInfo__wrap {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 991px) {
+  .firstInfo {
+    padding-bottom: 200px;
+  }
+  .firstInfo:after {
+    background-size: 250px;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    right: -130px;
+    bottom: -50px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .firstInfo {
+    min-height: calc(100vh - 300px);
+    padding: 10px 20px 130px;
+  }
+  .firstInfo:after {
+    background-size: 175px;
+    width: 175px;
+    height: 180px;
+  }
+  .firstInfo__wrap {
+    max-width: 300px;
+    position: relative;
+    z-index: 3;
+  }
+  .firstInfo__info {
+    align-items: flex-start;
+    margin: 0 0 10px;
+    padding: 10px 9px 8px;
+  }
+  .firstInfo__info:before {
+    font-size: 26px;
+  }
+  .firstInfo__info h3 {
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+.firstStart {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px -4px 0px rgba(0, 0, 0, 0.1);
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+}
+
+.firstStart .btn {
+  min-width: 188px;
+  text-align: center;
+}
+
+@media (max-width: 575px) {
+  .firstStart {
+    padding: 0 20px;
+  }
+  .firstStart .btn {
+    max-width: 320px;
+    width: 100%;
+    min-width: 0;
+  }
+}
+
 .cart {
   display: flex;
   justify-content: space-between;
@@ -2409,6 +2552,21 @@ body {
   right: 0;
   margin: 0 auto;
   z-index: 2;
+}
+
+.courierSelect__option--simple {
+  padding-top: 0;
+}
+
+.courierSelect__option--simple .content {
+  text-align: center;
+}
+
+.courierSelect__option--simple .content p.delivery {
+  max-width: fit-content;
+  max-width: -moz-max-content;
+  max-width: -webkit-fit-content;
+  margin: 0 auto;
 }
 
 @media (max-width: 767px) {
@@ -6193,6 +6351,62 @@ body.noscroll {
   top: 0px;
 }
 
+.panel--first {
+  background-color: #feb800;
+  min-height: calc(100vh - 61px);
+  position: relative;
+  padding-bottom: 130px;
+  overflow: hidden;
+}
+
+.panel--first .stepHeading {
+  min-height: 140px;
+  margin: 0;
+  position: relative;
+  z-index: 3;
+}
+
+.panel--first .stepHeading__wrap {
+  position: relative;
+}
+
+.panel--first .stepHeading__wrap:before {
+  content: '';
+  background-image: url("../assets/img/miska_vec.png");
+  background-repeat: no-repeat;
+  background-size: 300px;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: -35px;
+  top: 0px;
+}
+
+@media (max-width: 1199px) {
+  .panel--first .stepHeading__wrap:before {
+    left: -65px;
+  }
+}
+
+@media (max-width: 991px) {
+  .panel--first .stepHeading__wrap:before {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .panel--first .stepHeading {
+    min-height: 105px;
+  }
+  .panel--first .stepHeading__wrap {
+    padding: 10px 20px 5px;
+  }
+  .panel--first .stepHeading__wrap h2 {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 991px) {
   .panel--mainform .stepHeading__wrap {
     position: relative;
@@ -6263,6 +6477,10 @@ body.noscroll {
   margin: 10px auto 0;
   text-align: center;
   max-width: 445px;
+}
+
+.stepHeading__wrap--container {
+  max-width: 1170px;
 }
 
 .stepHeading--small .stepHeading__wrap h2 {

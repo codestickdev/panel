@@ -2,6 +2,8 @@
     height: 60px;
     border-bottom: 1px solid $primarycolorlight;
     background-color: #fff;
+    position: relative;
+    z-index: 4;
 
     &__wrap{
         display: flex;
