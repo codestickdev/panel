@@ -2164,6 +2164,17 @@ body {
   }
 }
 
+.accordion__content .summarySafety {
+  margin: 8px 0 0;
+}
+
+.accordion__content .summarySafety p {
+  font-size: 10px;
+  line-height: 12px;
+  color: #000;
+  margin: 0 0 18px;
+}
+
 .accordion__inputWrap {
   max-width: 420px;
   margin: 0 auto;

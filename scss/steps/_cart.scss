@@ -322,6 +322,17 @@
         @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
         @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
         @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+        .summarySafety{
+            margin: 8px 0 0;
+
+            p{
+                font-size: 10px;
+                line-height: 12px;
+                color: #000;
+                margin: 0 0 18px;
+            }
+        }
     }
     &__inputWrap{
         max-width: 420px;
