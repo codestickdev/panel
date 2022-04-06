@@ -1782,7 +1782,7 @@ body {
 @media (max-width: 575px) {
   .firstInfo {
     min-height: calc(100vh - 300px);
-    padding: 10px 20px 130px;
+    padding: 10px 20px 50px;
   }
   .firstInfo:after {
     background-size: 175px;
