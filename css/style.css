@@ -1782,7 +1782,7 @@ body {
 @media (max-width: 575px) {
   .firstInfo {
     min-height: calc(100vh - 300px);
-    padding: 10px 20px 50px;
+    padding: 10px 20px 10px;
   }
   .firstInfo:after {
     background-size: 175px;
@@ -6366,7 +6366,7 @@ body.noscroll {
   background-color: #feb800;
   min-height: calc(100vh - 61px);
   position: relative;
-  padding-bottom: 130px;
+  padding-bottom: 86px;
   overflow: hidden;
 }
 
