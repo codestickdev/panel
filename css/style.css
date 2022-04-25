@@ -1808,6 +1808,13 @@ body {
   }
 }
 
+@media (max-width: 320px) {
+  .firstInfo__info h3 {
+    font-size: 19px;
+    line-height: 21px;
+  }
+}
+
 .firstStart {
   width: 100%;
   background-color: #fff;
