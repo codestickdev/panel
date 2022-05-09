@@ -213,16 +213,8 @@
                 <div class="cartSummary__heading">
                     <h2>Twój koszyk</h2>
                 </div>
-                <div class="switchTabs">
-                    <div class="tab selected" data="01">
-                        <h4>Pierwsza dostawa</h4>
-                    </div>
-                    <div class="tab" data="02">
-                        <h4>Kolejne dostawy</h4>
-                    </div>
-                </div>
                 <div class="cartSummary__content contentShow ready visible" data="01" price="46.72">
-                    <div class="info">
+                    <div class="info" style="margin: 0 auto 20px;">
                         <h3>14 dni z karmą PsiBufet</h3>
                     </div>
                     <div class="summary">
@@ -246,33 +238,6 @@
                     <div class="total">
                         <p>Suma:</p>
                         <p class="price"><span class="value">36<small>40</small></span> zł</p>
-                    </div>
-                </div>
-                <div class="cartSummary__content contentShow" data="02" price="46.72">
-                    <div class="info">
-                        <h3>14 dni z karmą PsiBufet</h3>
-                    </div>
-                    <div class="summary">
-                        <div class="summary__pos">
-                            <p>Karmy:</p>
-                            <p><span class="value">6<small>90</small></span> zł / dzień</p>
-                        </div>
-                        <div class="summary__pos">
-                            <p>Okres:</p>
-                            <p>14 dni</p>
-                        </div>
-                        <div class="summary__pos">
-                            <p>Dostawa:</p>
-                            <p><span>10</span> zł</p>
-                        </div>
-                        <div class="summary__pos">
-                            <p>Płatność:</p>
-                            <p><span>0</span> zł</p>
-                        </div>
-                    </div>
-                    <div class="total">
-                        <p>Suma:</p>
-                        <p class="price"><span class="value">46<small>72</small></span> zł</p>
                     </div>
                 </div>
             </div>
