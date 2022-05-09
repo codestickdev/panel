@@ -239,6 +239,20 @@
         margin: 0 auto;
         max-width: calc(100% - 60px);
     }
+    .confirmCoupon{
+        margin: 0 auto 20px;
+        max-width: calc(100% - 60px);
+
+        .btn{
+            width: 100%;
+            height: 40px;
+
+            span{
+                font-size: 15px;
+                line-height: 40px;
+            }
+        }
+    }
 }
 @media (max-width: 530px){
     .summaryCoupon{

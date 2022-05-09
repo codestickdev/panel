@@ -105,6 +105,9 @@
                 <div class="accordion__content inputname">
                     <input type="text" class="input input--text" placeholder="Wpisz kod rabatowy"/>
                 </div>
+                <div class="confirmCoupon">
+                    <button class="btn btn--button"><span>Zrealizuj</span></button>
+                </div>
             </div>
         </div>
     </section>
