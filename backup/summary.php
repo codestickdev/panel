@@ -10,52 +10,42 @@
     <section class="summaryContent">
         <div class="summaryCart">
             <div class="summaryCart__content">
+                <div class="switchTabs">
+                    <div class="tab selected" data="01">
+                        <h4>Pierwsza dostawa</h4>
+                    </div>
+                    <div class="tab" data="02">
+                        <h4>Kolejne dostawy</h4>
+                    </div>
+                </div>
                 <div class="cartSummary__content contentShow ready visible" data="01">
-                    <h2 class="heading">Zawartość paczki</h2>
+                    <h2 class="heading">Jedzienie na 2 tygodnie</h2>
                     <div class="info">
-                        <div class="info__pos">
-                            <h3>600 g</h3>
-                            <p>dziennej <br/>porcji</p>
-                        </div>
-                        <div class="info__pos">
-                            <h3>14</h3>
-                            <p>saszetek <br/>z jedzeniem</p>
-                        </div>
-                        <div class="info__pos">
-                            <h3>2 tygodnie</h3>
-                            <p>zapasu <br/>posiłków</p>
-                        </div>
+                        <h2>Zawartość paczki</h2>
+                        <h3>28 <small>x</small> 500g</h3>
                     </div>
-                    <div class="summary summary--items" data-summary="1">
-                        <div class="summary__pos summary__pos--heading">
-                            <p>Smak</p>
-                            <p>14 saszetek</p>
-                        </div>
+                    <div class="summary summary--items">
                         <div class="summary__pos">
+                            <p><b>4x</b></p>
                             <p>Wołowe Love</p>
-                            <p>4 x 600g</p>
                         </div>
                         <div class="summary__pos">
+                            <p><b>4x</b></p>
                             <p>Jagnię Wcina</p>
-                            <p>4 x 600g</p>
                         </div>
                         <div class="summary__pos">
+                            <p><b>10x</b></p>
                             <p>Indyczy Kąsek</p>
-                            <p>4 x 600g</p>
                         </div>
                         <div class="summary__pos">
+                            <p><b>10x</b></p>
                             <p>Kurczę Pieczone</p>
-                            <p>2 x 600g</p>
                         </div>
-                    </div>
-                    <div class="showInfo" data-summary="1">
-                        <p>Zobacz wybrane smaki</p>
+                        <div class="alert alert--success">
+                            <p>Możesz w każdym momencie zmienić plan lub wstrzymać dostawy.</p>
+                        </div>
                     </div>
                     <div class="summary">
-                        <div class="summary__pos summary__pos--heading discount">
-                            <p>Podsumowanie</p>
-                            <p class="value">Zniżka -20%</p>
-                        </div>
                         <div class="summary__pos">
                             <p>Karma na 14 dni:</p>
                             <div class="priceWrap">
@@ -79,13 +69,6 @@
                     <div class="total">
                         <p>Suma:</p>
                         <p class="price"><span class="value">36<small>40</small></span> zł</p>
-                    </div>
-                    <div class="deliveryInfo">
-                        <p>Druga dostawa dotrze do Ciebie 2 tygodnie po pierwszej paczce.</p>
-                        <p>Możesz w każdej chwili zrezygnować z kolejnych dostaw lub zmienić zawartość paczki oraz termin dostawy.</p>
-                    </div>
-                    <div class="showInfo showInfo--delivery" data-summary="2">
-                        <p>Kolejne dostawy</p>
                     </div>
                 </div>
                 <div class="cartSummary__content contentShow contentShow--nextdelivery" data="02">

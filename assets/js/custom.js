@@ -54,6 +54,28 @@ $(document).ready(function(){
 });
 
 /**
+ * Payment options - order button change
+ */
+$(document).ready(function(){
+    $('input[name="paymentSelect"]').on('click', function(){
+        let value = $(this).val(),
+            card = $('.paymentField'),
+            placeOrder = $('.btn.place-order');
+
+        card.addClass('paymentField--disabled');
+
+        if(value == 'card'){
+            card.removeClass('paymentField--disabled');
+            placeOrder.removeClass('btn--applepay').removeClass('btn--googlepay').addClass('btn--placeOrder');
+        }else if(value == 'applepay'){
+            placeOrder.removeClass('btn--placeOrder').removeClass('btn--googlepay').addClass('btn--applepay');
+        }else if(value == 'googlepay'){
+            placeOrder.removeClass('btn--placeOrder').removeClass('btn--applepay').addClass('btn--googlepay');
+        }
+    });
+});
+
+/**
  * Courier select
  */
 $(document).ready(function(){

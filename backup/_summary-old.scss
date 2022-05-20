@@ -43,38 +43,23 @@
                 color: #000;
             }
             .info{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                flex-direction: row;
+                background: rgba(247, 190, 69, 0.2);
                 max-width: 350px;
-                padding: 15px 0;
-                border-top: 1px solid rgba(0, 0, 0, .2);
-                height: auto;
-                background: unset;
+                height: 73px;
                 margin: 15px auto 14px;
 
-                &:before,
+                &:before{
+                    content: '';
+                    background-image: url('../assets/img/cartSummary_boxLeft.svg');
+                    background-size: 85px;
+                    width: 85px;
+                    height: 61px;
+                    left: 5px;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                }
                 &:after{
                     display: none;
-                }
-
-                &__pos{
-                    max-width: calc(100% / 3);
-                    width: 100%;
-
-                    h3{
-                        font-size: 25px;
-                        line-height: 30px;
-                        margin: 0 0 2px;
-                    }
-                    p{
-                        font-size: 16px;
-                        line-height: 20px;
-                        font-family: 'Roboto', sans-serif;
-                        color: #000;
-                        text-align: center;
-                    }
                 }
 
                 h2{
@@ -86,68 +71,19 @@
                     text-transform: uppercase;
                     margin: 0;
                 }
-            }
-            .showInfo{
-                background-color: rgba(0, 0, 0, .05);
-                max-width: 350px;
-                margin: 0 auto 21px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 5px 0;
-                cursor: pointer;
-                transition: ease .3s;
-
-                &:hover{
-                    opacity: .8;
-                }
-
-                &.active{
-                    p{
-                        &:after{
-                            transform: translate(0, -50%) rotate(-180deg);
-                        }
-                    }
-                }
-
-                p{
-                    font-size: 16px;
-                    line-height: 19px;
-                    color: #000;
-                    text-decoration: underline;
-                    padding-right: 20px;
-                    text-align: center;
-                    margin: 0;
-                    position: relative;
-
-                    &:after{
-                        content: '';
-                        background-image: url('../assets/img/arrow_red.svg');
-                        background-repeat: no-repeat;
-                        background-size: 12px;
-                        width: 12px;
-                        height: 9px;
-                        position: absolute;
-                        right: 0;
-                        top: 50%;
-                        transform: translate(0, -50%);
-                        transition: ease .3s;
-                    }
-                }
-
-                &--delivery{
-                    margin: 15px auto 0;
+                h3{
+                    font-size: 25px;
+                    line-height: 30px;
+                    margin: 0 0 -6px;
                 }
             }
             .summary{
                 max-width: 380px;
-                padding: 15px 0;
-                border-top: 1px solid rgba(0, 0, 0, .2);
 
                 &__pos{
-                    max-width: 350px;
+                    max-width: 360px;
                     margin: 0 auto;
-                    padding: 5px 10px;
+                    padding: 3px 10px;
 
                     @media (min-width: 768px){
                         p{
@@ -177,27 +113,10 @@
                     &--discount{
                         background-color: rgba(18, 157, 111, 0.2);
                     }
-                    &--heading{
-                        p{
-                            font-weight: bold;
-                        }
-
-                        &.discount{
-                            .value{
-                                color: $greencolor;
-                            }
-                        }
-                    }
                 }
                 &--items{
-                    padding: 15px 0 10px;
-                    border-top: 1px solid rgba(0, 0, 0, .2);
-                    max-width: 350px;
-
                     .summary__pos{
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
+                        max-width: 235px;
                     }
                 }
             }
@@ -221,40 +140,11 @@
                 }
             }
             .total{
-                max-width: 330px;
-                margin: 0 auto 15px;
+                max-width: 340px;
 
                 p{
-                    font-size: 24px;
-                    line-height: 28px;
-
-                    .value{
-                        padding-right: 17px;
-
-                        small{
-                            font-size: 14px;
-                            top: -5px;
-                        }
-                    }
-                }
-            }
-            .deliveryInfo{
-                max-width: 380px;
-                margin: 0 auto;
-                padding: 17px 0 0;
-                border-top: 1px solid rgba(0, 0, 0, .2);
-
-                p{
-                    font-size: 16px;
-                    line-height: 19px;
-                    color: #000;
-                    max-width: 330px;
-                    margin: 0 auto 15px;
-                    text-align: justify;
-
-                    &:last-of-type{
-                        margin: 0 auto;
-                    }
+                    font-size: 18px;
+                    line-height: 21px;
                 }
             }
         }

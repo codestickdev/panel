@@ -412,6 +412,90 @@ body{
             }
         }
     }
+    &--applepay{
+        max-width: 280px;
+        width: 100%;
+        background-color: #000;
+
+        &:hover{
+            background-color: #3e3e3e;
+        }
+        &.disabled{
+            cursor: not-allowed;
+            filter: grayscale(1);
+            opacity: .7;
+
+            &:hover{
+                background-color: #000 !important;
+            }
+        }
+
+        span{
+            display: block;
+            font-size: 0;
+            padding: 0;
+
+            &:before{
+                content: '';
+                background-image: url('../assets/img/applepay_logo.svg');
+                background-repeat: no-repeat;
+                background-size: 40px;
+                width: 40px;
+                height: 16px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+            &::after{
+                display: none;
+            }
+        }
+    }
+    &--googlepay{
+        max-width: 280px;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, .2);
+
+        &:hover{
+            background-color: #f3f3f3;
+        }
+        &.disabled{
+            cursor: not-allowed;
+            filter: grayscale(1);
+
+            &:hover{
+                background-color: #fff !important;
+            }
+        }
+
+        span{
+            display: block;
+            font-size: 0;
+            padding: 0;
+
+            &:before{
+                content: '';
+                background-image: url('../assets/img/googlepay_logo.svg');
+                background-repeat: no-repeat;
+                background-size: 44px;
+                width: 44px;
+                height: 17px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+            &::after{
+                display: none;
+            }
+        }
+    }
     &--arrowDown{
         &:hover{
             span{
@@ -693,12 +777,13 @@ body{
         .stepHeading{
             &__wrap{
                 &:after{
-                    background-image: url('../assets/img/summarykoszyk_vec.svg');
-                    background-size: 130px;
-                    width: 130px;
-                    height: 105px;
+                    background-image: url('../assets/img/summarypudlo_vec.svg');
+                    background-size: 200px;
+                    width: 200px;
+                    height: 144px;
                     right: 20px;
-                    top: 0;
+                    top: 50%;
+                    transform: translate(0, -50%);
                 }
             }
         }

@@ -155,15 +155,49 @@
                 <div class="accordion__contentWrap">
                     <div class="accordion__content">
                         <div class="paymentSelect">
-                            <h3>Zapłać bezpiecznie kartą
-                                <img src="./assets/img/mastercard_logo.svg"/>
-                                <img src="./assets/img/visa_logo.svg"/>
-                            </h3>
                             <div class="paymentSelect__option">
+                                <div class="wrap checked">
+                                    <input type="radio" name="paymentSelect" class="radioEngine" value="card" checked=true/>
+                                    <div class="checkbox">
+                                        <div></div>
+                                    </div>
+                                    <div class="content">
+                                        <h3>Zapłać bezpiecznie kartą
+                                            <img src="./assets/img/mastercard_logo.svg"/>
+                                            <img src="./assets/img/visa_logo.svg"/>
+                                        </h3>
+                                    </div>
+                                </div>
                                 <div class="paymentField">
                                     <input type="number" class="cardNumber" placeholder="Numer karty"/>
                                     <input type="number" class="cardExpire" placeholder="MM/RR" maxlength="5"/>
                                     <input type="number" class="cardCVC" placeholder="Kod CVC" maxlength="3"/>
+                                </div>
+                            </div>
+                            <div class="paymentSelect__option">
+                                <div class="wrap">
+                                    <input type="radio" name="paymentSelect" class="radioEngine" value="googlepay"/>
+                                    <div class="checkbox">
+                                        <div></div>
+                                    </div>
+                                    <div class="content">
+                                        <h3>Google Pay
+                                            <img src="./assets/img/googlepay_logo.svg"/>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="paymentSelect__option">
+                                <div class="wrap">
+                                    <input type="radio" name="paymentSelect" class="radioEngine" value="applepay"/>
+                                    <div class="checkbox">
+                                        <div></div>
+                                    </div>
+                                    <div class="content">
+                                        <h3>Apple Pay
+                                            <img src="./assets/img/applepay_logo_dark.svg"/>
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>

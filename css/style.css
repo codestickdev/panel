@@ -3078,7 +3078,7 @@ body {
 }
 
 .paymentSelect__option .checkbox {
-  width: 40px;
+  width: 32px;
 }
 
 .paymentSelect__option .checkbox div {
@@ -3125,6 +3125,10 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
   margin: 12px 0 0;
+}
+
+.paymentSelect__option .paymentField--disabled {
+  display: none;
 }
 
 .paymentSelect__option .paymentField input {
@@ -3786,25 +3790,39 @@ body {
 }
 
 .summaryContent .summaryCart__content .info {
-  background: rgba(247, 190, 69, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
   max-width: 350px;
-  height: 73px;
+  padding: 15px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  height: auto;
+  background: unset;
   margin: 15px auto 14px;
 }
 
-.summaryContent .summaryCart__content .info:before {
-  content: '';
-  background-image: url("../assets/img/cartSummary_boxLeft.svg");
-  background-size: 85px;
-  width: 85px;
-  height: 61px;
-  left: 5px;
-  top: 50%;
-  transform: translate(0, -50%);
+.summaryContent .summaryCart__content .info:before, .summaryContent .summaryCart__content .info:after {
+  display: none;
 }
 
-.summaryContent .summaryCart__content .info:after {
-  display: none;
+.summaryContent .summaryCart__content .info__pos {
+  max-width: calc(100% / 3);
+  width: 100%;
+}
+
+.summaryContent .summaryCart__content .info__pos h3 {
+  font-size: 25px;
+  line-height: 30px;
+  margin: 0 0 2px;
+}
+
+.summaryContent .summaryCart__content .info__pos p {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #000;
+  text-align: center;
 }
 
 .summaryContent .summaryCart__content .info h2 {
@@ -3817,20 +3835,65 @@ body {
   margin: 0;
 }
 
-.summaryContent .summaryCart__content .info h3 {
-  font-size: 25px;
-  line-height: 30px;
-  margin: 0 0 -6px;
+.summaryContent .summaryCart__content .showInfo {
+  background-color: rgba(0, 0, 0, 0.05);
+  max-width: 350px;
+  margin: 0 auto 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+  cursor: pointer;
+  transition: ease .3s;
+}
+
+.summaryContent .summaryCart__content .showInfo:hover {
+  opacity: .8;
+}
+
+.summaryContent .summaryCart__content .showInfo.active p:after {
+  transform: translate(0, -50%) rotate(-180deg);
+}
+
+.summaryContent .summaryCart__content .showInfo p {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+  text-decoration: underline;
+  padding-right: 20px;
+  text-align: center;
+  margin: 0;
+  position: relative;
+}
+
+.summaryContent .summaryCart__content .showInfo p:after {
+  content: '';
+  background-image: url("../assets/img/arrow_red.svg");
+  background-repeat: no-repeat;
+  background-size: 12px;
+  width: 12px;
+  height: 9px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: ease .3s;
+}
+
+.summaryContent .summaryCart__content .showInfo--delivery {
+  margin: 15px auto 0;
 }
 
 .summaryContent .summaryCart__content .summary {
   max-width: 380px;
+  padding: 15px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .summaryContent .summaryCart__content .summary__pos {
-  max-width: 360px;
+  max-width: 350px;
   margin: 0 auto;
-  padding: 3px 10px;
+  padding: 5px 10px;
 }
 
 @media (min-width: 768px) {
@@ -3860,8 +3923,24 @@ body {
   background-color: rgba(18, 157, 111, 0.2);
 }
 
+.summaryContent .summaryCart__content .summary__pos--heading p {
+  font-weight: bold;
+}
+
+.summaryContent .summaryCart__content .summary__pos--heading.discount .value {
+  color: #129D6F;
+}
+
+.summaryContent .summaryCart__content .summary--items {
+  padding: 15px 0 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  max-width: 350px;
+}
+
 .summaryContent .summaryCart__content .summary--items .summary__pos {
-  max-width: 235px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .summaryContent .summaryCart__content .alert {
@@ -3886,12 +3965,42 @@ body {
 }
 
 .summaryContent .summaryCart__content .total {
-  max-width: 340px;
+  max-width: 330px;
+  margin: 0 auto 15px;
 }
 
 .summaryContent .summaryCart__content .total p {
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.summaryContent .summaryCart__content .total p .value {
+  padding-right: 17px;
+}
+
+.summaryContent .summaryCart__content .total p .value small {
+  font-size: 14px;
+  top: -5px;
+}
+
+.summaryContent .summaryCart__content .deliveryInfo {
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 17px 0 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.summaryContent .summaryCart__content .deliveryInfo p {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+  max-width: 330px;
+  margin: 0 auto 15px;
+  text-align: justify;
+}
+
+.summaryContent .summaryCart__content .deliveryInfo p:last-of-type {
+  margin: 0 auto;
 }
 
 @media (max-width: 767px) {
@@ -6091,6 +6200,96 @@ body.noscroll {
   transform: translate(0, -55%);
 }
 
+.btn--applepay {
+  max-width: 280px;
+  width: 100%;
+  background-color: #000;
+}
+
+.btn--applepay:hover {
+  background-color: #3e3e3e;
+}
+
+.btn--applepay.disabled {
+  cursor: not-allowed;
+  filter: grayscale(1);
+  opacity: .7;
+}
+
+.btn--applepay.disabled:hover {
+  background-color: #000 !important;
+}
+
+.btn--applepay span {
+  display: block;
+  font-size: 0;
+  padding: 0;
+}
+
+.btn--applepay span:before {
+  content: '';
+  background-image: url("../assets/img/applepay_logo.svg");
+  background-repeat: no-repeat;
+  background-size: 40px;
+  width: 40px;
+  height: 16px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.btn--applepay span::after {
+  display: none;
+}
+
+.btn--googlepay {
+  max-width: 280px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.btn--googlepay:hover {
+  background-color: #f3f3f3;
+}
+
+.btn--googlepay.disabled {
+  cursor: not-allowed;
+  filter: grayscale(1);
+}
+
+.btn--googlepay.disabled:hover {
+  background-color: #fff !important;
+}
+
+.btn--googlepay span {
+  display: block;
+  font-size: 0;
+  padding: 0;
+}
+
+.btn--googlepay span:before {
+  content: '';
+  background-image: url("../assets/img/googlepay_logo.svg");
+  background-repeat: no-repeat;
+  background-size: 44px;
+  width: 44px;
+  height: 17px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.btn--googlepay span::after {
+  display: none;
+}
+
 .btn--arrowDown:hover span:after {
   right: 0;
   top: 50%;
@@ -6341,12 +6540,13 @@ body.noscroll {
 }
 
 .panel--summary .stepHeading__wrap:after {
-  background-image: url("../assets/img/summarykoszyk_vec.svg");
-  background-size: 130px;
-  width: 130px;
-  height: 105px;
+  background-image: url("../assets/img/summarypudlo_vec.svg");
+  background-size: 200px;
+  width: 200px;
+  height: 144px;
   right: 20px;
-  top: 0;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 .panel--calculation .stepHeading__wrap:after {

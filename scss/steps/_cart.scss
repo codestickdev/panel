@@ -1296,7 +1296,7 @@
             }
         }
         .checkbox{
-            width: 40px;
+            width: 32px;
 
             div{
                 width: 20px;
@@ -1343,6 +1343,10 @@
             border: 1px solid $primarycolorlight;
             box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
             margin: 12px 0 0;
+
+            &--disabled{
+                display: none;
+            }
 
             input{
                 display: block;
