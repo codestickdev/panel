@@ -3999,8 +3999,9 @@ body {
   text-align: justify;
 }
 
-.summaryContent .summaryCart__content .deliveryInfo p:last-of-type {
-  margin: 0 auto;
+.summaryContent .summaryCart__content .deliveryInfo p span {
+  color: #129D6F;
+  font-weight: bold;
 }
 
 @media (max-width: 767px) {

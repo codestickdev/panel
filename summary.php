@@ -26,7 +26,7 @@
                             <p>zapasu <br/>posiłków</p>
                         </div>
                     </div>
-                    <div class="summary summary--items" data-summary="1">
+                    <div class="summary summary--items" style="display: none;" data-summary="1">
                         <div class="summary__pos summary__pos--heading">
                             <p>Smak</p>
                             <p>14 saszetek</p>
@@ -48,7 +48,7 @@
                             <p>2 x 600g</p>
                         </div>
                     </div>
-                    <div class="showInfo" data-summary="1">
+                    <div class="showInfo" data-info="summary">
                         <p>Zobacz wybrane smaki</p>
                     </div>
                     <div class="summary">
@@ -80,11 +80,11 @@
                         <p>Suma:</p>
                         <p class="price"><span class="value">36<small>40</small></span> zł</p>
                     </div>
-                    <div class="deliveryInfo">
-                        <p>Druga dostawa dotrze do Ciebie 2 tygodnie po pierwszej paczce.</p>
+                    <div class="deliveryInfo" style="display: none;">
+                        <p>Druga dostawa <span>z rabatem 25%</span> dotrze do Ciebie 2 tygodnie po pierwszej paczce.</p>
                         <p>Możesz w każdej chwili zrezygnować z kolejnych dostaw lub zmienić zawartość paczki oraz termin dostawy.</p>
                     </div>
-                    <div class="showInfo showInfo--delivery" data-summary="2">
+                    <div class="showInfo" data-info="delivery">
                         <p>Kolejne dostawy</p>
                     </div>
                 </div>

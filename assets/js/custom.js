@@ -54,6 +54,29 @@ $(document).ready(function(){
 });
 
 /**
+ * Summary - information show/hide
+ */
+$(document).ready(function(){
+    $('.showInfo').on('click', function(){
+        let value = $(this).data('info');
+
+        $(this).toggleClass('active');
+
+        if(value == 'summary'){
+            $('.summary--items').slideToggle();
+            $(this).find('p').text(function(i, text){
+                return text === 'Ukryj' ? 'Zobacz wybrane smaki' : 'Ukryj';
+            })
+        }else if(value == 'delivery'){
+            $('.deliveryInfo').slideToggle();
+            $(this).find('p').text(function(i, text){
+                return text === 'Ukryj' ? 'Kolejne dostawy' : 'Ukryj';
+            })
+        }
+    });
+});
+
+/**
  * Payment options - order button change
  */
 $(document).ready(function(){

@@ -252,8 +252,9 @@
                     margin: 0 auto 15px;
                     text-align: justify;
 
-                    &:last-of-type{
-                        margin: 0 auto;
+                    span{
+                        color: $greencolor;
+                        font-weight: bold;
                     }
                 }
             }
