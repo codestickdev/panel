@@ -432,7 +432,7 @@ body{
 
         span{
             display: block;
-            font-size: 0;
+            font-size: 0 !important;
             padding: 0;
 
             &:before{
@@ -474,7 +474,7 @@ body{
 
         span{
             display: block;
-            font-size: 0;
+            font-size: 0 !important;
             padding: 0;
 
             &:before{
