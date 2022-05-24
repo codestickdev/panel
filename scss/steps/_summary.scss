@@ -280,29 +280,48 @@
                     }
                 }
                 .heading{
-                    font-size: 18px;
-                    line-height: 22px;
+                    font-size: 21px;
+                    line-height: 25px;
                 }
                 .info{
                     max-width: 252px;
-                    height: 53px;
-                    margin: 15px auto 10px;
+                    height: auto;
+                    margin: 15px auto 0;
 
-                    &:before{
-                        background-size: 61px;
-                        width: 61px;
-                        height: 44px;
+                    &__pos{
+                        h3{
+                            font-size: 21px;
+                            line-height: 25px;
+                        }
+                        p{
+                            font-size: 12px;
+                            line-height: 14px;
+                        }
                     }
-                    h2,
-                    h3{
-                        font-size: 18px;
-                        line-height: 22px;
+                }
+                .showInfo{
+                    margin: 0 auto 15px;
+
+                    p{
+                        font-size: 12px;
+                        line-height: 14px;
+                        padding-right: 15px;
+
+                        &:after{
+                            background-size: 9px;
+                            width: 9px;
+                            height: 7px;
+                        }
                     }
                 }
                 .summary{
                     max-width: 252px;
+                    padding: 10px 0;
 
                     &__pos{
+                        max-width: 240px;
+                        padding: 2px 10px;
+
                         p{
                             font-size: 12px;
                             line-height: 14px;
@@ -328,10 +347,25 @@
                 .total{
                     max-width: 252px;
                     padding: 4px 10px;
+                    margin: 0 auto 10px;
 
                     p{
-                        font-size: 14px;
-                        line-height: 16px;
+                        font-size: 18px;
+                        line-height: 21px;
+
+                        &.price{
+                            font-size: 18px;
+                            line-height: 21px;
+
+                            .value{
+                                padding-right: 15px;
+
+                                small{
+                                    font-size: 12px;
+                                    top: -3px;
+                                }
+                            }
+                        }
                     }
                 }
             }

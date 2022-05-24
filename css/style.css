@@ -1781,7 +1781,7 @@ body {
 
 @media (max-width: 575px) {
   .firstInfo {
-    min-height: calc(100vh - 300px);
+    min-height: calc(100vh - 226px);
     padding: 10px 20px 10px;
   }
   .firstInfo:after {
@@ -1808,7 +1808,7 @@ body {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
   .firstInfo__info h3 {
     font-size: 19px;
     line-height: 21px;
@@ -4018,26 +4018,42 @@ body {
     margin-bottom: -1px;
   }
   .summaryContent .summaryCart__content .heading {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 21px;
+    line-height: 25px;
   }
   .summaryContent .summaryCart__content .info {
     max-width: 252px;
-    height: 53px;
-    margin: 15px auto 10px;
+    height: auto;
+    margin: 15px auto 0;
   }
-  .summaryContent .summaryCart__content .info:before {
-    background-size: 61px;
-    width: 61px;
-    height: 44px;
+  .summaryContent .summaryCart__content .info__pos h3 {
+    font-size: 21px;
+    line-height: 25px;
   }
-  .summaryContent .summaryCart__content .info h2,
-  .summaryContent .summaryCart__content .info h3 {
-    font-size: 18px;
-    line-height: 22px;
+  .summaryContent .summaryCart__content .info__pos p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .summaryContent .summaryCart__content .showInfo {
+    margin: 0 auto 15px;
+  }
+  .summaryContent .summaryCart__content .showInfo p {
+    font-size: 12px;
+    line-height: 14px;
+    padding-right: 15px;
+  }
+  .summaryContent .summaryCart__content .showInfo p:after {
+    background-size: 9px;
+    width: 9px;
+    height: 7px;
   }
   .summaryContent .summaryCart__content .summary {
     max-width: 252px;
+    padding: 10px 0;
+  }
+  .summaryContent .summaryCart__content .summary__pos {
+    max-width: 240px;
+    padding: 2px 10px;
   }
   .summaryContent .summaryCart__content .summary__pos p {
     font-size: 12px;
@@ -4056,10 +4072,22 @@ body {
   .summaryContent .summaryCart__content .total {
     max-width: 252px;
     padding: 4px 10px;
+    margin: 0 auto 10px;
   }
   .summaryContent .summaryCart__content .total p {
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .summaryContent .summaryCart__content .total p.price {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .summaryContent .summaryCart__content .total p.price .value {
+    padding-right: 15px;
+  }
+  .summaryContent .summaryCart__content .total p.price .value small {
+    font-size: 12px;
+    top: -3px;
   }
 }
 
@@ -6587,7 +6615,6 @@ body.noscroll {
 
 .panel--first {
   background-color: #feb800;
-  min-height: calc(100vh - 61px);
   position: relative;
   padding-bottom: 86px;
   overflow: hidden;
@@ -6630,13 +6657,15 @@ body.noscroll {
 
 @media (max-width: 575px) {
   .panel--first .stepHeading {
-    min-height: 105px;
+    min-height: 80px;
   }
   .panel--first .stepHeading__wrap {
     padding: 10px 20px 5px;
   }
   .panel--first .stepHeading__wrap h2 {
-    max-width: 300px;
+    max-width: 280px;
+    font-size: 24px !important;
+    line-height: 28px !important;
     margin: 0 auto;
   }
 }

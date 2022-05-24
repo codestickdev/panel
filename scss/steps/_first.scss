@@ -82,7 +82,7 @@
 }
 @media (max-width: 575px){
     .firstInfo{
-        min-height: calc(100vh - 300px);
+        min-height: calc(100vh - 226px);
         padding: 10px 20px 10px;
 
         &:after{
@@ -110,7 +110,7 @@
         }
     }
 }
-@media (max-width: 320px){
+@media (max-width: 400px){
     .firstInfo{
         &__info{
             h3{

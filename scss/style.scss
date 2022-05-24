@@ -833,7 +833,7 @@ body{
     }
     &--first{
         background-color: #feb800;
-        min-height: calc(100vh - 61px);
+        // min-height: calc(100vh - 61px);
         position: relative;
         padding-bottom: 86px;
         overflow: hidden;
@@ -886,13 +886,15 @@ body{
     @media (max-width: 575px){
         &--first{
             .stepHeading{
-                min-height: 105px;
+                min-height: 80px;
 
                 &__wrap{
                     padding: 10px 20px 5px;
 
                     h2{
-                        max-width: 300px;
+                        max-width: 280px;
+                        font-size: 24px !important;
+                        line-height: 28px !important;
                         margin: 0 auto;
                     }
                 }
