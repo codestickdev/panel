@@ -284,7 +284,7 @@
                     line-height: 25px;
                 }
                 .info{
-                    max-width: 252px;
+                    max-width: 274px;
                     height: auto;
                     margin: 15px auto 0;
 
@@ -300,6 +300,7 @@
                     }
                 }
                 .showInfo{
+                    max-width: 252px;
                     margin: 0 auto 15px;
 
                     p{
@@ -315,11 +316,11 @@
                     }
                 }
                 .summary{
-                    max-width: 252px;
+                    max-width: 274px;
                     padding: 10px 0;
 
                     &__pos{
-                        max-width: 240px;
+                        max-width: 252px;
                         padding: 2px 10px;
 
                         p{
@@ -345,7 +346,7 @@
                     }
                 }
                 .total{
-                    max-width: 252px;
+                    max-width: 274px;
                     padding: 4px 10px;
                     margin: 0 auto 10px;
 
@@ -366,6 +367,15 @@
                                 }
                             }
                         }
+                    }
+                }
+                .deliveryInfo{
+                    max-width: 274px;
+                    padding: 17px 20px 0;
+
+                    p{
+                        font-size: 12px;
+                        line-height: 14px;
                     }
                 }
             }

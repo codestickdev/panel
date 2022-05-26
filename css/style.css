@@ -4022,7 +4022,7 @@ body {
     line-height: 25px;
   }
   .summaryContent .summaryCart__content .info {
-    max-width: 252px;
+    max-width: 274px;
     height: auto;
     margin: 15px auto 0;
   }
@@ -4035,6 +4035,7 @@ body {
     line-height: 14px;
   }
   .summaryContent .summaryCart__content .showInfo {
+    max-width: 252px;
     margin: 0 auto 15px;
   }
   .summaryContent .summaryCart__content .showInfo p {
@@ -4048,11 +4049,11 @@ body {
     height: 7px;
   }
   .summaryContent .summaryCart__content .summary {
-    max-width: 252px;
+    max-width: 274px;
     padding: 10px 0;
   }
   .summaryContent .summaryCart__content .summary__pos {
-    max-width: 240px;
+    max-width: 252px;
     padding: 2px 10px;
   }
   .summaryContent .summaryCart__content .summary__pos p {
@@ -4070,7 +4071,7 @@ body {
     line-height: 16px;
   }
   .summaryContent .summaryCart__content .total {
-    max-width: 252px;
+    max-width: 274px;
     padding: 4px 10px;
     margin: 0 auto 10px;
   }
@@ -4088,6 +4089,14 @@ body {
   .summaryContent .summaryCart__content .total p.price .value small {
     font-size: 12px;
     top: -3px;
+  }
+  .summaryContent .summaryCart__content .deliveryInfo {
+    max-width: 274px;
+    padding: 17px 20px 0;
+  }
+  .summaryContent .summaryCart__content .deliveryInfo p {
+    font-size: 12px;
+    line-height: 14px;
   }
 }
 
