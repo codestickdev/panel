@@ -497,3 +497,27 @@ $(document).ready(function(){
         }
     });
 });
+
+/**
+ * Piesonalizacja
+ */
+$(document).ready(function(){
+    $('.foodOption').each(function(){
+        if($(this).hasClass('foodOption--selected')){
+            $(this).find('input[name="foodOption"]').click();
+        }
+    });
+    $('input[name="foodOption"]').on('click', function(){
+        if($(this).is(':checked')){
+            $(this).parents('.foodOption').addClass('foodOption--selected');
+        }else{
+            $(this).parents('.foodOption').removeClass('foodOption--selected');
+        }
+    });
+    $('input[name="foodPlan"]').on('click', function(){
+        if($(this).is(':checked')){
+            $('.foodPlan').removeClass('foodPlan--selected');
+            $(this).parents('.foodPlan').addClass('foodPlan--selected');
+        }
+    });
+});

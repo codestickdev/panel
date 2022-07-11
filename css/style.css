@@ -1256,7 +1256,7 @@ body {
 }
 
 .foodModal__wrap {
-  width: 540px;
+  width: 450px;
   height: 100vh;
   background-color: #fff;
   position: relative;
@@ -1271,11 +1271,11 @@ body {
 }
 
 .foodModal__wrap .closeImg {
-  width: 40px;
+  width: 30px;
   cursor: pointer;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 12px;
+  right: 25px;
   opacity: .7;
   z-index: 2;
   transition: ease .3s;
@@ -1286,11 +1286,11 @@ body {
 }
 
 .foodModal__close {
-  position: sticky;
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 25px 0;
+  padding: 18px 34px;
   background: #fff;
   background: #ffffffad;
   box-shadow: 0 0 30px #00000021;
@@ -1298,6 +1298,7 @@ body {
 }
 
 .foodModal__close p {
+  width: 100%;
   cursor: pointer;
 }
 
@@ -1305,19 +1306,35 @@ body {
   display: none;
 }
 
+.foodModal__content[data="data_indyk"] .title p:before {
+  background-color: #ED7433;
+}
+
+.foodModal__content[data="data_kurczak"] .title p:before {
+  background-color: #4EACB6;
+}
+
+.foodModal__content[data="data_wolowe"] .title p:before {
+  background-color: #4769B2;
+}
+
+.foodModal__content[data="data_jagnie"] .title p:before {
+  background-color: #F7BE45;
+}
+
 .foodModal__content--active {
   display: block;
 }
 
 .foodModal__content .gallery {
-  height: 310px;
-  width: 540px;
-  margin: 0 !important;
+  height: 215px;
+  width: 100%;
+  margin: 0 0 15px !important;
 }
 
 .foodModal__content .gallery__image {
-  height: 310px;
-  width: 540px;
+  height: inherit;
+  width: 100%;
   overflow: hidden;
   outline: none;
 }
@@ -1413,58 +1430,59 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 56px;
 }
 
 .foodModal__content .title p {
   font-size: 41px;
   line-height: 1;
   font-family: 'Bebas Neue';
-  color: #fff;
+  color: #000;
   text-transform: uppercase;
   margin: 0;
   position: relative;
 }
 
-.foodModal__content .title p img {
+.foodModal__content .title p:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #000;
   position: absolute;
-  top: -18px;
-  height: 68px;
-  max-width: 125px;
+  left: -16px;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 .foodModal__content .desc {
-  padding: 32px 0;
+  padding: 10px 0 16px;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.5);
-  max-width: calc(100% - 84px);
+  max-width: 400px;
   margin: 0 auto;
 }
 
 .foodModal__content .desc p {
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
+  max-width: calc(100% - 40px);
 }
 
 .foodModal__content .usp {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 25px 40px 0;
+  padding: 16px 0 0;
+  max-width: 370px;
+  margin: 0 auto;
 }
 
 .foodModal__content .usp__pos {
-  width: 130px;
+  width: calc(100% / 3);
   text-align: center;
   margin-bottom: 30px;
-}
-
-.foodModal__content .usp__pos:first-of-type p {
-  max-width: 90px;
-  margin: 0 auto;
 }
 
 .foodModal__content .usp__pos .thumb {
@@ -1485,15 +1503,15 @@ body {
 }
 
 .foodModal__content .usp__pos p {
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
   margin: 0;
 }
 
 .foodModal__content .accordion {
   border-top: 1px dashed rgba(0, 0, 0, 0.5);
-  max-width: calc(100% - 84px);
+  max-width: calc(100% - 50px);
   margin: 0 auto 32px;
   border-left: 0;
   border-right: 0;
@@ -1509,18 +1527,23 @@ body {
   transform: rotate(180deg);
 }
 
+.foodModal__content .accordion__element--open .heading p {
+  font-weight: bold;
+}
+
 .foodModal__content .accordion__element .heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 40px;
+  height: 32px;
   cursor: pointer;
+  padding: 0 5px;
 }
 
 .foodModal__content .accordion__element .heading p {
-  font-size: 18px;
-  line-height: 21px;
-  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
   margin: 0;
 }
 
@@ -1531,77 +1554,19 @@ body {
 
 .foodModal__content .accordion__element .content {
   display: none;
+  padding: 0 5px;
 }
 
 .foodModal__content .accordion__element .content p {
   font-size: 16px;
-  line-height: 19px;
-  color: rgba(0, 0, 0, 0.5);
+  line-height: 20px;
+  color: #000;
   margin: 0 0 15px;
 }
 
 .foodModal__content .btn {
   margin-bottom: 32px;
   cursor: pointer;
-}
-
-@media (max-width: 991px) {
-  .foodModal__wrap {
-    width: 545px;
-  }
-  .foodModal__content .gallery {
-    width: 545px;
-    height: 300px;
-  }
-  .foodModal__content .gallery__image {
-    width: 545px;
-    height: 300px;
-  }
-  .foodModal__content .title {
-    height: 60px;
-  }
-  .foodModal__content .title p {
-    font-size: 42px;
-  }
-  .foodModal__content .title p img {
-    height: 75px;
-    max-width: 125px;
-  }
-  .foodModal__content .desc {
-    max-width: calc(100% - 64px);
-  }
-  .foodModal__content .desc p {
-    font-size: 24px;
-    line-height: 28px;
-  }
-  .foodModal__content .usp__pos .thumb {
-    height: 90px;
-  }
-  .foodModal__content .usp__pos .thumb img {
-    max-width: 80px;
-    max-height: 90px;
-  }
-  .foodModal__content .usp__pos p {
-    font-size: 18px;
-    line-height: 21px;
-  }
-  .foodModal__content .accordion {
-    margin: 0 auto 32px;
-  }
-  .foodModal__content .accordion__element .heading {
-    height: 52px;
-  }
-  .foodModal__content .accordion__element .heading p {
-    font-size: 24px;
-    line-height: 28px;
-  }
-  .foodModal__content .accordion__element .content p {
-    font-size: 18px;
-    line-height: 24px;
-  }
-  .foodModal__content .btn {
-    margin-bottom: 32px;
-  }
 }
 
 @media (max-width: 767px) {
@@ -1611,13 +1576,15 @@ body {
   .foodModal__wrap .closeImg {
     width: 24px;
   }
+  .foodModal__close {
+    padding: 18px 20px;
+  }
   .foodModal__content .gallery {
-    width: 360px;
     height: 215px;
   }
   .foodModal__content .gallery__image {
-    width: 360px;
-    height: 215px;
+    width: 100%;
+    height: inherit;
   }
   .foodModal__content .gallery .slick-arrow {
     background-size: 24px;
@@ -1630,63 +1597,52 @@ body {
   .foodModal__content .gallery .slick-arrow.slick-next {
     right: 20px;
   }
-  .foodModal__content .title {
-    height: 38px;
-  }
   .foodModal__content .title p {
     font-size: 28px;
-  }
-  .foodModal__content .title p img {
-    height: 48px;
-    max-width: 100px;
+    line-height: 34px;
   }
   .foodModal__content .desc {
     max-width: calc(100% - 42px);
-    padding: 16px;
   }
   .foodModal__content .desc p {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 12px;
+    line-height: 14px;
   }
   .foodModal__content .usp {
     padding: 12px 16px;
   }
   .foodModal__content .usp__pos {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    margin: 0 0 8px;
-  }
-  .foodModal__content .usp__pos:nth-last-child(-n+2) {
-    display: none;
+    margin-bottom: 10px;
   }
   .foodModal__content .usp__pos .thumb {
-    height: 60px;
-    width: 50px;
-    margin: 0 8px 0 0;
+    height: 70px;
+    width: 60px;
+    margin: 0 auto 6px;
   }
   .foodModal__content .usp__pos p {
-    max-width: none !important;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: left;
-    margin: 0 !important;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    margin: 0;
   }
   .foodModal__content .accordion {
     max-width: calc(100% - 42px);
     margin: 0 auto 20px;
   }
   .foodModal__content .accordion__element .heading {
-    height: 32px;
+    height: 26px;
   }
   .foodModal__content .accordion__element .heading p {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .foodModal__content .accordion__element .heading img {
+    width: 10px;
+    margin-right: 5px;
   }
   .foodModal__content .accordion__element .content p {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 12px;
+    line-height: 14px;
   }
   .foodModal__content .btn {
     min-width: calc(100% - 40px);
@@ -5882,6 +5838,900 @@ body {
   }
 }
 
+.piesoCalc {
+  padding: 0 0 25px;
+}
+
+.piesoCalc__heading {
+  margin: 0 0 20px;
+}
+
+.piesoCalc__heading h2 {
+  font-size: 28px;
+  line-height: 34px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.piesoCalc__info {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  min-height: 90px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.piesoCalc__info h3 {
+  font-size: 21px;
+  line-height: 26px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+
+.piesoCalc__info h3 span {
+  font-size: 35px;
+  line-height: 42px;
+  padding: 0 6px;
+}
+
+.piesoCalc__info h3 span.dog {
+  color: #F15748;
+}
+
+.piesoCalc__info h3 span.portion {
+  color: #129D6F;
+}
+
+@media (max-width: 767px) {
+  .piesoCalc {
+    padding: 0 0 20px;
+  }
+  .piesoCalc__heading {
+    margin: 0 0 15px;
+  }
+  .piesoCalc__heading h2 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .piesoCalc__info h3 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .piesoCalc__info h3 span {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+.piesoHints {
+  padding: 0 0 25px;
+}
+
+.piesoHints__heading {
+  margin: 0 0 20px;
+}
+
+.piesoHints__heading h2 {
+  font-size: 35px;
+  line-height: 42px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.piesoHints__info {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  min-height: 90px;
+  padding: 24px 40px 30px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.piesoHints__info .box {
+  max-width: calc(100% / 3);
+}
+
+.piesoHints__info .box__image {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 15px;
+}
+
+.piesoHints__info .box__image img {
+  max-width: 90px;
+  max-height: 90px;
+  width: 100%;
+}
+
+.piesoHints__info .box h3 {
+  font-size: 28px;
+  line-height: 34px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  margin: 0 0 8px;
+  text-align: center;
+}
+
+.piesoHints__info .box p {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 260px;
+}
+
+@media (max-width: 991px) {
+  .piesoHints__info {
+    padding: 24px 15px 30px;
+  }
+  .piesoHints__info .box h3 {
+    font-size: 21px;
+    line-height: 25px;
+  }
+  .piesoHints__info .box p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .piesoHints {
+    padding: 0 0 20px;
+  }
+  .piesoHints__heading {
+    margin: 0 0 15px;
+  }
+  .piesoHints__heading h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .piesoHints__info {
+    flex-direction: column;
+    padding: 20px 20px 20px 24px;
+  }
+  .piesoHints__info .box {
+    display: flex;
+    max-width: 100%;
+    margin: 0 0 10px;
+  }
+  .piesoHints__info .box:last-of-type {
+    margin: 0;
+  }
+  .piesoHints__info .box__image {
+    width: 80px;
+    margin: 0 15px 0 0;
+  }
+  .piesoHints__info .box__image img {
+    max-width: 70px;
+    max-height: 75px;
+  }
+  .piesoHints__info .box__content {
+    width: 100%;
+    max-width: calc(100% - 80px);
+  }
+  .piesoHints__info .box__content h3,
+  .piesoHints__info .box__content p {
+    text-align: left;
+    max-width: 100%;
+  }
+}
+
+.piesoMenu {
+  padding: 0 0 25px;
+}
+
+.piesoMenu__heading {
+  margin: 0 0 20px;
+}
+
+.piesoMenu__heading h2 {
+  font-size: 35px;
+  line-height: 42px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.piesoMenu__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 950px;
+  margin: 0 auto 25px;
+}
+
+.piesoMenu__list hr {
+  width: 100%;
+  margin: 20px 0;
+  background-color: #BCBCBB;
+  margin: 7px 0 32px;
+}
+
+.piesoMenu__list .foodOption {
+  display: flex;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  max-width: calc(100% / 2 - 16px);
+  width: 100%;
+  margin: 0 16px 32px;
+  transition: ease .3s;
+}
+
+.piesoMenu__list .foodOption--selected {
+  border: 1px solid #129D6F;
+}
+
+.piesoMenu__list .foodOption--selected .foodOption__image {
+  border: 1px solid #129D6F;
+  border-right: 0;
+}
+
+.piesoMenu__list .foodOption--selected .foodOption__content {
+  border: 1px solid #129D6F;
+  border-left: 0;
+}
+
+.piesoMenu__list .foodOption--selected .foodOption__content .checkbox__checkbox {
+  background-color: #129D6F;
+  border-color: #129D6F;
+}
+
+.piesoMenu__list .foodOption:nth-child(2n+1) {
+  margin-left: 0;
+}
+
+.piesoMenu__list .foodOption:nth-child(2n+2) {
+  margin-right: 0;
+}
+
+.piesoMenu__list .foodOption:nth-last-child(-n+2) {
+  margin-bottom: 0;
+}
+
+.piesoMenu__list .foodOption__image {
+  max-width: 147px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.piesoMenu__list .foodOption__image img {
+  width: 100%;
+  height: 101%;
+  object-fit: cover;
+}
+
+.piesoMenu__list .foodOption__content {
+  max-width: calc(100% - 147px);
+  width: 100%;
+  padding: 21px 50px 21px 25px;
+  border: 1px solid transparent;
+  transition: ease .3s;
+  position: relative;
+}
+
+.piesoMenu__list .foodOption__content .checkbox {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 23px;
+  right: 27px;
+  cursor: pointer;
+}
+
+.piesoMenu__list .foodOption__content .checkbox input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  margin: 0;
+  z-index: 9;
+  cursor: pointer;
+}
+
+.piesoMenu__list .foodOption__content .checkbox__checkbox {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: ease .3s;
+}
+
+.piesoMenu__list .foodOption__content .checkbox__checkbox:after {
+  content: '';
+  background-image: url("../assets/img/check_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 17px;
+  width: 17px;
+  height: 14px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.piesoMenu__list .foodOption__content h3 {
+  font-size: 28px;
+  line-height: 34px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  margin: 0 0 8px;
+  position: relative;
+}
+
+.piesoMenu__list .foodOption__content h3:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  position: absolute;
+  left: -15px;
+  top: 45%;
+  transform: translate(0, -50%);
+}
+
+.piesoMenu__list .foodOption__content p {
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+  max-width: 215px;
+}
+
+.piesoMenu__list .foodOption__content p.info {
+  display: flex;
+  align-items: flex-end;
+  font-size: 16px;
+  line-height: 1;
+  color: #000;
+  font-weight: bold;
+  position: relative;
+  text-decoration: underline;
+  max-width: fit-content;
+  max-width: -moz-max-content;
+  max-width: -webkit-fit-content;
+  margin: 15px 0 0;
+  cursor: pointer;
+  transition: ease .3s;
+}
+
+.piesoMenu__list .foodOption__content p.info:hover {
+  opacity: .7;
+}
+
+.piesoMenu__list .foodOption__content p.info:before {
+  content: '';
+  background-image: url("../assets/img/info_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 22px;
+  width: 22px;
+  height: 22px;
+  position: relative;
+  top: 2px;
+  display: block;
+  margin-right: 6px;
+}
+
+.piesoMenu__list .foodOption--notrecommend .foodOption__image {
+  opacity: .5;
+}
+
+.piesoMenu__list .foodOption--notrecommend .foodOption__content .checkbox {
+  pointer-events: none;
+}
+
+.piesoMenu__list .foodOption--notrecommend .foodOption__content p:not(.info) {
+  position: relative;
+}
+
+.piesoMenu__list .foodOption--notrecommend .foodOption__content p:not(.info):before {
+  content: 'Nierekomendowane';
+  font-size: 13px;
+  line-height: 19px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #fff;
+  background-color: #F15748;
+  padding: 6px 20px;
+  display: block;
+  max-width: fit-content;
+  max-width: -moz-max-content;
+  max-width: -webkit-fit-content;
+  margin: 0 0 10px;
+}
+
+.piesoMenu__list .foodOption--indyczykasek .foodOption__content h3:before {
+  background-color: #ED7433;
+}
+
+.piesoMenu__list .foodOption--kurczepieczone .foodOption__content h3:before {
+  background-color: #4EACB6;
+}
+
+.piesoMenu__list .foodOption--wolowelove .foodOption__content h3:before {
+  background-color: #4769B2;
+}
+
+.piesoMenu__list .foodOption--jagniewcina .foodOption__content h3:before {
+  background-color: #F7BE45;
+}
+
+@media (max-width: 991px) {
+  .piesoMenu__list .foodOption__image {
+    width: 120px;
+  }
+  .piesoMenu__list .foodOption__content {
+    max-width: calc(100% - 120px);
+    padding: 16px 35px 20px 21px;
+  }
+  .piesoMenu__list .foodOption__content .checkbox {
+    width: 21px;
+    height: 21px;
+    top: 18px;
+    right: 14px;
+  }
+  .piesoMenu__list .foodOption__content .checkbox__checkbox:after {
+    background-size: 14px;
+    width: 14px;
+    height: 11px;
+  }
+  .piesoMenu__list .foodOption__content h3 {
+    font-size: 21px;
+    line-height: 25px;
+  }
+  .piesoMenu__list .foodOption__content h3:before {
+    left: -14px;
+  }
+  .piesoMenu__list .foodOption__content p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .piesoMenu__list .foodOption__content p.info {
+    font-size: 13px;
+    margin: 10px 0 0;
+  }
+  .piesoMenu__list .foodOption__content p.info:before {
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+    top: 1px;
+    margin-right: 4px;
+  }
+}
+
+@media (max-width: 767px) {
+  .piesoMenu {
+    padding: 0 0 20px;
+  }
+  .piesoMenu__heading {
+    margin: 0 0 15px;
+  }
+  .piesoMenu__heading h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .piesoMenu__list {
+    margin: 0 auto;
+  }
+  .piesoMenu__list hr {
+    margin: 10px 0 25px;
+  }
+  .piesoMenu__list .foodOption {
+    max-width: 100%;
+    margin: 0 0 20px;
+  }
+}
+
+.piesoPlan {
+  padding: 0 0 32px;
+}
+
+.piesoPlan__heading {
+  margin: 0 0 20px;
+}
+
+.piesoPlan__heading h2 {
+  font-size: 35px;
+  line-height: 42px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.piesoPlan__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 950px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.piesoPlan__list .foodPlan {
+  width: 100%;
+  max-width: 460px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px 0 28px;
+  transition: ease .3s;
+}
+
+.piesoPlan__list .foodPlan--best {
+  border-top: 30px solid #129D6F !important;
+  position: relative;
+}
+
+.piesoPlan__list .foodPlan--best:before {
+  content: '';
+  background-image: url("../assets/img/piesonalizacja/planbestbadge.svg");
+  background-repeat: no-repeat;
+  background-size: 150px;
+  width: 150px;
+  height: 21px;
+  position: absolute;
+  top: -26px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.piesoPlan__list .foodPlan--selected {
+  border: 2px solid #129D6F;
+}
+
+.piesoPlan__list .foodPlan--selected .foodPlan__title .checkbox__checkbox {
+  background-color: #129D6F;
+  border-color: #129D6F;
+}
+
+.piesoPlan__list .foodPlan__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.piesoPlan__list .foodPlan__title h3 {
+  font-size: 28px;
+  line-height: 34px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+  text-align: center;
+}
+
+.piesoPlan__list .foodPlan__title .checkbox {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 50%;
+  right: 27px;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+
+.piesoPlan__list .foodPlan__title .checkbox input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  margin: 0;
+  z-index: 9;
+  cursor: pointer;
+}
+
+.piesoPlan__list .foodPlan__title .checkbox__checkbox {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: ease .3s;
+}
+
+.piesoPlan__list .foodPlan__title .checkbox__checkbox:after {
+  content: '';
+  background-image: url("../assets/img/check_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 17px;
+  width: 17px;
+  height: 14px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.piesoPlan__list .foodPlan__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 42px;
+  margin: 0 0 8px;
+}
+
+.piesoPlan__list .foodPlan__info .image {
+  width: 100%;
+  max-width: 140px;
+}
+
+.piesoPlan__list .foodPlan__info .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.piesoPlan__list .foodPlan__info .info {
+  width: 100%;
+  max-width: calc(100% - 140px);
+}
+
+.piesoPlan__list .foodPlan__info .info .discount {
+  font-family: 'Bebas Neue';
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  margin: 0 auto;
+  max-width: fit-content;
+  text-align: center;
+  color: #808080;
+  position: relative;
+}
+
+.piesoPlan__list .foodPlan__info .info .discount:after {
+  content: '';
+  height: 2px;
+  width: calc(100% + 10px);
+  left: -5px;
+  top: 45%;
+  transform: translate(0, -50%);
+  position: absolute;
+  background-color: #F15748;
+}
+
+.piesoPlan__list .foodPlan__info .info .discount__wrap {
+  font-size: 21px;
+  line-height: 26px;
+  padding-right: 3px;
+}
+
+.piesoPlan__list .foodPlan__info .info .discount__wrap span {
+  position: relative;
+  padding-right: 13px;
+}
+
+.piesoPlan__list .foodPlan__info .info .discount__wrap span small {
+  font-size: 14px;
+  position: absolute;
+  top: -3px;
+  right: 1px;
+}
+
+.piesoPlan__list .foodPlan__info .info .price {
+  font-family: 'Bebas Neue';
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+  color: #129D6F;
+}
+
+.piesoPlan__list .foodPlan__info .info .price__wrap {
+  font-size: 45px;
+  line-height: 54px;
+  padding: 0 7px;
+}
+
+.piesoPlan__list .foodPlan__info .info .price__price {
+  position: relative;
+  padding-right: 30px;
+}
+
+.piesoPlan__list .foodPlan__info .info .price__price small {
+  font-size: 28px;
+  position: absolute;
+  top: -7px;
+  right: 5px;
+}
+
+.piesoPlan__list .foodPlan__info .info .portion {
+  font-family: 'Bebas Neue';
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+  color: #000;
+}
+
+.piesoPlan__list .foodPlan__desc {
+  padding: 0 37px;
+}
+
+.piesoPlan__list .foodPlan__desc p {
+  font-size: 12px;
+  line-height: 16px;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .piesoPlan__list .foodPlan {
+    max-width: 345px;
+    padding: 8px 0 20px;
+  }
+  .piesoPlan__list .foodPlan__title h3 {
+    font-size: 21px;
+    line-height: 25px;
+  }
+  .piesoPlan__list .foodPlan__title .checkbox {
+    width: 21px;
+    height: 21px;
+    right: 20px;
+  }
+  .piesoPlan__list .foodPlan__title .checkbox__checkbox:after {
+    background-size: 14px;
+    width: 14px;
+    height: 11px;
+  }
+  .piesoPlan__list .foodPlan__info {
+    padding: 0 15px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .piesoPlan {
+    padding: 0 0 20px;
+  }
+  .piesoPlan__heading {
+    margin: 0 0 15px;
+  }
+  .piesoPlan__heading h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .piesoPlan__list {
+    flex-wrap: wrap;
+  }
+  .piesoPlan__list .foodPlan {
+    max-width: 100%;
+    margin: 0 0 20px;
+  }
+  .piesoPlan__list .foodPlan:last-of-type {
+    margin: 0;
+  }
+  .piesoPlan__list .foodPlan__info {
+    max-width: 270px;
+    margin: 0 auto 8px;
+  }
+  .piesoPlan__list .foodPlan__info .image {
+    max-width: 104px;
+  }
+  .piesoPlan__list .foodPlan__info .info {
+    max-width: calc(100% - 104px);
+  }
+  .piesoPlan__list .foodPlan__info .info .price {
+    font-size: 21px;
+    line-height: 25px;
+  }
+  .piesoPlan__list .foodPlan__info .info .price__wrap {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  .piesoPlan__list .foodPlan__info .info .price__price {
+    padding-right: 23px;
+  }
+  .piesoPlan__list .foodPlan__info .info .price__price small {
+    font-size: 21px;
+    top: -5px;
+    right: 5px;
+  }
+  .piesoPlan__list .foodPlan__info .info .portion {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .piesoPlan__list .foodPlan__desc p {
+    font-size: 9px;
+    line-height: 14px;
+  }
+}
+
+.piesoInfo {
+  padding: 0 0 25px;
+}
+
+.piesoInfo__wrap {
+  max-width: 950px;
+  background-color: #129D6F;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 135px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.piesoInfo__wrap h2 {
+  font-size: 28px;
+  line-height: 34px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.piesoInfo__wrap p {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  max-width: 530px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .piesoInfo {
+    padding: 0 0 20px;
+  }
+  .piesoInfo__wrap {
+    min-height: 95px;
+    padding: 15px;
+  }
+  .piesoInfo__wrap h2 {
+    font-size: 21px;
+    line-height: 25px;
+    margin: 0 0 6px;
+  }
+  .piesoInfo__wrap p {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+
 *,
 *:before,
 *:after {
@@ -6587,13 +7437,13 @@ body.noscroll {
   transform: translate(0, -50%);
 }
 
-.panel--calculation .stepHeading__wrap:after {
+.panel--calculation .stepHeading__wrap:after, .panel--piesonalizacja .stepHeading__wrap:after {
   background-image: url("../assets/img/checklist_vec.svg");
   background-size: 126px;
   width: 126px;
   height: 154px;
   right: 20px;
-  bottom: 0;
+  bottom: -8px;
 }
 
 .panel--dogspecs .stepHeading {

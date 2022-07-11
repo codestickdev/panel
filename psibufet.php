@@ -46,7 +46,7 @@
                             <img src="./assets/img/planMiska_half.png"/>
                         </div>
                         <div class="mobileInfo__price">
-                        <h2 class="discount"><span class="discount__wrap"><span>7<small>90</small></span> zł</span> / dzień</h2>
+                            <h2 class="discount"><span class="discount__wrap"><span>7<small>90</small></span> zł</span> / dzień</h2>
                             <h3 class="price">od<span class="price__wrap"><span class="price__price">6<small>45</small></span>zł</span>/ dzień</h3>
                             <h4 class="portion">Porcja: <span>500</span> g / dzień</h4>
                         </div>
