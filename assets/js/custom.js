@@ -503,9 +503,17 @@ $(document).ready(function(){
  */
 $(document).ready(function(){
     $('.foodOption').each(function(){
+        let input = $(this).find('input[name="foodOption"]');
         if($(this).hasClass('foodOption--selected')){
             $(this).find('input[name="foodOption"]').click();
         }
+
+        $(this).find('.foodOption__image').on('click', function(){
+            input.click();
+        });
+        $(this).find('.foodOption__content h3').on('click', function(){
+            input.click();
+        });
     });
     $('input[name="foodOption"]').on('click', function(){
         if($(this).is(':checked')){
@@ -519,5 +527,21 @@ $(document).ready(function(){
             $('.foodPlan').removeClass('foodPlan--selected');
             $(this).parents('.foodPlan').addClass('foodPlan--selected');
         }
+    });
+
+
+    // Show more info
+    let more = $('.piesoInfo__wrap').find('p.more');
+    let less = $('.piesoInfo__wrap').find('p.less');
+
+    $(more).on('click', function(){
+        $(this).hide();
+        $('.piesoInfo__content').slideDown();
+    });
+    $(less).on('click', function(){
+        $('.piesoInfo__content').slideUp();
+        setTimeout(function(){
+            $(more).show();
+        }, 400);
     });
 });

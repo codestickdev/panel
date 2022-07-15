@@ -158,8 +158,15 @@
 
     <section class="piesoInfo container">
         <div class="piesoInfo__wrap">
-            <h2>Wylizana miska lub zwrot pieniędzy</h2>
-            <p>Jesteśmy pewni, że Twój pies pokocha PsiBufet, dlatego na nasze jedzenie dajemy <u>Gwarancję Czystej Miski</u>.</p>
+            <div class="wrap">
+                <h2>Wylizana miska lub zwrot pieniędzy</h2>
+                <p><b>Jesteśmy pewni, że Twój pies pokocha PsiBufet</b>, dlatego na nasze jedzenie dajemy <b>Gwarancję Czystej Miski</b>.</p>
+                <p class="more">Zobacz więcej</p>
+            </div>
+            <div class="piesoInfo__content">
+                <p><b>Piesek nie chce jeść? Nie szkodzi!</b> Wystarczy, że odeślesz nam porcje, które nie zostały zjedzone, a my zwrócimy środki na Twoje konto.</p>
+                <p class="less">Zobacz mniej</p>
+            </div>
         </div>
     </section>
 
