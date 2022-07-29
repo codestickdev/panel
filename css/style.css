@@ -6076,6 +6076,7 @@ body {
   width: 100%;
   margin: 0 16px 32px;
   transition: ease .3s;
+  position: relative;
 }
 
 .piesoMenu__list .foodOption--selected {
@@ -6096,6 +6097,18 @@ body {
 .piesoMenu__list .foodOption--selected .foodOption__content .checkbox__checkbox {
   background-color: #129D6F;
   border-color: #129D6F;
+}
+
+.piesoMenu__list .foodOption > input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  margin: 0;
+  z-index: 9;
+  cursor: pointer;
 }
 
 .piesoMenu__list .foodOption:nth-child(2n+1) {
@@ -6143,18 +6156,6 @@ body {
   position: absolute;
   top: 23px;
   right: 27px;
-  cursor: pointer;
-}
-
-.piesoMenu__list .foodOption__content .checkbox input {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  margin: 0;
-  z-index: 9;
   cursor: pointer;
 }
 
@@ -6231,6 +6232,7 @@ body {
   margin: 15px 0 0;
   cursor: pointer;
   transition: ease .3s;
+  z-index: 10;
 }
 
 .piesoMenu__list .foodOption__content p.info:hover {
@@ -6391,6 +6393,7 @@ body {
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
   padding: 20px 0 28px;
   transition: ease .3s;
+  position: relative;
 }
 
 .piesoPlan__list .foodPlan--best {
@@ -6422,6 +6425,18 @@ body {
   border-color: #129D6F;
 }
 
+.piesoPlan__list .foodPlan > input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  margin: 0;
+  z-index: 9;
+  cursor: pointer;
+}
+
 .piesoPlan__list .foodPlan__title {
   display: flex;
   align-items: center;
@@ -6448,18 +6463,6 @@ body {
   top: 50%;
   right: 27px;
   transform: translate(0, -50%);
-  cursor: pointer;
-}
-
-.piesoPlan__list .foodPlan__title .checkbox input {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  margin: 0;
-  z-index: 9;
   cursor: pointer;
 }
 

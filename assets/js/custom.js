@@ -508,13 +508,11 @@ $(document).ready(function(){
             $(this).find('input[name="foodOption"]').click();
         }
 
-        $(this).find('.foodOption__image').on('click', function(){
-            input.click();
-        });
         $(this).find('.foodOption__content h3').on('click', function(){
             input.click();
         });
     });
+    
     $('input[name="foodOption"]').on('click', function(){
         if($(this).is(':checked')){
             $(this).parents('.foodOption').addClass('foodOption--selected');

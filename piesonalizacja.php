@@ -40,12 +40,12 @@
             </div>
             <div class="piesoMenu__list">
                 <div class="foodOption foodOption--indyczykasek foodOption--selected">
+                    <input type="checkbox" name="foodOption" value="indyczykasek"/>
                     <div class="foodOption__image">
                         <img src="./assets/img/piesonalizacja/smak_indyczykasek.png"/>
                     </div>
                     <div class="foodOption__content">
                         <div class="checkbox">
-                            <input type="checkbox" name="foodOption" value="indyczykasek"/>
                             <div class="checkbox__checkbox"></div>
                         </div>
                         <h3>Indyczy kąsek</h3>
@@ -54,12 +54,12 @@
                     </div>
                 </div>
                 <div class="foodOption foodOption--kurczepieczone foodOption--selected">
+                    <input type="checkbox" name="foodOption" value="kurczepieczone"/>
                     <div class="foodOption__image">
                         <img src="./assets/img/piesonalizacja/smak_kurczepieczone.png"/>
                     </div>
                     <div class="foodOption__content">
                         <div class="checkbox">
-                            <input type="checkbox" name="foodOption" value="kurczepieczone"/>
                             <div class="checkbox__checkbox"></div>
                         </div>
                         <h3>Kurczę pieczone</h3>
@@ -68,12 +68,12 @@
                     </div>
                 </div>
                 <div class="foodOption foodOption--wolowelove">
+                    <input type="checkbox" name="foodOption" value="wolowelove"/>
                     <div class="foodOption__image">
                         <img src="./assets/img/piesonalizacja/smak_wolowelove.png"/>
                     </div>
                     <div class="foodOption__content">
                         <div class="checkbox">
-                            <input type="checkbox" name="foodOption" value="wolowelove"/>
                             <div class="checkbox__checkbox"></div>
                         </div>
                         <h3>Wołowe love</h3>
@@ -86,12 +86,12 @@
                 <hr/>
 
                 <div class="foodOption foodOption--jagniewcina foodOption--notrecommend">
+                    <input type="checkbox" name="foodOption" value="jagniewcina"/>
                     <div class="foodOption__image">
                         <img src="./assets/img/piesonalizacja/smak_jagniewcina.png"/>
                     </div>
                     <div class="foodOption__content">
                         <div class="checkbox">
-                            <input type="checkbox" name="foodOption" value="jagniewcina"/>
                             <div class="checkbox__checkbox"></div>
                         </div>
                         <h3>Jagnię wcina</h3>
@@ -110,10 +110,10 @@
             </div>
             <div class="piesoPlan__list">
                 <div class="foodPlan foodPlan--best foodPlan--selected">
+                    <input type="radio" name="foodPlan" value="100psibufet" checked/>
                     <div class="foodPlan__title">
                         <h3>100% PsiBufet</h3>
                         <div class="checkbox">
-                            <input type="radio" name="foodPlan" value="100psibufet" checked/>
                             <div class="checkbox__checkbox"></div>
                         </div>
                     </div>
@@ -132,10 +132,10 @@
                     </div>
                 </div>
                 <div class="foodPlan">
+                    <input type="radio" name="foodPlan" value="mix"/>
                     <div class="foodPlan__title">
                         <h3>Plan MIX</h3>
                         <div class="checkbox">
-                            <input type="radio" name="foodPlan" value="mix"/>
                             <div class="checkbox__checkbox"></div>
                         </div>
                     </div>

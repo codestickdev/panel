@@ -243,6 +243,7 @@
             width: 100%;
             margin: 0 16px 32px;
             transition: ease .3s;
+            position: relative;
 
             &--selected{
                 border: 1px solid $greencolor;
@@ -263,6 +264,18 @@
                         }
                     }
                 }
+            }
+
+            &>input{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                margin: 0;
+                z-index: 9;
+                cursor: pointer;
             }
 
             &:nth-child(2n+1){
@@ -308,18 +321,6 @@
                     top: 23px;
                     right: 27px;
                     cursor: pointer;
-
-                    input{
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        left: 0;
-                        top: 0;
-                        opacity: 0;
-                        margin: 0;
-                        z-index: 9;
-                        cursor: pointer;
-                    }
 
                     &__checkbox{
                         width: 100%;
@@ -393,6 +394,7 @@
                         margin: 15px 0 0;
                         cursor: pointer;
                         transition: ease .3s;
+                        z-index: 10;
 
                         &:hover{
                             opacity: .7;
@@ -593,6 +595,7 @@
             box-shadow: 4px 4px 0px rgba(0, 0, 0, .1);
             padding: 20px 0 28px;
             transition: ease .3s;
+            position: relative;
 
             &--best{
                 border-top: 30px solid $greencolor !important;
@@ -626,6 +629,18 @@
                 }
             }
 
+            &>input{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                margin: 0;
+                z-index: 9;
+                cursor: pointer;
+            }
+
             &__title{
                 display: flex;
                 align-items: center;
@@ -651,18 +666,6 @@
                     right: 27px;
                     transform: translate(0, -50%);
                     cursor: pointer;
-
-                    input{
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        left: 0;
-                        top: 0;
-                        opacity: 0;
-                        margin: 0;
-                        z-index: 9;
-                        cursor: pointer;
-                    }
 
                     &__checkbox{
                         width: 100%;
